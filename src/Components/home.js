@@ -1,26 +1,21 @@
 import React from 'react';
-import fragrance from '../images/fragrance.jpeg'
-// import './App.css';
 
-function home() {
+const Home = () => {
 return (
     <div className="App">
-      <header className="App-header">
-        <img src={fragrance} className="App-logo" alt="logo" />
-        <p>
-          Fragrance & Flicker
-        </p>
+        <h1>Fragrance & Flicker</h1>
+        <h2>High-end scented candles and gifts without the high-end price tag.</h2>
+
         <a
           className="App-link"
           href="https://unolusso.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Buy Your Frangranced Candles 
         </a>
-      </header>
     </div>
     )
 }
 
-export default home
+export default Home;

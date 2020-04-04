@@ -1,16 +1,20 @@
 import React from 'react';
-// import fragrance from '../src/fragrance.jpeg'
-import Images from './Components/pictures'
-import Home from './Components/home'
-import Contact from './Components/contact'
+import Images from './Components/Pictures'
+import Home from './Components/Home'
+import Contact from './Components/Contact'
+import About from './Components/About'
+import Product from './Components/Products'
 
-
-function App() {
+const App = () => {
   return (
    <fragment>
     <Home />
+    <About />
+    <Images />
+    <Product />
     <Contact />
     </fragment>
+
   );
 }
 
