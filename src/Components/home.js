@@ -5,15 +5,9 @@ return (
     <div className="App">
         <h1>Fragrance & Flicker</h1>
         <h2>High-end scented candles and gifts without the high-end price tag.</h2>
-
-        <a
-          className="App-link"
-          href="https://unolusso.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Buy Your Frangranced Candles 
-        </a>
+        <h1>LUXURY YET AFFORDABLE</h1>
+        <p>
+Fragrance and Flicker was brought into this world with one single purpose – to provide people with luxury scented products without the hefty price tag.</p>
     </div>
     )
 }

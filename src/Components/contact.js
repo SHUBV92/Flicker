@@ -1,4 +1,5 @@
 import React, { FormEvent } from "react";
+import "./contact.css"
 // import { useForm } from "../src/hooks/customHooks";
 // import { formInitialState } from "../src/constants";
 // import { extractPayload } from "../src/utils";
@@ -81,110 +82,7 @@ const Contact = () => {
             Send
           </button>
         </form> */}
-        <style jsx>{`
-          * {
-            box-sizing: border-box;
-            font-family: "Courier New, monospace";
-            color: white;
-          }
-
-          .contactContainer {
-            box-sizing: border-box;
-            display: grid;
-            grid-template-column: 25% 25% 25% 25%;
-            grid-template-row: auto;
-            grid-template-areas:
-              "contact contact  contact contact"
-              "touch form form form"
-              "touch form form form";
-            width: 100%;
-            align-items: center;
-            padding: 2vmin;
-            font-family: "Courier New, monospace";
-            background-color: salmon;
-            // RGB(0, 107, 189);
-            color: white;
-          }
-
-          .contactsHeader {
-            grid-area: contact;
-            justify-self: center;
-          }
-
-          .touch {
-            grid-area: touch;
-            justify-self: left;
-          }
-
-          lighter {
-            font-weigth: normal;
-          }
-          h1,
-          h2,
-          .p1 {
-            color: RGB(223, 193, 42);
-            font-weight: bold;
-          }
-          form {
-            display: grid;
-            grid-area: form;
-            grid-template-columns: 50% 50%;
-            grid-template-rows: auto;
-            margin: 2em;
-            max-width: 1000px;
-            font-weight: bold;
-          }
-
-          .topic {
-            grid-column: 1 / 3;
-          }
-          .submit {
-            grid-column: 2 / 2;
-          }
-          label {
-            display: flex;
-            flex-direction: column;
-            color: white;
-            margin-top: 1em;
-            margin-left: 1em;
-          }
-
-          ::placeholder {
-            color: white;
-          }
-
-          input,
-          textarea,
-          button {
-            max-width: 100%;
-            border: none;
-            margin-top: 1em;
-            resize: vertical;
-            min-height: 30px;
-            max-height: 100px;
-            font-family: "Courier New, monospace";
-            background-color: Salmon;
-            
-            color: white;
-          }
-          input,
-          textarea {
-            border-bottom: 1px solid white;
-          }
-
-          button {
-            font-size: xx-large;
-            font-weight: 800;
-            color: RGB(223, 193, 42);
-            text-align: end;
-          }
-          /*to do: Carolina 17/03/2020: make linear transition once chosen final effect to adjust margins as required*/
-          input:focus,
-          textarea:focus {
-            border-bottom: 1px solid #555;
-            outline: none;
-          }
-        `}</style>
+        
       </div>
     </div>
   );
