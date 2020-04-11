@@ -1,31 +1,51 @@
-import React from 'react';
-import Images from './Components/Pictures'
-import Home from './Components/Home'
-import Contact from './Components/Contact'
-import About from './Components/About'
-import Product from './Components/Products'
-import Navbar from'./Components/Navbar'
+import React from "react";
 
-import { BrowserRouter as Router } from 'react-router-dom';
-import * as ROUTES from '../constants/routes'
+import {
+  BrowserRouter as Router,
+  Link,
+  Switch,
+  Route
+} from "react-router-dom";
 
-import Navigation from '../Navigation';
-// import './App.css/'
+import Favourites from "./Components/Favourites"
+// import Home from "./Components/Home";
+// import Navbar from "./Components/Navbar";
 
 const App = () => {
-  return (
-   <fragment className="App">
-    <Router >
-      <Navbar />
-    </Router>
-    <Home />
-    <Product />
-    <Images />
-    <About />
-    <Contact />
-    </fragment>
+  const routes = [
+    {
+      name: "home",
+      route: "/",
+      component: "HOME",
+      exact: true
+    },
+    {
+      name: "topic",
+      route: "/topic",
+      component: "TOPIC"
 
+    }
+  ];
+
+  return (
+    <fragment className="App">
+      <Router>
+        <Favourites />
+        {/* <Navbar />
+        <Home /> */}
+        {routes.map(v => (
+          <Link to={v.route}>{v.name}</Link>
+        ))}
+        <Switch>
+          {routes.map(s => (
+            <Route exact path={s.route} exact={s.exact}>
+              {s.component}
+            </Route>
+          ))}
+        </Switch>
+      </Router>
+    </fragment>
   );
-}
+};
 
 export default App;

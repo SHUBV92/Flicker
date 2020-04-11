@@ -1,4 +1,3 @@
-import cassis from "../images/cassis.jpeg";
 import eveningSnow from "../images/eveningSnow.jpeg";
 import lime from "../images/lime.jpeg";
 import freshLinen from "../images/freshLinen.jpeg";

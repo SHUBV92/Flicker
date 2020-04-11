@@ -4,6 +4,7 @@ import "./about.css";
 const About = () => {
   return (
     <div>
+      
       <h1>About Our Ceo</h1>
       <p>Established Fragrance and Flicker at Home in October 2019</p>
       <p>Supports female run business</p>

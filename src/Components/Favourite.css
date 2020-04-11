@@ -1,0 +1,54 @@
+.wrapper1 {
+  display: flex;
+  background-color: turquoise;
+  justify-content: center;
+}
+
+.add-item {
+  display: flex;
+  background-color: grey;
+  margin: 10px;
+  margin-bottom: 34px;  
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12), 0 1px 8px 0 rgba(0,0,0,.2);
+  justify-content:center ;
+}
+
+input {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  justify-content: flex-end;
+  align-items: stretch;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12), 0 1px 8px 0 rgba(0,0,0,.2);
+
+}
+
+button {
+  
+  margin: 30px;
+  padding: 5px;
+  color: black;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12), 0 1px 8px 0 rgba(0,0,0,.2);
+}
+/* 
+.display-items {
+  background-color: blue;
+  margin: 10px;
+  padding: 10px;
+}
+.wrapper2 {
+  display: flex;
+  background-color: blue;
+  padding: 10px;
+  height: 10px;
+  justify-content: center;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12), 0 1px 8px 0 rgba(0,0,0,.2);
+}
+
+li {
+  background-color: grey;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12), 0 1px 8px 0 rgba(0,0,0,.2);
+  margin: 10px;
+  border-radius: 5px;
+
+} */
