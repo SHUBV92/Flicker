@@ -2,7 +2,6 @@ import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import { routes } from "../constants/routes";
-import Home from "../Components/Home";
 import NavbarLogo from "./assets/logo";
 import {
   BrowserRouter as Router,
@@ -28,9 +27,11 @@ const Navbar = () => {
       ;
       {routes.map(route => (
         <Switch>
-          
-          <Route path={route.routes} exact={route.exact}>
-            {route.component}
+          <Route
+            path={route.routes}
+            exact={route.exact}
+          >
+            <Route>{route.component}</Route>
           </Route>
         </Switch>
       ))}

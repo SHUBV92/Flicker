@@ -1,15 +1,15 @@
 import React from "react";
-import Images from "../Components/Pictures";
-import Contact from "../Components/Contact";
-import About from "../Components/About";
-import Product from "../Components/Products";
-import Navbar from "../Components/Navbar";
+import Images from "./Pictures";
+import Contact from "./Contact";
+import About from "./About";
+import Product from "./Products";
+import Navbar from "./Navbar";
 
 const Home = () => {
   return (
     <div className="App">
-      {/* <Navbar /> */}
-
+    <Navbar />
+<div>
       <h1>Fragrance & Flicker</h1>
       <h2>
         High-end scented candles and gifts without
@@ -26,6 +26,7 @@ const Home = () => {
       <Images />
       <About />
       <Contact />
+    </div>
     </div>
   );
 };

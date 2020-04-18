@@ -9,40 +9,18 @@ import {
 
 import Favourites from "./Components/Favourites"
 // import Home from "./Components/Home";
-// import Navbar from "./Components/Navbar";
+import Navbar from "./Components/Navbar";
+import Form from './Components/Test/Form'
 
 const App = () => {
-  const routes = [
-    {
-      name: "home",
-      route: "/",
-      component: "HOME",
-      exact: true
-    },
-    {
-      name: "topic",
-      route: "/topic",
-      component: "TOPIC"
-
-    }
-  ];
 
   return (
     <fragment className="App">
       <Router>
-        <Favourites />
-        {/* <Navbar />
-        <Home /> */}
-        {routes.map(v => (
-          <Link to={v.route}>{v.name}</Link>
-        ))}
-        <Switch>
-          {routes.map(s => (
-            <Route exact path={s.route} exact={s.exact}>
-              {s.component}
-            </Route>
-          ))}
-        </Switch>
+        <Navbar /> 
+        <hr />
+        <Favourites /> 
+        <Form />
       </Router>
     </fragment>
   );

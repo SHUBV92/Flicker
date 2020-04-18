@@ -6,7 +6,7 @@ import Contact from "../Components/Contact";
 import About from "../Components/About";
 import Product from "../Components/Products";
 
-// Routes 
+// Routes
 const LANDING = "/";
 const SIGN_UP = "/signup";
 const SIGN_IN = "/signin";

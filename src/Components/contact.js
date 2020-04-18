@@ -3,6 +3,8 @@ import "./contact.css"
 // import { useForm } from "../src/hooks/customHooks";
 // import { formInitialState } from "../src/constants";
 // import { extractPayload } from "../src/utils";
+import Form from "./Test/Form";
+
 
 const Contact = () => {
   // const { value: name, bind: bindName, reset: resetName } = useInput("");
@@ -82,6 +84,8 @@ const Contact = () => {
             Send
           </button>
         </form> */}
+        <Form />
+
         
       </div>
     </div>

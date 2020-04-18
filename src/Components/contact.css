@@ -2,7 +2,7 @@
     * {
       box-sizing: border-box;
       font-family: "Courier New, monospace";
-      color: white;
+      /* color: white; */
     }
 
     .contactContainer {

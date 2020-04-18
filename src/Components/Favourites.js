@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import firebase, {
-  auth,
-  provider
+  provider,
+  auth
 } from "../firebase.js";
 import "./Favourite.css";
 
@@ -20,6 +20,8 @@ class Favourites extends Component {
     this.handleSubmit = this.handleSubmit.bind(
       this
     );
+    this.login = this.login.bind(this);
+    this.logout = this.logout.bind(this);
   }
 
   handleChange(e) {
@@ -32,6 +34,25 @@ class Favourites extends Component {
       "b",
       e.target.value
     );
+  }
+
+  logout() {
+    auth.signOut().then(() => {
+      this.setState({
+        user: null
+      });
+    });
+  }
+
+  login() {
+    auth
+      .signInWithPopup(provider)
+      .then(result => {
+        const user = result.user;
+        this.setState({
+          user
+        });
+      });
   }
 
   // Handle the submission of the form to Firebase
@@ -68,18 +89,37 @@ class Favourites extends Component {
       snapshot => {
         console.log("snapshot: ", snapshot);
 
-        let items = snapshot.val();
+        let items1 = snapshot.val();
+        console.log("Recieving items: ", items1);
 
-        console.log("Recieving items: ", items);
+        const itemsArray =
+          items1 && Object.entries(items1);
+        console.log(itemsArray);
+        console.log("Items Array : ", itemsArray);
 
         let newState = [];
-        for (let item in items) {
+
+        itemsArray&&itemsArray.map(item => {
           newState.push({
-            id: item.id,
-            title: items[item].title,
-            user: items[item].user
+            id: item[0],
+            title: item[1].title,
+            user: item[1].user
           });
-        }
+        });
+
+        // ['hello', 'bye', ['mongolia']]
+
+        // items.map (item => [['493248394343ekjflea', [title: 'Betch', name: 'Shubs']]]
+
+        // for(let [key, value] of Object.enteries(itemsArray))
+
+        // for (let item in items1) {
+        //   newState.push({
+        //     id: items1[item].id,
+        //     title: items1[item].title,
+        //     user: items1[item].user
+        //   });
+        // }
         this.setState({
           items: newState
         });
@@ -87,6 +127,10 @@ class Favourites extends Component {
       error => {
         console.error("Error: ", error);
       }
+    );
+    console.log(
+      "Updated Items",
+      this.state.items
     );
   }
 
@@ -102,7 +146,7 @@ class Favourites extends Component {
       <div className="app">
         <header>
           <div className="wrapper1">
-            <h1> Favourite Candles</h1>
+            <h1>Favourite Candles</h1>
             {this.state.user ? (
               <button onClick={this.logout}>
                 Log Out
@@ -127,10 +171,10 @@ class Favourites extends Component {
               />
               <input
                 type="text"
-                name="currentCandle"
+                name="currentItem"
                 placeholder="Your Favourite Candle's"
                 onChange={this.handleChange}
-                value={this.state.currentCandle}
+                value={this.state.currentItem}
               />
               <button onClick={this.handleSubmit}>
                 Add Candle
@@ -148,7 +192,6 @@ class Favourites extends Component {
                     <li>
                       <h3>{item.title}</h3>
                       <p>
-                        {" "}
                         User: {item.user}
                         <button
                           onClick={() =>
