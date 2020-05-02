@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    width: 100vh;
+    height:10rem;
+    flex-direction: row;
+    background-color: salmon;
+    justify-content: flex-end;
+
+}
+
+.navbarnav {
+    list-style: none;
+    padding: 3px;
+    margin: 3px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    width: 10px;
+    height: 10px;
+}
+
+.fa-secondary {
+    width: 10px;
+    height: 10px;
+}

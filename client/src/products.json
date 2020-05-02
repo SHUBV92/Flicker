@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Soap Candle",
+    "items": [
+      {
+        "name": "Soap Candle Blue",
+        "price": 40,
+        "description": "This is a Soap Candle that is Blue",
+        "img": " <Imag Src> "
+      },
+      {
+        "name": "Soap Candle Orange",
+        "price": 50,
+        "description": "This is a Soap Candle that is Orange",
+        "img": " <Imag Src> "
+      },
+      {
+        "name": "Soap Candle Red",
+        "price": 60,
+        "description": "This is a Soap Candle that is Red",
+        "img": " <Imag Src> "
+      }
+    ]
+  },
+
+  {
+    "name": "Wax Candle",
+    "items": [
+      {
+        "name": "Wax Candle Red",
+        "price": 20,
+        "description": "This is a Soap Candle that is Red",
+        "img": " <Imag Src> "
+      },
+      {
+        "name": "Soap Candle Orange",
+        "price": 50,
+        "description": "This is a Soap Candle that is Orange",
+        "img": " <Imag Src> "
+      },
+      {
+        "name": "Soap Candle Orange",
+        "price": 50,
+        "description": "This is a Soap Candle that is Orange",
+        "img": " <Imag Src> "
+      }
+    ]
+  },
+  {
+    "name": "Wax Candle",
+    "items": [
+      {
+        "name": "Soap Candle Orange",
+        "price": 50,
+        "description": "This is a Soap Candle that is Orange",
+        "img": " <Imag Src> "
+      },
+
+      {
+        "name": "Soap Candle Orange",
+        "price": 50,
+        "description": "This is a Soap Candle that is Orange",
+        "img": " <Imag Src> "
+      },
+      {
+        "name": "Soap Candle Orange",
+        "price": 50,
+        "description": "This is a Soap Candle that is Orange",
+        "img": " <Imag Src> "
+      }
+    ]
+  },
+  {
+    "name": "Yankee Candle",
+    "items": [
+      {
+        "name": "Yankee Candle Orange",
+        "price": 50,
+        "description": "This is a Soap Candle that is Orange",
+        "img": " <Imag Src> "
+      },
+
+      {
+        "name": "Yankee Candle Purple",
+        "price": 90,
+        "description": "This is a Yankee Candle that is Purple",
+        "img": " <Imag Src> "
+      },
+      {
+        "name": "Yankee Candle Pink",
+        "price": 150,
+        "description": "This is a Yankee Candle that is Pink",
+        "img": " <Imag Src> "
+      }
+    ]
+  }
+]
