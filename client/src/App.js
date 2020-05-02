@@ -8,9 +8,9 @@ import {
 
 import { routes } from "./constants/routes";
 
-// import Home from "./Components/Home";
 import Navbar from "./Containers/Navbar";
 import { Footer } from "./Containers/Footer/Footer";
+import Products from "./Containers/Products/Products";
 
 const App = () => {
   return (
@@ -32,6 +32,7 @@ const App = () => {
           })}
         </Switch>
       </Router>
+      <Products />
       <Footer />
     </div>
   );

@@ -70,7 +70,7 @@ class Mailer extends Component {
             <span>Contact </span> For Candles
           </h1>
         </div>
-        <form Method="POST" action="send" >
+        <form Method="post" action="/send">
           <p>
             <label>Name</label>
             <input

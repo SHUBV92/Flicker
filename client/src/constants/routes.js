@@ -4,7 +4,7 @@ import Images from "../Containers/Pictures";
 import Home from "../Containers/Home";
 import Contact from "../Containers/Contact";
 import About from "../Containers/About";
-import Product from "../Containers/ProductWrapper";
+import Product from "../Components/ProductWrapper";
 import LoginControl from "../Containers/LoginControl";
 import Cart from "../Containers/ShoppingCart";
 

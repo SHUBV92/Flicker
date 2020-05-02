@@ -2,7 +2,7 @@ import React from "react";
 import { imageData } from "../../constants/imageData";
 
 import "./pictures.css";
-import ProductWrapper from "../ProductWrapper/ProductWrapper";
+import ProductWrapper from "../../Components/ProductWrapper/ProductWrapper";
 
 const Images = () => {
   return (
