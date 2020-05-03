@@ -5,13 +5,13 @@ const Card = props => {
     <div className="App-Container">
       <ol>
         <div className="Image">
-          <h3>{props.title}</h3>
-          <img
+          <h3>{props.name}</h3>
+          {/* <img
             src={props.pictures}
-            className={`items${index + 1}`}
-          />
+            // className={`items${index + 1}`}
+          /> */}
           <div className="info">
-            <h3>Pirce: {props.price}</h3>
+            <h3>Price: {props.price}</h3>
             <a
               className="App-link"
               target="_blank"
@@ -19,6 +19,7 @@ const Card = props => {
             >
               Products Details
             </a>
+            <Button
           </div>
         </div>
       </ol>

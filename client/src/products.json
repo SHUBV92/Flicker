@@ -16,7 +16,7 @@
       },
       {
         "name": "Soap Candle Red",
-        "price": 60,
+        "price": 100,
         "description": "This is a Soap Candle that is Red",
         "img": " <Imag Src> "
       }
@@ -34,7 +34,7 @@
       },
       {
         "name": "Soap Candle Orange",
-        "price": 50,
+        "price": 500,
         "description": "This is a Soap Candle that is Orange",
         "img": " <Imag Src> "
       },
@@ -47,7 +47,7 @@
     ]
   },
   {
-    "name": "Wax Candle",
+    "name": "Soap Candle",
     "items": [
       {
         "name": "Soap Candle Orange",

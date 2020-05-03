@@ -4,7 +4,7 @@ import Images from "../Containers/Pictures";
 import Home from "../Containers/Home";
 import Contact from "../Containers/Contact";
 import About from "../Containers/About";
-import Product from "../Components/ProductWrapper";
+import Products from "../Containers/Products";
 import LoginControl from "../Containers/LoginControl";
 import Cart from "../Containers/ShoppingCart";
 
@@ -17,7 +17,7 @@ export const routes = [
   {
     name: "Products",
     routes: "/products",
-    component: <Product />
+    component: <Products />
   },
   {
     name: "Home",

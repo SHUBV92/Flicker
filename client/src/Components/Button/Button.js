@@ -1,12 +1,11 @@
-import React from 'react'
+import React from "react";
 
-export const Button = (props) => { 
-return(
+const Button = props => {
+  return (
     <div>
-        <button>
-
-        </button>
+      <button>Submit</button>
     </div>
-)
+  );
+};
 
-}
+export default 
