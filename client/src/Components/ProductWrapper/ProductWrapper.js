@@ -13,9 +13,9 @@ const ProductWrapper = props => {
         <div>
           <Card
             item = {item}
-            // id={item.id}
-            // name={item.name}
-            // price={item.price}
+
+            submit={props.submit}
+
             CBFP1={props.CBFP}
           />
         </div>

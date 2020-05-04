@@ -11,16 +11,34 @@ class Products extends Component {
     this.state = {
       products : {
       name: null,
-      price: null,
-      description: null 
+      price: null
+      
       }
     };
+    this.handleClick = this.handleClick.bind(this)
+    this.submitFirebase = this.submitFirebase.bind(this)
+
   }
   
   handleClick = (returnedData) => { 
-    this.setState({products: { name:returnedData[0].name, price: returnedData[0].price }})
-    console.log(this.state.products)
+        console.log("Data from Card Comp:", returnedData)
+    const data = {...this.state.products}
+    const name = data.name
+        console.log("State Name:", name)
+    
+    const price = data.price
+        console.log("State Price:", price)
+
+this.setState({products : {...this.state.products, name:returnedData[0].name}})
+    // this.setState({name :returnedData[0].name, price: returnedData[0].price })
+
+    // this.setState({this.state.products: {name :returnedData[0].name, price: returnedData[0].price }})
+        // console.log("State Values", products[price]})
+        // console.log({products: { name:returnedData[0].name, price: returnedData[0].price }})
+    
+        console.log(this.state.products)
   }
+    // this.setState({products: { name:returnedData[0].name, price: returnedData[0].price }})
 
 
   submitFirebase = ()=> {
@@ -31,8 +49,10 @@ class Products extends Component {
       .ref("items")
 
       const item = { 
-        name: this.state.products.name,
-        price: this.state.products.price
+        // name: this.state.products.name,
+        name: "Lavender",
+        price: "£50"
+        // price: this.state.products.price
       }
       itemsRef.push(item);
       this.setState({
