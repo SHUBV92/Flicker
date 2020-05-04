@@ -1,18 +1,43 @@
 import React, { Component } from "react";
 import productsData from "../../products.json";
 import ProductWrapper from "../../Components/ProductWrapper";
+import ProductSelector from "../ProductSelector/index.js";
 
 
 class Products extends Component {
   constructor() {
     super();
     this.state = {
-      products: null
+      products : {
+      name: null,
+      price: null,
+      description: null 
+      }
     };
   }
+  
+  handleClick = (returnedData) => { 
+    this.setState({products: { name:returnedData[0].name, price: returnedData[0].price }})
+    console.log(this.state.products)
+  }
 
-  handleClick () { 
-    
+
+  handleSubmit = ()=> {
+    console.log("HandleSubmit")
+    e.preventDefault();
+    const itemRef = firebase
+      .database()
+      .ref("items")
+
+      const item = { 
+        name: this.state.products.name,
+        price: this.state.products.price
+      }
+      itemsRef.push(item);
+      this.setState({
+      products : {name: "",
+      price: ""}
+      })
   }
 
   render() {
@@ -37,11 +62,16 @@ class Products extends Component {
           {productsData.map(product => (
             <div className="Container">
               <h3>{product.name}</h3>
+                <h1>{this.state.products.name}</h1>
+                <h1>{this.state.products.price}</h1>
+
               <div className="ProductsWrapper">
                 <ProductWrapper
-
                   items={product.items}
+                  CBFP={this.handleClick}
+                  submit={this.handleSubmit}
                 />
+                <ProductSelector />
               </div>
             </div>
           ))}

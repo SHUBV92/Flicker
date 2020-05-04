@@ -3,18 +3,19 @@
     "name": "Soap Candle",
     "items": [
       {
+         "id":"1",
         "name": "Soap Candle Blue",
         "price": 40,
         "description": "This is a Soap Candle that is Blue",
         "img": " <Imag Src> "
       },
-      {
+      { "id":"2",
         "name": "Soap Candle Orange",
         "price": 50,
         "description": "This is a Soap Candle that is Orange",
         "img": " <Imag Src> "
       },
-      {
+      { "id":"3",
         "name": "Soap Candle Red",
         "price": 100,
         "description": "This is a Soap Candle that is Red",
@@ -23,22 +24,22 @@
     ]
   },
 
-  {
+  { 
     "name": "Wax Candle",
     "items": [
-      {
+      { "id":"1",
         "name": "Wax Candle Red",
         "price": 20,
         "description": "This is a Soap Candle that is Red",
         "img": " <Imag Src> "
       },
-      {
+      { "id":"2",
         "name": "Soap Candle Orange",
         "price": 500,
         "description": "This is a Soap Candle that is Orange",
         "img": " <Imag Src> "
       },
-      {
+      { "id":"3",
         "name": "Soap Candle Orange",
         "price": 50,
         "description": "This is a Soap Candle that is Orange",
@@ -46,23 +47,23 @@
       }
     ]
   },
-  {
+  { 
     "name": "Soap Candle",
     "items": [
-      {
+      { "id":"1",
         "name": "Soap Candle Orange",
         "price": 50,
         "description": "This is a Soap Candle that is Orange",
         "img": " <Imag Src> "
       },
 
-      {
+      { "id":"2",
         "name": "Soap Candle Orange",
         "price": 50,
         "description": "This is a Soap Candle that is Orange",
         "img": " <Imag Src> "
       },
-      {
+      { "id":"3",
         "name": "Soap Candle Orange",
         "price": 50,
         "description": "This is a Soap Candle that is Orange",
@@ -70,23 +71,23 @@
       }
     ]
   },
-  {
+  { 
     "name": "Yankee Candle",
     "items": [
-      {
+      { "id":"1",
         "name": "Yankee Candle Orange",
         "price": 50,
         "description": "This is a Soap Candle that is Orange",
         "img": " <Imag Src> "
       },
 
-      {
+      { "id":"2",
         "name": "Yankee Candle Purple",
         "price": 90,
         "description": "This is a Yankee Candle that is Purple",
         "img": " <Imag Src> "
       },
-      {
+      { "id":"3",
         "name": "Yankee Candle Pink",
         "price": 150,
         "description": "This is a Yankee Candle that is Pink",

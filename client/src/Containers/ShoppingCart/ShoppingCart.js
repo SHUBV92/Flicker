@@ -37,6 +37,7 @@ class ShoppingCart extends Component {
               id: item[0],
               title: item[1].title,
               user: item[1].user
+              price: items[1].price
             });
           });
         console.log("B", newState);
@@ -69,6 +70,9 @@ class ShoppingCart extends Component {
                   <ul>
                     <li>
                       <h3>{item.title}</h3>
+                      <h3>{item.price}</h3>
+
+
                       <p>User: {item.user}
                       <button
                           onClick={() =>
