@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import productsData from "../../products.json";
 import ProductWrapper from "../../Components/ProductWrapper";
 import ProductSelector from "../ProductSelector/index.js";
+import firebase from 'firebase'
 
 
 class Products extends Component {
@@ -22,10 +23,10 @@ class Products extends Component {
   }
 
 
-  handleSubmit = ()=> {
+  submitFirebase = ()=> {
     console.log("HandleSubmit")
-    e.preventDefault();
-    const itemRef = firebase
+    // e.preventDefault();
+    const itemsRef = firebase
       .database()
       .ref("items")
 
@@ -69,7 +70,7 @@ class Products extends Component {
                 <ProductWrapper
                   items={product.items}
                   CBFP={this.handleClick}
-                  submit={this.handleSubmit}
+                  submit={this.submitFirebase}
                 />
                 <ProductSelector />
               </div>

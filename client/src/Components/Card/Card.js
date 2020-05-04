@@ -13,8 +13,10 @@ const click = () => {
     console.log(products)
     
     props.CBFP1(products)
-    props.submit
-
+console.log("Products Submitted")
+    
+    props.submit()
+console.log("Submitted")
     }
    
   return (

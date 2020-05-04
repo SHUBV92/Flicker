@@ -36,8 +36,8 @@ class ShoppingCart extends Component {
             newState.push({
               id: item[0],
               title: item[1].title,
-              user: item[1].user
-              price: items[1].price
+              user: item[1].user,
+              price: item[1].price
             });
           });
         console.log("B", newState);
