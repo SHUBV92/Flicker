@@ -64,7 +64,6 @@ class Products extends Component {
                   CBFP={this.handleClick}
                   submit={this.submitFirebase}
                 />
-                <ProductSelector />
               </div>
             </div>
           ))}

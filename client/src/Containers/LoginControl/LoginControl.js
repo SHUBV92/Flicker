@@ -1,34 +1,66 @@
 import React, { Component } from "react";
 import { LoginButton } from "./LoginButton";
 import { LogoutButton } from "./LoginButton";
+import Form from "../../Components/Form/Form";
+import firebase, {
+  provider,
+  auth
+} from "../../utils/firebase.js";
 
 class LoginControl extends Component {
   constructor(props) {
-    super(props);
+    super();
+    this.state = {
+      isLoggedIn: false,
+      username: "",
+      user: null
+    };
 
     this.handleLoginClick = this.handleLoginClick.bind(
       this
     );
-
     this.handleLogoutClick = this.handleLogoutClick.bind(
       this
     );
-
-    this.state = { isLoggedIn: false };
   }
+
+  componentDidMount() {
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        this.setState({ user });
+      }
+    });
+  }
+
+  // Conditional Rendering
+  // Firebase Login Functionality
 
   handleLoginClick() {
     this.setState({ isLoggedIn: true });
+    auth
+      .signInWithPopup(provider)
+      .then(result => {
+        const user = result.user;
+
+        user.setState({});
+      });
   }
+
+  // Firebase Logout Functionality
 
   handleLogoutClick() {
     this.setState({ isLoggedIn: false });
+    auth.signOut().then(() => {
+      this.setState({
+        user: null
+      });
+    });
   }
 
   render() {
     const isLoggedIn = this.state.isLoggedIn;
     let button;
-    if (isLoggedIn) {
+    if (isLoggedIn && this.state.user) {
       button = (
         <LogoutButton
           onClick={this.handleLogoutClick}
@@ -43,8 +75,9 @@ class LoginControl extends Component {
     }
     return (
       <div style={{ backgroundColor: "Blue" }}>
-      <h1>Authentication</h1>
-        <form>
+        <h1>Authentication</h1>
+        <Form />
+        {/* <form>
           <p>
             <lable>Name</lable>
             <input
@@ -61,7 +94,7 @@ class LoginControl extends Component {
               placeholder="Password"
             />
           </p>
-        </form>
+        </form> */}
 
         {button}
       </div>

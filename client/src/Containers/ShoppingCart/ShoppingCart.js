@@ -62,13 +62,20 @@ class ShoppingCart extends Component {
     return (
       <div className="display-item">
         <h2>Your Basket</h2>
+        <h3>
+        <span>Product</span>
+        <span>Description</span>
+        <span>Quantity</span>
+        <span>Price</span>
+        <span>Remove</span>
+        </h3>
         {this.state.items.map(item => {
           return (
             <div classname="item" key={item.id}>
               <ul>
                 <li>
                   <h3>{item.name}</h3>
-                  <h3>{item.price}</h3>
+                  <h3>£{item.price}</h3>
 
                   <p>
                     User: {item.name}
@@ -77,7 +84,7 @@ class ShoppingCart extends Component {
                         this.removeItem(item.id)
                       }
                     >
-                      Remove Item
+                      X
                     </button>
                   </p>
                 </li>

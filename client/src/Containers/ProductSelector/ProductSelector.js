@@ -42,8 +42,8 @@ class ProductSelector extends Component {
       .signInWithPopup(provider)
       .then(result => {
         const user = result.user;
-        this.setState({
-          user
+        
+          user.setState({
         });
       });
   }
