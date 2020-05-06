@@ -51,10 +51,28 @@ class ShoppingCart extends Component {
         console.error("Error: ", error);
       }
     );
+
+    this.calculateTotal()
   }
 
-  calculateTotal = () => {
+  calculateTotal ()  {
+    console.log("Initiated calculateTotal")
+
+let totalItems = []
+
+    for(let i = 0; i<this.state.items.length; i++){
+    console.log(this.state.items[0].price)
+      
+      totalItems.push(this.state.items[i].price)
+    }
+
+  //  const item =  this.state.items.map(item => {
+            // item.price
+    // })
+    console.log(totalItems)
+    // this.setState({total: this.state.total + item.price})
     
+
   }
 
   removeItem(itemId) {
@@ -65,6 +83,7 @@ class ShoppingCart extends Component {
   }
 
   render() {
+    // console.log("Items in state", this.state.items[0])
     return (
       <div className="display-item">
         <h2>Your Basket</h2>
