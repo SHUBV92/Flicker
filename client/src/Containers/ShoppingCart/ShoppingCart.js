@@ -62,36 +62,49 @@ class ShoppingCart extends Component {
     return (
       <div className="display-item">
         <h2>Your Basket</h2>
-        <h3>
-        <span>Product</span>
-        <span>Description</span>
-        <span>Quantity</span>
-        <span>Price</span>
-        <span>Remove</span>
-        </h3>
+        <section>
+          <h3>
+            <span>Product</span>
+            <span>Description</span>
+            <span>Quantity</span>
+            <span>Price</span>
+            <span>Remove</span>
+          </h3>
+        </section>
+
         {this.state.items.map(item => {
           return (
-            <div classname="item" key={item.id}>
-              <ul>
-                <li>
-                  <h3>{item.name}</h3>
-                  <h3>£{item.price}</h3>
+            <section>
+              <div classname="item" key={item.id}>
+                <ul>
+                  <li>
+                    <h3>{item.name}</h3>
+                    <h3>£{item.price}</h3>
+                    <p>Counter : " " </p>
 
-                  <p>
-                    User: {item.name}
-                    <button
-                      onClick={() =>
-                        this.removeItem(item.id)
-                      }
-                    >
-                      X
-                    </button>
-                  </p>
-                </li>
-              </ul>
-            </div>
+                    <p>
+                      User: {item.name}
+                      <button
+                        onClick={() =>
+                          this.removeItem(item.id)
+                        }
+                      >
+                        X
+                      </button>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </section>
           );
         })}
+        <section>
+          <p>Total: </p>
+        </section>
+
+        <button>
+          Pay Now
+        </button>
       </div>
     );
   }

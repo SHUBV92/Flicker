@@ -36,15 +36,14 @@ class ProductSelector extends Component {
       e.target.value
     );
   }
-// Login Functionality
+  // Login Functionality
   login() {
     auth
       .signInWithPopup(provider)
       .then(result => {
         const user = result.user;
-        
-          user.setState({
-        });
+
+        user.setState({});
       });
   }
 
@@ -57,7 +56,6 @@ class ProductSelector extends Component {
     });
   }
 
-  
   // Handle the submission of the form to Firebase
 
   handleSubmit(e) {
@@ -78,12 +76,12 @@ class ProductSelector extends Component {
     });
   }
 
-  componentDidMount(){
-    auth.onAuthStateChanged((user) => { 
-      if(user) {
-        this.setState({user})
+  componentDidMount() {
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        this.setState({ user });
       }
-    })
+    });
   }
 
   render() {
@@ -135,73 +133,60 @@ class ProductSelector extends Component {
 }
 export default ProductSelector;
 
-
-
-
-
-
-
-
-
-
-
-
-
-  //   Grab Items from Firebase when starting the Component
-  
-// Working Code -------------------->
-
-  // componentDidMount() {
-  //   const itemsRef = firebase
-  //     .database()
-  //     .ref("items");
-
-  //   console.log("itemsRef: ", itemsRef);
-
-  //   itemsRef.on(
-  //     "value",
-  //     snapshot => {
-  //       let items1 = snapshot.val();
-
-  //       const itemsArray =
-  //         items1 && Object.entries(items1);
-
-  //       let newState = [];
-
-  //       itemsArray &&
-  //         itemsArray.map(item => {
-  //           newState.push({
-  //             id: item[0],
-  //             title: item[1].title,
-  //             user: item[1].user
-  //           });
-  //         });
+//   Grab Items from Firebase when starting the Component
 
 // Working Code -------------------->
 
+// componentDidMount() {
+//   const itemsRef = firebase
+//     .database()
+//     .ref("items");
 
-                    // ['hello', 'bye', ['mongolia']]
+//   console.log("itemsRef: ", itemsRef);
 
-                    // items.map (item => [['493248394343ekjflea', [title: 'Betch', name: 'Shubs']]]
+//   itemsRef.on(
+//     "value",
+//     snapshot => {
+//       let items1 = snapshot.val();
 
-                    // for(let [key, value] of Object.enteries(itemsArray))
+//       const itemsArray =
+//         items1 && Object.entries(items1);
 
-                    // for (let item in items1) {
-                    //   newState.push({
-                    //     id: items1[item].id,
-                    //     title: items1[item].title,
-                    //     user: items1[item].user
-                    //   });
-                    // }
+//       let newState = [];
 
-  // Working Code -------------------->
-  //       this.setState({
-  //         items: newState
-  //       });
-  //     },
-  //     error => {
-  //       console.error("Error: ", error);
-  //     }
-  //   );
-  // }
-        // Working Code -------------------->
+//       itemsArray &&
+//         itemsArray.map(item => {
+//           newState.push({
+//             id: item[0],
+//             title: item[1].title,
+//             user: item[1].user
+//           });
+//         });
+
+// Working Code -------------------->
+
+// ['hello', 'bye', ['mongolia']]
+
+// items.map (item => [['493248394343ekjflea', [title: 'Betch', name: 'Shubs']]]
+
+// for(let [key, value] of Object.enteries(itemsArray))
+
+// for (let item in items1) {
+//   newState.push({
+//     id: items1[item].id,
+//     title: items1[item].title,
+//     user: items1[item].user
+//   });
+// }
+
+// Working Code -------------------->
+//       this.setState({
+//         items: newState
+//       });
+//     },
+//     error => {
+//       console.error("Error: ", error);
+//     }
+//   );
+// }
+// Working Code -------------------->
