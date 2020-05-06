@@ -35,8 +35,7 @@ class ShoppingCart extends Component {
           itemsArray.map(item => {
             newState.push({
               id: item[0],
-              title: item[1].title,
-              user: item[1].user,
+              name: item[1].name,
               price: item[1].price
             });
           });
@@ -63,38 +62,31 @@ class ShoppingCart extends Component {
     return (
       <div className="display-item">
         <h2>Your Basket</h2>
-            {this.state.items.map(item => {
-              return (
-                <div classname="item"
-                key={item.id}>
-                  <ul>
-                    <li>
-                      <h3>{item.title}</h3>
-                      <h3>{item.price}</h3>
+        {this.state.items.map(item => {
+          return (
+            <div classname="item" key={item.id}>
+              <ul>
+                <li>
+                  <h3>{item.name}</h3>
+                  <h3>{item.price}</h3>
 
-
-                      <p>User: {item.user}
-                      <button
-                          onClick={() =>
-                            this.removeItem(
-                              item.id
-                            )
-                          }
-                        >
-                          Remove Item
-                        </button>
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              );
-            })}
-
+                  <p>
+                    User: {item.name}
+                    <button
+                      onClick={() =>
+                        this.removeItem(item.id)
+                      }
+                    >
+                      Remove Item
+                    </button>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          );
+        })}
       </div>
     );
   }
 }
 export default ShoppingCart;
-
-
-  

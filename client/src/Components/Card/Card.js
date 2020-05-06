@@ -2,23 +2,8 @@ import React from "react";
 import Button from "../Button/Button";
 
 const Card = props => {
+  const { id, name, price } = props.item;
 
-  const {id, name, price} = props.item
-console.log("ID",props)
-  
-const click = () => {
-  const products = [{ name: name, 
-    price: price}]
-
-    console.log(products)
-    
-    props.CBFP1(products)
-console.log("Products Submitted")
-    
-    props.submit()
-console.log("Submitted")
-    }
-   
   return (
     <div className="App-Container">
       <ol>
@@ -29,16 +14,21 @@ console.log("Submitted")
             // className={`items${index + 1}`}
           /> */}
           {/* <div className="info"> */}
-            <h3>Price: {price}</h3>
-            <a
-              className="App-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Products Details
-            </a>
-            <button
-                onClick={click}>Add to Cart</button>
+          <h3>Price: £{price}</h3>
+          <a
+            className="App-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Products Details
+          </a>
+          <button
+            onClick={() => {
+              props.CBFP1({ name, price });
+            }}
+          >
+            Add to Cart
+          </button>
           {/* </div> */}
         </div>
       </ol>
