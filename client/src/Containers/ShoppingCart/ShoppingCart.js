@@ -4,13 +4,15 @@ import firebase, {
   provider,
   auth
 } from "../../utils/firebase.js";
+import Counter from "../../Components/Counter/Counter.js";
 
 class ShoppingCart extends Component {
   constructor(props) {
     super();
     this.state = {
       items: [],
-      total: null
+      total: 0
+      // count:0
     };
   }
 
@@ -51,6 +53,10 @@ class ShoppingCart extends Component {
     );
   }
 
+  calculateTotal = () => {
+    
+  }
+
   removeItem(itemId) {
     const itemsRef = firebase
       .database()
@@ -80,8 +86,10 @@ class ShoppingCart extends Component {
                   <li>
                     <h3>{item.name}</h3>
                     <h3>£{item.price}</h3>
-                    <p>Counter : " " </p>
-
+                    <p>
+                      Counter :
+                      <Counter />
+                    </p>
                     <p>
                       User: {item.name}
                       <button
@@ -99,12 +107,10 @@ class ShoppingCart extends Component {
           );
         })}
         <section>
-          <p>Total: </p>
+          <p>Total: {this.state.total} </p>
         </section>
 
-        <button>
-          Pay Now
-        </button>
+        <button>Pay Now</button>
       </div>
     );
   }
