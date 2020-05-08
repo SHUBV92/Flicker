@@ -4,15 +4,21 @@ import firebase, {
   provider,
   auth
 } from "../../utils/firebase.js";
+
 import Counter from "../../Components/Counter/Counter.js";
+import {
+  ItemCard,
+  Header,
+  Border
+} from "./ShoppingCart.styles.jsx";
 
 class ShoppingCart extends Component {
   constructor(props) {
     super();
     this.state = {
       items: [],
-      total: 0
-      // count:0
+      total: 0,
+      count:0
     };
   }
 
@@ -51,28 +57,44 @@ class ShoppingCart extends Component {
         console.error("Error: ", error);
       }
     );
-
-    this.calculateTotal()
   }
 
-  calculateTotal ()  {
-    console.log("Initiated calculateTotal")
+  calculateTotal = () => {
+    console.log("Initiated calculateTotal");
+    // console.log(this.state.items);
 
-let totalItems = []
+    let totalItems = [];
 
-    for(let i = 0; i<this.state.items.length; i++){
-    console.log(this.state.items[0].price)
-      
-      totalItems.push(this.state.items[i].price)
-    }
+    // for (
+    //   let i = 0;
+    //   i < this.state.items.length;
+    //   i++
+    // ) {
+    //   console.log(this.state.items[0].price);
 
-  //  const item =  this.state.items.map(item => {
-            // item.price
-    // })
-    console.log(totalItems)
-    // this.setState({total: this.state.total + item.price})
-    
+    //   totalItems.push(this.state.items[i].price);
+    // }
 
+    const items = this.state.items.map(item => {
+      return item.price;
+    });
+    console.log("Items", items);
+
+    const reducer = (acc, cur) => acc + cur;
+
+    const sum = items.reduce(reducer)
+
+    console.log(sum)
+
+    this.setState({total: sum})
+
+    this.counter()
+
+  };
+
+  counter = (returnedData) => {
+    console.log(returnedData)  
+    this.setState({ returnedData })
   }
 
   removeItem(itemId) {
@@ -83,32 +105,43 @@ let totalItems = []
   }
 
   render() {
-    // console.log("Items in state", this.state.items[0])
+    console.log(
+      "Items in state",
+      this.state.items[0]
+    );
     return (
       <div className="display-item">
         <h2>Your Basket</h2>
-        <section>
-          <h3>
+        <section className="header">
+          <Header>
             <span>Product</span>
             <span>Description</span>
             <span>Quantity</span>
             <span>Price</span>
             <span>Remove</span>
-          </h3>
+          </Header>
         </section>
 
         {this.state.items.map(item => {
           return (
-            <section>
-              <div classname="item" key={item.id}>
+            <ItemCard key={item.id}>
+              <section className="Card">
                 <ul>
                   <li>
                     <h3>{item.name}</h3>
+                  </li>
+                  <li>
                     <h3>£{item.price}</h3>
+                  </li>
+                  <li>
                     <p>
                       Counter :
-                      <Counter />
+                      <Counter 
+                      counter = {this.count}
+                      />
                     </p>
+                  </li>
+                  <li>
                     <p>
                       User: {item.name}
                       <button
@@ -121,12 +154,23 @@ let totalItems = []
                     </p>
                   </li>
                 </ul>
-              </div>
-            </section>
+              </section>
+            </ItemCard>
           );
         })}
-        <section>
-          <p>Total: {this.state.total} </p>
+        <Border />
+
+        <section className="total">
+        <p>
+                      <button
+                        onClick={
+                          this.calculateTotal
+                        } 
+                      >
+                        Get Total: £{this.state.total}
+                      </button>
+                    </p>
+          <p>Total: £{this.state.total} </p>
         </section>
 
         <button>Pay Now</button>

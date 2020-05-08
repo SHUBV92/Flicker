@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 
 class Counter extends Component { 
- state = {
+constructor(props){
+    super(props);
+    this.state = {
      count: 0
- };
+    }
+    };
+
+
+setCount = (props) => { 
+    props.counter(this.state.count)
+}
 
  handleClick = () => {
      this.setState((prevState, { count }) => ({

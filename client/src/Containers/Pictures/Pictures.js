@@ -1,7 +1,7 @@
 import React from "react";
 import { imageData } from "../../constants/imageData";
 
-import "./pictures.css";
+// import "./pictures.css";
 
 const Images = () => {
   return (

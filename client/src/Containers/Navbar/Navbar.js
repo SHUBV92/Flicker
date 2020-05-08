@@ -1,17 +1,21 @@
 import React from "react";
-// import styles from "./navbar.module.css";
 import { NavLink } from "react-router-dom";
 import { routes } from "../../constants/routes";
 
+import {
+  App,
+  Container,
+  Routes
+} from "./Navbar.styles";
+
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <App>
       {routes.map(route => (
-        <ul
-          className="navbarnav"
+        <Container
           style={{ display: "inline-block" }}
         >
-          <li className="logo">
+          <Routes>
             <button>
               <NavLink
                 to={route.routes}
@@ -23,10 +27,10 @@ const Navbar = () => {
                 {route.name}
               </NavLink>
             </button>
-          </li>
-        </ul>
+          </Routes>
+        </Container>
       ))}
-    </div>
+    </App>
   );
 };
 

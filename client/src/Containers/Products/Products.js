@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import productsData from "../../products.json";
 import ProductWrapper from "../../Components/ProductWrapper";
-import ProductSelector from "../ProductSelector/index.js";
+// import ProductSelector from "../ProductSelector/index.js";
 import firebase from "firebase";
 
 class Products extends Component {
