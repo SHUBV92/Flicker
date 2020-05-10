@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import productsData from "../../products.json";
 import ProductWrapper from "../../Components/ProductWrapper";
-// import ProductSelector from "../ProductSelector/index.js";
 import firebase from "firebase";
+import {App, GeneralInfo, Items } from "./Products.styles.jsx"
 
 class Products extends Component {
   constructor() {
@@ -15,11 +15,6 @@ class Products extends Component {
   }
 
   handleClick = returnedData => {
-    console.log(
-      "ReturnedData:",
-      returnedData.name
-    );
-
     const itemsRef = firebase
       .database()
       .ref("items");
@@ -32,11 +27,9 @@ class Products extends Component {
   };
 
   render() {
-    console.log("State", this.state);
-
     return (
-      <div class="App">
-        <section>
+      <App>
+        <GeneralInfo>
           <h1>Products</h1>
           <h2>SOY-BASED</h2>
           <p>
@@ -50,14 +43,14 @@ class Products extends Component {
             candles, so you essentially get more
             candle for your money.
           </p>
-        </section>
-        <div>
+        </GeneralInfo>
+        <Items>
           {productsData.map(product => (
             <div className="Container">
               <h3>{product.name}</h3>
               <h1>{this.state.name}</h1>
               <h1>{this.state.price}</h1>
-          
+
               <div className="ProductsWrapper">
                 <ProductWrapper
                   items={product.items}
@@ -67,8 +60,8 @@ class Products extends Component {
               </div>
             </div>
           ))}
-        </div>
-      </div>
+        </Items>
+      </App>
     );
   }
 }

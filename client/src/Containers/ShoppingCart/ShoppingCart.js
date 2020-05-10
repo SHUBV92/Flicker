@@ -18,7 +18,7 @@ class ShoppingCart extends Component {
     this.state = {
       items: [],
       total: 0,
-      count:0
+      count: 0
     };
   }
 
@@ -60,42 +60,22 @@ class ShoppingCart extends Component {
   }
 
   calculateTotal = () => {
-    console.log("Initiated calculateTotal");
-    // console.log(this.state.items);
-
-    let totalItems = [];
-
-    // for (
-    //   let i = 0;
-    //   i < this.state.items.length;
-    //   i++
-    // ) {
-    //   console.log(this.state.items[0].price);
-
-    //   totalItems.push(this.state.items[i].price);
-    // }
-
     const items = this.state.items.map(item => {
       return item.price;
     });
-    console.log("Items", items);
 
     const reducer = (acc, cur) => acc + cur;
 
-    const sum = items.reduce(reducer)
+    const sum = items.reduce(reducer);
 
-    console.log(sum)
+    this.setState({ total: sum });
 
-    this.setState({total: sum})
-
-    this.counter()
-
+    this.counter();
   };
 
-  counter = (returnedData) => {
-    console.log(returnedData)  
-    this.setState({ returnedData })
-  }
+  counter = returnedData => {
+    this.setState({ returnedData });
+  };
 
   removeItem(itemId) {
     const itemsRef = firebase
@@ -126,34 +106,25 @@ class ShoppingCart extends Component {
           return (
             <ItemCard key={item.id}>
               <section className="Card">
-                <ul>
-                  <li>
-                    <h3>{item.name}</h3>
-                  </li>
-                  <li>
-                    <h3>£{item.price}</h3>
-                  </li>
-                  <li>
-                    <p>
-                      Counter :
-                      <Counter 
-                      counter = {this.count}
-                      />
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      User: {item.name}
-                      <button
-                        onClick={() =>
-                          this.removeItem(item.id)
-                        }
-                      >
-                        X
-                      </button>
-                    </p>
-                  </li>
-                </ul>
+                <h3>{item.name}</h3>
+
+                <h3>£{item.price}</h3>
+
+                <p>
+                  Quantity :
+                  <Counter counter={this.count} />
+                </p>
+
+                <p>
+                  User: {item.name}
+                  <button
+                    onClick={() =>
+                      this.removeItem(item.id)
+                    }
+                  >
+                    X
+                  </button>
+                </p>
               </section>
             </ItemCard>
           );
@@ -161,15 +132,11 @@ class ShoppingCart extends Component {
         <Border />
 
         <section className="total">
-        <p>
-                      <button
-                        onClick={
-                          this.calculateTotal
-                        } 
-                      >
-                        Get Total: £{this.state.total}
-                      </button>
-                    </p>
+          <p>
+            <button onClick={this.calculateTotal}>
+              Get Total: £{this.state.total}
+            </button>
+          </p>
           <p>Total: £{this.state.total} </p>
         </section>
 

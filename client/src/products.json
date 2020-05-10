@@ -1,99 +1,124 @@
-
-
 [
   {
-    "name": "Soap Candle",
+    "name": "Candles",
     "items": [
       {
-         "id":"1",
-        "name": "Soap Candle Blue",
-        "price": 40,
-        "description": "This is a Soap Candle that is Blue",
-        "img":"./assets/images/freshLinen.jpeg"
+        "id": "1",
+        "name": "Lime, Basil and Mandarin ",
+        "price": 16.50,
+        "description": "An enticing, mouthwatering medley of Sicilian lime and zesty bergamot with a juicy heart busting with ripe mandarins, aquatic white florals, peppery basil and caraway seeds. Base notes include soft, velvety patchouli and sharp green vetivert.",
+        "img": "freshLinen"
       },
-      { "id":"2",
-        "name": "Soap Candle Orange",
-        "price": 50,
+      {
+        "id": "2",
+        "name": "Evening Snow",
+        "price": 16.50,
         "description": "This is a Soap Candle that is Orange",
-        "img": "./assets/images/eveningSnow.jpeg"
+        "img": "eveningSnow"
       },
-      { "id":"3",
-        "name": "Soap Candle Red",
-        "price": 100,
+      {
+        "id": "3",
+        "name": "Rhubarb and Custard ",
+        "price": 16.50,
+        "description": "Identical to those red & yellow sweets we all loved as kids. Packed full of sweet vanilla aromas.",
+        "img": "Roses"
+      }, 
+      {
+        "id": "4",
+        "name": "Clean Linen",
+        "price": 16.50,
         "description": "This is a Soap Candle that is Red",
-        "img": "./assets/images/lime.jpeg"
+        "img": "Roses"
+      }, 
+      {
+        "id": "4",
+        "name": "Lavender",
+        "price": 16.50,
+        "description": "This is a Soap Candle that is Red",
+        "img": "lavenderSoy"
       }
+
+      
     ]
   },
 
-  { 
-    "name": "Wax Candle",
+  {
+    "name": "Wax Melts",
     "items": [
-      { "id":"1",
+      {
+        "id": "1",
         "name": "Wax Candle Red",
         "price": 20,
         "description": "This is a Soap Candle that is Red",
-        "img":  "./assets/images/instaPage.jpeg"
+        "img": "instaPage"
       },
-      { "id":"2",
+      {
+        "id": "2",
         "name": "Soap Candle Orange",
         "price": 500,
         "description": "This is a Soap Candle that is Orange",
-        "img": "./assets/images/lavender.jpeg"
+        "img": "lavender"
       },
-      { "id":"3",
+      {
+        "id": "3",
         "name": "Soap Candle Orange",
         "price": 50,
         "description": "This is a Soap Candle that is Orange",
-        "img":  "./assets/images/competitor.jpeg"
+        "img": "competitor"
       }
     ]
   },
-  { 
-    "name": "Soap Candle",
+  {
+    "name": "Wax Melt burners",
     "items": [
-      { "id":"1",
+      {
+        "id": "1",
         "name": "Soap Candle Orange",
         "price": 50,
         "description": "This is a Soap Candle that is Orange",
-        "img":  "./assets/images/competitor.jpeg"
+        "img": "competitor"
       },
 
-      { "id":"2",
+      {
+        "id": "2",
         "name": "Soap Candle Orange",
         "price": 50,
         "description": "This is a Soap Candle that is Orange",
-        "img":  "./assets/images/competitor.jpeg"
+        "img": "competitor"
       },
-      { "id":"3",
+      {
+        "id": "3",
         "name": "Soap Candle Orange",
         "price": 50,
         "description": "This is a Soap Candle that is Orange",
-        "img":  "./assets/images/competitor.jpeg"
+        "img": "competitor"
       }
     ]
   },
-  { 
+  {
     "name": "Yankee Candle",
     "items": [
-      { "id":"1",
+      {
+        "id": "1",
         "name": "Yankee Candle Orange",
         "price": 50,
         "description": "This is a Soap Candle that is Orange",
-        "img":  "./assets/images/competitor.jpeg"
+        "img": "competitor"
       },
 
-      { "id":"2",
+      {
+        "id": "2",
         "name": "Yankee Candle Purple",
         "price": 90,
         "description": "This is a Yankee Candle that is Purple",
-        "img":  "./assets/images/competitor.jpeg"
+        "img": "competitor"
       },
-      { "id":"3",
+      {
+        "id": "3",
         "name": "Yankee Candle Pink",
         "price": 150,
         "description": "This is a Yankee Candle that is Pink",
-        "img":  "./assets/images/competitor.jpeg"
+        "img": "competitor"
       }
     ]
   }

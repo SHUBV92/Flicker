@@ -1,6 +1,5 @@
 import React from "react";
 
-import Images from "../Containers/Pictures";
 import Home from "../Containers/Home";
 import Contact from "../Containers/Contact";
 import About from "../Containers/About";
@@ -26,11 +25,6 @@ export const routes = [
     exact: true
   },
   {
-    name: "Images",
-    routes: "/images",
-    component: <Images />
-  },
-  {
     name: "About",
     routes: "/about",
     component: <About />
@@ -52,3 +46,10 @@ export const routes = [
 // const ADMIN = "/admin";
 // const PASSWORD_FORGET = "/pw-forget";
 // const SIGN_UP = "/signup";
+
+// import Images from "../Containers/Pictures";
+// {
+  //   name: "Images",
+  //   routes: "/images",
+  //   component: <Images />
+  // },

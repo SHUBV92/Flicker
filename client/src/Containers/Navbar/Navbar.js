@@ -4,6 +4,7 @@ import { routes } from "../../constants/routes";
 
 import {
   App,
+  Img,
   Container,
   Routes
 } from "./Navbar.styles";
@@ -11,6 +12,7 @@ import {
 const Navbar = () => {
   return (
     <App>
+      <Img src={require("../../assets/images/LogoGold.jpg")} />
       {routes.map(route => (
         <Container
           style={{ display: "inline-block" }}
@@ -30,6 +32,7 @@ const Navbar = () => {
           </Routes>
         </Container>
       ))}
+      <Img src="https://img.icons8.com/plasticine/100/000000/shopping-basket-2.png"/>
     </App>
   );
 };

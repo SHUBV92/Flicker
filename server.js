@@ -5,6 +5,10 @@ const creds = require("./config");
 
 const nodemailer = require("nodemailer");
 
+
+
+
+
 const app = express();
 
 // app.use(
@@ -81,6 +85,18 @@ app.post("/send", (req, res) => {
     }
   );
 });
+
+
+// Stripe Payment API 
+
+app.post('/payment', (req, res) => { 
+  const body = {
+    source:req.body.token.id,
+    amount: req.body.amount,
+    currency: 'gbp'
+  }
+
+}
 
 app.listen(5000, () =>
   console.log(`Listening on port: 5000`)

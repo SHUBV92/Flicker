@@ -74,28 +74,9 @@ class LoginControl extends Component {
       );
     }
     return (
-      <div style={{ backgroundColor: "Blue" }}>
+      <div >
         <h1>Authentication</h1>
         <Form />
-        {/* <form>
-          <p>
-            <lable>Name</lable>
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-            />
-          </p>
-          <p>
-            <lable>Password</lable>
-            <input
-              type="text"
-              name="password"
-              placeholder="Password"
-            />
-          </p>
-        </form> */}
-
         {button}
       </div>
     );

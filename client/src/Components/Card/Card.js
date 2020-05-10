@@ -1,39 +1,52 @@
 import React from "react";
 import Button from "../Button/Button";
 
+import {
+  CardApp,
+  CardContainer
+} from "./Card.styles";
+
 const Card = props => {
-  const { id, name, price, img } = props.items;
+  const {
+    id,
+    name,
+    price,
+    description,
+    img
+  } = props.items;
+  console.log("img", img);
 
   return (
-    <div className="App-Container">
-      <ol>
-        <div className="Image" key={id}>
-          <h3>{name}</h3>
-          <img
-            src={require(img)}
-            // className={`items${index + 1}`}
-            className="img"
-          />
-          {/* <div className="info"> */}
-          <h3>Price: £{price}</h3>
-          <a
-            className="App-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Products Details
-          </a>
-          <button
-            onClick={() => {
-              props.CBFP1({ name, price });
-            }}
-          >
-            Add to Cart
-          </button>
-          {/* </div> */}
-        </div>
-      </ol>
-    </div>
+    <CardApp>
+      <img
+        src={require(`../../assets/images/${img}.jpeg`)}
+        // className={`items${index + 1}`}
+        className="img"
+        style={{width:"330px"}}
+      />
+      <CardContainer key={id}>
+        <h3>{name}</h3>
+
+        {/* <div className="info"> */}
+        <h3>Price: £{price}</h3>
+        <a
+          className="App-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h4>Products Details :</h4>
+          <p>{description}</p>
+        </a>
+        <button
+          onClick={() => {
+            props.CBFP1({ name, price });
+          }}
+        >
+          Add to Cart
+        </button>
+        {/* </div> */}
+      </CardContainer>
+    </CardApp>
   );
 };
 
