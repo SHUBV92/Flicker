@@ -22,3 +22,8 @@ export const Border = styled.h1`
 
   border: 2px solid black;
 `;
+
+export const Link = styled.a`
+display: flex;
+  justify-content: center;
+`

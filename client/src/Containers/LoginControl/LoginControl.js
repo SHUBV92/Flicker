@@ -4,7 +4,8 @@ import { LogoutButton } from "./LoginButton";
 import Form from "../../Components/Form/Form";
 import firebase, {
   provider,
-  auth
+  auth,
+  // signInWithGoogle
 } from "../../utils/firebase.js";
 
 class LoginControl extends Component {
@@ -12,7 +13,7 @@ class LoginControl extends Component {
     super();
     this.state = {
       isLoggedIn: false,
-      username: "",
+      username:"",
       user: null
     };
 
@@ -60,7 +61,10 @@ class LoginControl extends Component {
   render() {
     const isLoggedIn = this.state.isLoggedIn;
     let button;
-    if (isLoggedIn && this.state.user) {
+    if (
+      isLoggedIn &&
+      this.state.user
+    ) {
       button = (
         <LogoutButton
           onClick={this.handleLogoutClick}
@@ -74,7 +78,7 @@ class LoginControl extends Component {
       );
     }
     return (
-      <div >
+      <div>
         <h1>Authentication</h1>
         <Form />
         {button}

@@ -1,6 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { routes } from "../../constants/routes";
+import Counter from "../../Components/Counter/Counter"
+import ShoppingCart from "../"
+
 
 import {
   App,
@@ -10,6 +13,11 @@ import {
 } from "./Navbar.styles";
 
 const Navbar = () => {
+  
+  getItemCount = (returnedData) => {
+
+  }
+
   return (
     <App>
       <Img src={require("../../assets/images/LogoGold.jpg")} />
@@ -33,6 +41,11 @@ const Navbar = () => {
         </Container>
       ))}
       <Img src="https://img.icons8.com/plasticine/100/000000/shopping-basket-2.png"/>
+      <div>
+        counter
+        <Counter counter={this.count}></Counter>
+
+      </div> 
     </App>
   );
 };

@@ -1,9 +1,9 @@
 import React from "react";
-import { Header, AboutUS, Paragraph} from "./About.styles.jsx"
+import { App, Header, AboutUS, Paragraph} from "./About.styles.jsx"
 
 const About = () => {
   return (
-    <div>
+    <App>
       <Header>About Our Ceo</Header>
       <AboutUS>
         <Paragraph>
@@ -26,7 +26,7 @@ const About = () => {
         Frangrance and Flicker - established in
         Essex in October 2019
       </h3>
-    </div>
+    </App>
   );
 };
 export default About;

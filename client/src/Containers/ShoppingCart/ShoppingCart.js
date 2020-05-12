@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import StripeCheckoutButton from "../Stripe/Stripe-button";
 
 import firebase, {
   provider,
@@ -7,9 +8,11 @@ import firebase, {
 
 import Counter from "../../Components/Counter/Counter.js";
 import {
+  CartDisplay,
   ItemCard,
   Header,
-  Border
+  Border,
+  Checkout
 } from "./ShoppingCart.styles.jsx";
 
 class ShoppingCart extends Component {
@@ -90,17 +93,17 @@ class ShoppingCart extends Component {
       this.state.items[0]
     );
     return (
-      <div className="display-item">
-        <h2>Your Basket</h2>
-        <section className="header">
-          <Header>
+      <CartDisplay>
+        <Header>
+          <h3>My Basket</h3>
+        </Header>
+        {/* <section className="header">
             <span>Product</span>
             <span>Description</span>
             <span>Quantity</span>
             <span>Price</span>
             <span>Remove</span>
-          </Header>
-        </section>
+        </section> */}
 
         {this.state.items.map(item => {
           return (
@@ -129,19 +132,36 @@ class ShoppingCart extends Component {
             </ItemCard>
           );
         })}
-        <Border />
 
-        <section className="total">
-          <p>
-            <button onClick={this.calculateTotal}>
-              Get Total: £{this.state.total}
-            </button>
-          </p>
-          <p>Total: £{this.state.total} </p>
-        </section>
+        {/* <Border /> */}
 
-        <button>Pay Now</button>
-      </div>
+        <Checkout>
+          <div>
+            <p>
+              <button
+                onClick={this.calculateTotal}
+              >
+                Get Total: £{this.state.total}
+              </button>
+            </p>
+            <p>Total: £{this.state.total} </p>
+          </div>
+          {/* <div className="test-warning">
+            <p>
+              *Please use the following test
+              credit card for payment*
+            </p>
+            <br />
+            <p>
+              4242 4242 4242 4242 - Exp: 01/23 -
+              CVV: 123
+            </p>
+          </div> */}
+          <StripeCheckoutButton
+            price={this.state.total}
+          />
+        </Checkout>
+      </CartDisplay>
     );
   }
 }
