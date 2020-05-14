@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import productsData from "../../products.json";
 import ProductWrapper from "../../Components/ProductWrapper";
 import firebase from "firebase";
-import {App, GeneralInfo, Items } from "./Products.styles.jsx"
+import {App, GeneralInfo, Head1, Head2, Items } from "./Products.styles.jsx"
 
 class Products extends Component {
   constructor() {
@@ -21,7 +21,8 @@ class Products extends Component {
 
     const item = {
       name: returnedData.name,
-      price: returnedData.price
+      price: returnedData.price,
+      image: returnedData.image
     };
     itemsRef.push(item);
   };
@@ -30,8 +31,8 @@ class Products extends Component {
     return (
       <App>
         <GeneralInfo>
-          <h1>Products</h1>
-          <h2>SOY-BASED</h2>
+          <Head1>Products</Head1>
+          <Head2>SOY-BASED</Head2>
           <p>
             Soy wax has so many benefits – it’s
             toxic-free. It’s natural, renewable

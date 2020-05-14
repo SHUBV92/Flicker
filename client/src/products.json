@@ -8,7 +8,7 @@
         "reducedPrice":10,
         "price": 16.50,
         "description": "An enticing, mouthwatering medley of Sicilian lime and zesty bergamot with a juicy heart busting with ripe mandarins, aquatic white florals, peppery basil and caraway seeds. Base notes include soft, velvety patchouli and sharp green vetivert.",
-        "img": "limeBasilMandrin"
+        "image": "limeBasilMandrin"
       },
       {
         "id": "2",
@@ -16,31 +16,31 @@
         "reducedPrice":21,
         "price": 16.50,
         "description": "Identical to those red & yellow sweets we all loved as kids. Packed full of sweet vanilla aromas.",
-        "img": "Roses"
+        "image": "Roses"
       },
       {
         "id": "3",
         "name": "Evening Snow",
         "reducedPrice":20,
        "price": 16.50,
-        "description": "This is a Soap Candle that is Orange",
-        "img": "eveningSnow"
+        "description": "Evening Snow",
+        "image": "eveningSnow"
       }, 
       {
         "id": "4",
         "name": "Clean Linen",
         "reducedPrice":30,
         "price": 16.50,
-        "description": "This is a Soap Candle that is Red",
-        "img": "Roses"
+        "description": "Clean Linen",
+        "image": "Roses"
       }, 
       {
         "id": "4",
         "name": "Lavender",
         "reducedPrice":22,
         "price": 16.50,
-        "description": "This is a Soap Candle that is Red",
-        "img": "lavenderSoy"
+        "description": "Identical to freshly picked lavender flowers. This fragrance is bursting with floral aroma, this scent is just like walking through a lavender field in the heart of summer.",
+        "image": "lavenderSoy"
       }
 
       
@@ -55,28 +55,28 @@
         "name": "Lime, Basil and Mandarin",
         "price": 4.50,
         "description": "An enticing, mouthwatering medley of Sicilian lime and zesty bergamot with a juicy heart busting with ripe mandarins, aquatic white florals, peppery basil and caraway seeds. Base notes include soft, velvety patchouli and sharp green vetivert.",
-        "img": "limeBasilMandrin"
+        "image": "limeBasilMandrin"
       },
       {
         "id": "2",
         "name": "Rhubarb and Custard",
         "price": 4.50,
         "description": "Identical those red & yellow sweets we all loved as kids. Packed full of sweet vanilla aromas.",
-        "img": "lavender"
+        "image": "lavender"
       },
       {
         "id": "3",
         "name": "Evening Snow",
         "price": 4.50,
-        "description": "This is a Soap Candle that is Orange",
-        "img": "eveningSnow"
+        "description": "Evening Snow",
+        "image": "eveningSnow"
       },
       {     
         "id": "4",
         "name": "Clean Linen",
         "price": 4.50,
-        "description": "This is a Soap Candle that is Orange",
-        "img": "lavender"
+        "description": "Clean Linen",
+        "image": "lavender"
       }
     ]
   },
@@ -87,16 +87,16 @@
         "id": "1",
         "name": "Lavender",
         "price": 7.50,
-        "description": "This is a Soap Candle that is Orange",
-        "img": "lavender"
+        "description": "Identical to freshly picked lavender flowers. This fragrance is bursting with floral aroma, this scent is just like walking through a lavender field in the heart of summer.",
+        "image": "lavender"
       },
 
       {
         "id": "2",
         "name": "Roses",
         "price": 7.50,
-        "description": "This is a Soap Candle that is Orange",
-        "img": "Roses"
+        "description": "A freshly picked bouquet of roses in full bloom with nuances of geranium and violet, all wrapped in a gentle woody base.",
+        "image": "Roses"
       }
     ]
   },
@@ -107,8 +107,8 @@
         "id": "1",
         "name": "Ceramic Burner",
         "price": 7,
-        "description": "Colors: White Marble & Pearl Pink",
-        "img": "Bundle"
+        "description": "Colours: White Marble & Pearl Pink",
+        "image": "Bundle"
       },
 
       {
@@ -116,7 +116,7 @@
         "name": "Pearl Burners",
         "price": 12.50,
         "description": "Colours: Bluish Grey & Clear",
-        "img": "Bundle"
+        "image": "Bundle"
       }
     ]
   }

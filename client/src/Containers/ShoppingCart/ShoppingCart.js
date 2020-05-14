@@ -47,7 +47,8 @@ class ShoppingCart extends Component {
             newState.push({
               id: item[0],
               name: item[1].name,
-              price: item[1].price
+              price: item[1].price,
+              image: item[1].image
             });
           });
         console.log("B", newState);
@@ -112,6 +113,11 @@ class ShoppingCart extends Component {
                 <h3>{item.name}</h3>
                 <hr />
 
+
+<img src={require(`../../assets/images/${item.image}.jpeg`)}
+    className="img"
+    style={{width:"300px"}}
+/>  
 
                 <h3>£{item.price}</h3>
 

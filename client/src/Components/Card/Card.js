@@ -12,10 +12,9 @@ const Card = props => {
     name,
     price,
     description,
-    img,
+    image,
     reducedPrice
   } = props.items;
-  console.log("img", img);
 
   return (
 
@@ -27,7 +26,7 @@ const Card = props => {
 
     <CardApp>
       <img
-        src={require(`../../assets/images/${img}.jpeg`)}
+        src={require(`../../assets/images/${image}.jpeg`)}
         // className={`items${index + 1}`}
         className="img"
         style={{width:"330px"}}
@@ -51,7 +50,7 @@ const Card = props => {
         </a>
         <button
           onClick={() => {
-            props.CBFP1({ name, price });
+            props.CBFP1({ name, price, image });
           }}
         >
           Add to Cart
