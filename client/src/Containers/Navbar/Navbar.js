@@ -14,9 +14,7 @@ import {
 
 const Navbar = () => {
   
-  getItemCount = (returnedData) => {
 
-  }
 
   return (
     <App>
@@ -43,7 +41,7 @@ const Navbar = () => {
       <Img src="https://img.icons8.com/plasticine/100/000000/shopping-basket-2.png"/>
       <div>
         counter
-        <Counter counter={this.count}></Counter>
+      {/* Shopping cart item length */}
 
       </div> 
     </App>

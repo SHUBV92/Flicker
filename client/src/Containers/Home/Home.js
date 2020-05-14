@@ -1,14 +1,18 @@
 import React from "react";
+import { Title, Intro, Head, App } from "./home.styles.jsx";
 
 const Home = () => {
   return (
-    <div className="App">
-      <div>
-        <h1>Fragrance & Flicker</h1>
-        <h2>
+<div>
+      <App>
+        <Title>Fragrance & Flicker</Title>
+        <hr />
+        <h3>Established Fragrance and Flicker at Home in October 2019</h3>
+
+        <h4>
           High-end scented candles and gifts
           without the high-end price tag.
-        </h2>
+        </h4>
         <h1>LUXURY YET AFFORDABLE</h1>
         <p>
           Fragrance and Flicker was brought into
@@ -16,7 +20,15 @@ const Home = () => {
           provide people with luxury scented
           products without the hefty price tag.
         </p>
-      </div>
+      </App>
+
+    {/* Picture Carasoule */}
+    {/* Products */}
+ <Intro>
+ <Head>Who We are </Head>
+ </Intro>
+     {/* Contact */}
+
     </div>
   );
 };

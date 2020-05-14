@@ -12,7 +12,7 @@ import {
   ItemCard,
   Header,
   Border,
-  Checkout
+  Checkout,
 } from "./ShoppingCart.styles.jsx";
 
 class ShoppingCart extends Component {
@@ -110,6 +110,8 @@ class ShoppingCart extends Component {
             <ItemCard key={item.id}>
               <section className="Card">
                 <h3>{item.name}</h3>
+                <hr />
+
 
                 <h3>£{item.price}</h3>
 

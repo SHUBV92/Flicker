@@ -26,9 +26,13 @@ const Card = props => {
       />
       <CardContainer key={id}>
         <h3>{name}</h3>
+          <hr />
+
 
         {/* <div className="info"> */}
-        <h3>Price: £{price}</h3>
+        <h3>Price: <s>£20</s> £{price}</h3>
+              {/* <h4>Previous reduced price : <s>£20</s></h4> */}
+        
         <a
           className="App-link"
           target="_blank"

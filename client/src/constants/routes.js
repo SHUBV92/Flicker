@@ -9,21 +9,18 @@ import Cart from "../Containers/ShoppingCart";
 
 export const routes = [
   {
-    name: "Sign_in",
-    routes: "/signin",
-    component: <LoginControl />
-  },
-  {
-    name: "Products",
-    routes: "/products",
-    component: <Products />
-  },
-  {
     name: "Home",
     routes: "/",
     component: <Home />,
     exact: true
   },
+ 
+  {
+    name: "Products",
+    routes: "/products",
+    component: <Products />
+  },
+ 
   {
     name: "About",
     routes: "/about",
@@ -33,6 +30,11 @@ export const routes = [
     name: "Contact",
     routes: "/contact",
     component: <Contact />
+  },
+  {
+    name: "Sign_in",
+    routes: "/signin",
+    component: <LoginControl />
   },
   {
     name: "Cart",

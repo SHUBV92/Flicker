@@ -1,5 +1,7 @@
 import React from "react";
 
+import { SignIn, SignUp } from "./Form.styles.jsx"
+
 const Form = (props) => {
   return (
     <div>
@@ -20,7 +22,7 @@ const Form = (props) => {
         />
         </p>
       </section>
-      <section>
+      <SignIn>
         <h2>I do not have an account</h2>
         <p>
         <input
@@ -50,7 +52,7 @@ const Form = (props) => {
         placeholder="Password"
         />
         </p>
-      </section>
+      </SignIn>
     </div>
   );
 };

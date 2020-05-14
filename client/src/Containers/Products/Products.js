@@ -47,7 +47,7 @@ class Products extends Component {
         <Items>
           {productsData.map(product => (
             <div className="Container">
-              <h3>{product.name}</h3>
+              <h3><u>{product.name}</u></h3>
               <h1>{this.state.name}</h1>
               <h1>{this.state.price}</h1>
 
