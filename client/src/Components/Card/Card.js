@@ -12,11 +12,19 @@ const Card = props => {
     name,
     price,
     description,
-    img
+    img,
+    reducedPrice
   } = props.items;
   console.log("img", img);
 
   return (
+
+ 
+//  const reducedP =  !reducedPrice ? null
+//            <s>£{reducedPrice}</s> : null;
+        
+        
+
     <CardApp>
       <img
         src={require(`../../assets/images/${img}.jpeg`)}
@@ -30,7 +38,7 @@ const Card = props => {
 
 
         {/* <div className="info"> */}
-        <h3>Price: <s>£20</s> £{price}</h3>
+        <h3>Price: <s>{reducedPrice}</s> £{price}</h3>
               {/* <h4>Previous reduced price : <s>£20</s></h4> */}
         
         <a

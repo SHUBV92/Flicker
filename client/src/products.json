@@ -5,27 +5,31 @@
       {
         "id": "1",
         "name": "Lime, Basil and Mandarin ",
+        "reducedPrice":10,
         "price": 16.50,
         "description": "An enticing, mouthwatering medley of Sicilian lime and zesty bergamot with a juicy heart busting with ripe mandarins, aquatic white florals, peppery basil and caraway seeds. Base notes include soft, velvety patchouli and sharp green vetivert.",
-        "img": "freshLinen"
+        "img": "limeBasilMandrin"
       },
       {
         "id": "2",
-        "name": "Evening Snow",
-        "price": 16.50,
-        "description": "This is a Soap Candle that is Orange",
-        "img": "eveningSnow"
-      },
-      {
-        "id": "3",
         "name": "Rhubarb and Custard ",
+        "reducedPrice":21,
         "price": 16.50,
         "description": "Identical to those red & yellow sweets we all loved as kids. Packed full of sweet vanilla aromas.",
         "img": "Roses"
+      },
+      {
+        "id": "3",
+        "name": "Evening Snow",
+        "reducedPrice":20,
+       "price": 16.50,
+        "description": "This is a Soap Candle that is Orange",
+        "img": "eveningSnow"
       }, 
       {
         "id": "4",
         "name": "Clean Linen",
+        "reducedPrice":30,
         "price": 16.50,
         "description": "This is a Soap Candle that is Red",
         "img": "Roses"
@@ -33,6 +37,7 @@
       {
         "id": "4",
         "name": "Lavender",
+        "reducedPrice":22,
         "price": 16.50,
         "description": "This is a Soap Candle that is Red",
         "img": "lavenderSoy"
@@ -47,78 +52,71 @@
     "items": [
       {
         "id": "1",
-        "name": "Wax Candle Red",
-        "price": 20,
-        "description": "This is a Soap Candle that is Red",
-        "img": "instaPage"
+        "name": "Lime, Basil and Mandarin",
+        "price": 4.50,
+        "description": "An enticing, mouthwatering medley of Sicilian lime and zesty bergamot with a juicy heart busting with ripe mandarins, aquatic white florals, peppery basil and caraway seeds. Base notes include soft, velvety patchouli and sharp green vetivert.",
+        "img": "limeBasilMandrin"
       },
       {
         "id": "2",
-        "name": "Soap Candle Orange",
-        "price": 500,
-        "description": "This is a Soap Candle that is Orange",
+        "name": "Rhubarb and Custard",
+        "price": 4.50,
+        "description": "Identical those red & yellow sweets we all loved as kids. Packed full of sweet vanilla aromas.",
         "img": "lavender"
       },
       {
         "id": "3",
-        "name": "Soap Candle Orange",
-        "price": 50,
+        "name": "Evening Snow",
+        "price": 4.50,
         "description": "This is a Soap Candle that is Orange",
-        "img": "competitor"
+        "img": "eveningSnow"
+      },
+      {     
+        "id": "4",
+        "name": "Clean Linen",
+        "price": 4.50,
+        "description": "This is a Soap Candle that is Orange",
+        "img": "lavender"
       }
     ]
   },
   {
-    "name": "Wax Melt burners",
+    "name": "Wardrobe Freshners",
     "items": [
       {
         "id": "1",
-        "name": "Soap Candle Orange",
-        "price": 50,
+        "name": "Lavender",
+        "price": 7.50,
         "description": "This is a Soap Candle that is Orange",
-        "img": "competitor"
+        "img": "lavender"
       },
 
       {
         "id": "2",
-        "name": "Soap Candle Orange",
-        "price": 50,
+        "name": "Roses",
+        "price": 7.50,
         "description": "This is a Soap Candle that is Orange",
-        "img": "competitor"
-      },
-      {
-        "id": "3",
-        "name": "Soap Candle Orange",
-        "price": 50,
-        "description": "This is a Soap Candle that is Orange",
-        "img": "competitor"
+        "img": "Roses"
       }
     ]
   },
   {
-    "name": "Yankee Candle",
+    "name": "Wax Melt Bruners",
     "items": [
       {
         "id": "1",
-        "name": "Yankee Candle Orange",
-        "price": 50,
-        "description": "This is a Soap Candle that is Orange",
-        "img": "competitor"
+        "name": "Ceramic Burner",
+        "price": 7,
+        "description": "Colors: White Marble & Pearl Pink",
+        "img": "Bundle"
       },
 
       {
         "id": "2",
-        "name": "Yankee Candle Purple",
-        "price": 90,
-        "description": "This is a Yankee Candle that is Purple",
-        "img": "competitor"
-      },
-      {
-        "id": "3",
-        "name": "Yankee Candle Pink",
-        "price": 150,
-        "description": "This is a Yankee Candle that is Pink",
-        "img": "competitor"
+        "name": "Pearl Burners",
+        "price": 12.50,
+        "description": "Colours: Bluish Grey & Clear",
+        "img": "Bundle"
       }
     ]
   }
