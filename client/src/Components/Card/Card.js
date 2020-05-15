@@ -50,7 +50,7 @@ const Card = props => {
         </a>
         <button
           onClick={() => {
-            props.CBFP1({ name, price, image });
+            props.handleCartClick({ name, price, image });
           }}
         >
           Add to Cart

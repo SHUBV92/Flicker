@@ -1,29 +1,10 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
+export const FooterWrapper = styled.div`
+  text-align: center;
+  list-style-type: none;
 
-export const Foot = styled.div`
-`
-export const Header = styled.h3`
-  display: flex;
-  justify-content: center;
-`
-export const List = styled.p`
-  display: flex;
-  justify-content: center;
-`
-
-
-export const Border = styled.h1`
-  position: static;
-  left: 0%;
-  right: 0%;
-  top: 77.94%;
-  bottom: 21.92%;
-
-  border: 2px solid black;
+  li {
+    color: salmon;
+  }
 `;
-
-export const Link = styled.a`
-display: flex;
-  justify-content: center;
-`

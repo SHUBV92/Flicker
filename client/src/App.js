@@ -31,8 +31,8 @@ const App = () => {
             );
           })}
         </Switch>
-      </Router>
       <Footer />
+      </Router>
     </div>
   );
 };

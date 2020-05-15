@@ -12,6 +12,7 @@ export const Header = styled.h3`
 export const ItemCard = styled.div`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   width:50vh;
   justify-content: flex-center;
   // background-color: white;
@@ -24,16 +25,6 @@ export const ItemCard = styled.div`
 
 export const Items = styled.section`
   padding: 2px 16px;
-`;
-
-export const Border = styled.h1`
-  position: static;
-  left: 0%;
-  right: 0%;
-  top: 77.94%;
-  bottom: 21.92%;
-
-  border: 3px solid salmon;
 `;
 
 export const Checkout = styled.section`

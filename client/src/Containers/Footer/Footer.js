@@ -1,31 +1,25 @@
 import React from "react";
 import {
-  Link,
-  Border,
-  Foot,
-  Header,
-  List
+  FooterWrapper
 } from "./Footer.styles";
 
 export const Footer = () => {
   return (
-    <Foot>
-    <hr />
-      <Header>Get Additional Info</Header>
-
-      <List>Contact</List>
-      <List>About Us</List>
-      <List>Testimonials</List>
-
-      <Link
+    <FooterWrapper>
+      <hr />
+      <h3>Get Additional Info</h3>
+      <li>Contact</li>
+      <li>About Us</li>
+      <li>Testimonials</li>
+      <a
         className="App-link"
         href="https://www.instagram.com/fragranceandflicker/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        instagram
-      </Link>
-    </Foot>
+        Instagram
+      </a>
+    </FooterWrapper>
   );
 };
 

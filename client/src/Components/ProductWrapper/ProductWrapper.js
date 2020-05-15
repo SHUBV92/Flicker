@@ -1,22 +1,15 @@
 import React from "react";
-import firebase from "../../utils/firebase";
-
-import Favourite from "../../Containers/ProductSelector";
 import Card from "../Card/";
 
 const ProductWrapper = props => {
-  const products = "Vintage Candle";
-  console.log("Props P.W", props);
   return (
     <div>
-      {props.items.map(item => (
-        <div>
+      <h3>{props.category.name}</h3>
+      {props.category.items.map(item => (
           <Card
             items={item}
-            submit={props.submit}
-            CBFP1={props.CBFP}
+            handleCartClick={props.handleCartClick}
           />
-        </div>
       ))}
     </div>
   );

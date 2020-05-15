@@ -12,7 +12,7 @@ import {
   ItemCard,
   Header,
   Border,
-  Checkout,
+  Checkout
 } from "./ShoppingCart.styles.jsx";
 
 class ShoppingCart extends Component {
@@ -97,14 +97,8 @@ class ShoppingCart extends Component {
       <CartDisplay>
         <Header>
           <h3>My Basket</h3>
+          <hr />
         </Header>
-        {/* <section className="header">
-            <span>Product</span>
-            <span>Description</span>
-            <span>Quantity</span>
-            <span>Price</span>
-            <span>Remove</span>
-        </section> */}
 
         {this.state.items.map(item => {
           return (
@@ -113,19 +107,17 @@ class ShoppingCart extends Component {
                 <h3>{item.name}</h3>
                 <hr />
 
-
-<img src={require(`../../assets/images/${item.image}.jpeg`)}
-    className="img"
-    style={{width:"300px"}}
-/>  
+                <img
+                  src={require(`../../assets/images/${item.image}.jpeg`)}
+                  className="img"
+                  style={{ width: "300px" }}
+                />
 
                 <h3>£{item.price}</h3>
-
                 <p>
                   Quantity :
                   <Counter counter={this.count} />
                 </p>
-
                 <p>
                   User: {item.name}
                   <button
@@ -140,9 +132,7 @@ class ShoppingCart extends Component {
             </ItemCard>
           );
         })}
-
-        {/* <Border /> */}
-
+        
         <Checkout>
           <div>
             <p>
