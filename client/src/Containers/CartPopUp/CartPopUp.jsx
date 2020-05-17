@@ -7,12 +7,12 @@ const CartPopUp = () => (
 //   <div>
     <nav class="navbar">
       <ul class="navbar-nav">
-          <li class="logo">
+          <li class="nav-item">
         <a href="/cart" class="nav-link">
-        <span>Cart</span>
+        <span class="link-text">Cart</span>
         {/* Selected Item Card */}
-        <h2>Subtotal</h2>
-        <h2>total</h2>
+        <h2 class="link-text">Subtotal</h2>
+        <h2 class="link-text">total</h2>
 
         {/* <NavLink> */}
         <button>View Cart</button>
