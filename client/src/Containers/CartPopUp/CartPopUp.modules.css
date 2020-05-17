@@ -97,11 +97,11 @@ is the relative position
   }
   
   /* Styling for only the SVG tags within the nav-link class */
-  /* .nav-link svg {
+  .nav-link svg {
     min-width: 2rem;
     margin: 0 1.5rem;
   }
-   */
+  
   .navbar:hover {
     width: 16rem;
   }
