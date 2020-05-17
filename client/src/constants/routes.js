@@ -14,13 +14,13 @@ export const routes = [
     component: <Home />,
     exact: true
   },
- 
+
   {
     name: "Products",
     routes: "/products",
     component: <Products />
   },
- 
+
   {
     name: "About",
     routes: "/about",
@@ -31,11 +31,11 @@ export const routes = [
     routes: "/contact",
     component: <Contact />
   },
-  {
-    name: "Sign_in",
-    routes: "/signin",
-    component: <LoginControl />
-  },
+  // {
+  //   name: "Log in",
+  //   routes: "/login",
+  //   component: <LoginControl />
+  // },
   {
     name: "Cart",
     routes: "/cart",
@@ -51,7 +51,7 @@ export const routes = [
 
 // import Images from "../Containers/Pictures";
 // {
-  //   name: "Images",
-  //   routes: "/images",
-  //   component: <Images />
-  // },
+//   name: "Images",
+//   routes: "/images",
+//   component: <Images />
+// },

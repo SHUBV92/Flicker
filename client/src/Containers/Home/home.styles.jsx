@@ -1,24 +1,21 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-export const App = styled.div`
-    display: flex;
-    align-items:center;
-    position: sticky;
-    background-color: 	rgb(232, 213, 209);
-`
+export const Container = styled.div``;
 
-export const Title = styled.h1` 
-    display:flex;
-    align-self: center;
-`
+export const Intro = styled.div`
+  text-align: center;
+  padding: 50px;
 
-export const Intro  = styled.div`
-    background-color:salmon;
-    padding:30px;
-    margin:30px;
-`
+  h1 {
+    /* color: #e6ac00; */
+    /* color: #cc9900; */
+    color: #ffd24d;
+  }
+`;
 
-export const Head  = styled.h2`
-    display: flex;
-    justify-content: center;
-`
+export const WhoWeAre = styled.div`
+  background-color: #6e6e6e;
+  padding: 50px;
+  text-align: center;
+  color: #fff;
+`;

@@ -7,33 +7,41 @@ import {
 } from "react-router-dom";
 
 import { routes } from "./constants/routes";
-
 import Navbar from "./Containers/Navbar";
 import { Footer } from "./Containers/Footer/Footer";
-
+import {
+  Container,
+  Pages
+} from "./App.styles.jsx";
 
 const App = () => {
   return (
-    <div className="App">
+    <Container>
       <Router>
         <Navbar />
-        <Switch>
-          {routes.map(route => {
-            const {
-              routes,
-              exact,
-              component
-            } = route;
-            return (
-              <Route path={routes} exact={exact}>
-                {component}
-              </Route>
-            );
-          })}
-        </Switch>
-      <Footer />
+        <br />
+        <Pages>
+          <Switch>
+            {routes.map(route => {
+              const {
+                routes,
+                exact,
+                component
+              } = route;
+              return (
+                <Route
+                  path={routes}
+                  exact={exact}
+                >
+                  {component}
+                </Route>
+              );
+            })}
+          </Switch>
+        </Pages>
       </Router>
-    </div>
+      <Footer />
+    </Container>
   );
 };
 
