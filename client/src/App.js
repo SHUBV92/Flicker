@@ -8,6 +8,7 @@ import {
 
 import { routes } from "./constants/routes";
 import Navbar from "./Containers/Navbar";
+import CartPopUp from "./Containers/CartPopUp/CartPopUp.jsx";
 import { Footer } from "./Containers/Footer/Footer";
 import {
   Container,
@@ -40,6 +41,7 @@ const App = () => {
           </Switch>
         </Pages>
       </Router>
+      <CartPopUp />
       <Footer />
     </Container>
   );
