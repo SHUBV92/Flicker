@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { routes } from "../../constants/routes";
 import Counter from "../../Components/Counter/Counter";
 import ShoppingCart from "../";
-import CartPopUp from "../CartPopUp/CartPopUp.jsx";
+// import CartPopUp from "../CartPopUp/CartPopUp.jsx";
 
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -52,7 +52,6 @@ const Navbar = () => (
     </NavWrapper>
     
     <div>{/* Shopping cart item length */}</div>
-      <CartPopUp />
   </Container>
 );
 

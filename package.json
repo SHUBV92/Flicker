@@ -28,5 +28,8 @@
     "nodemon": "^2.0.3",
     "stripe": "^8.50.0",
     "styled-components": "^5.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^10.0.4"
   }
 }

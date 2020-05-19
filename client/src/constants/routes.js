@@ -6,6 +6,7 @@ import About from "../Containers/About";
 import Products from "../Containers/Products";
 import LoginControl from "../Containers/LoginControl";
 import Cart from "../Containers/ShoppingCart";
+import CartPopUp from "../Containers/CartPopUp/CartPopUp";
 
 export const routes = [
   {
@@ -40,6 +41,12 @@ export const routes = [
     name: "Cart",
     routes: "/cart",
     component: <Cart />
+  },
+
+  {
+    name: "CartPopUp",
+    routes: "/cartPopUp",
+    component: <CartPopUp />
   }
 ];
 
