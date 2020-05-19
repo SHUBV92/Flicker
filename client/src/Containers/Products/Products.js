@@ -3,6 +3,7 @@ import productsData from "../../products.json";
 import ProductWrapper from "../../Components/ProductWrapper";
 import firebase from "firebase";
 import { GeneralInfo } from "./Products.styles.jsx";
+import { fetchProductData } from '../CartPopUp/CartPopUp'
 
 const Products = () => {
   const handleCartClick = data => {

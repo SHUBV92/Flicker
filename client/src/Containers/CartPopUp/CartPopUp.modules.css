@@ -9,14 +9,14 @@ is the relative position
 2 * 16px = 32 px 
 */
 
-:root {
+/* :root {
     font-size: 16px;
     font-family: "Open sans";
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
     --bg-primary: #f9daea;
     --bg-secondary: pink;
-  }
+  } */
   
 /* //   body {
 //     color: black;

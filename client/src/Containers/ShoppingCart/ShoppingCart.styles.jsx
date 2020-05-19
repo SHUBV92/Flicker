@@ -10,12 +10,10 @@ export const Header = styled.h3`
 `;
 
 export const ItemCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+
+display: inline-block;
+
   width:50vh;
-  justify-content: flex-center;
-  // background-color: white;
   padding: 10px;
   margin: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -31,3 +29,8 @@ export const Checkout = styled.section`
   display:flex;
   justify-content:flex-end;
  `
+
+export const Description = styled.div`
+ margin-left: 10px;
+
+`

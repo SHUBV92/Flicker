@@ -11,8 +11,8 @@ import {
   CartDisplay,
   ItemCard,
   Header,
-  Border,
-  Checkout
+  Checkout,
+  Description
 } from "./ShoppingCart.styles.jsx";
 
 class ShoppingCart extends Component {
@@ -103,16 +103,13 @@ class ShoppingCart extends Component {
         {this.state.items.map(item => {
           return (
             <ItemCard key={item.id}>
-              <section className="Card">
+              <img
+                src={require(`../../assets/images/${item.image}.jpeg`)}
+                className="img"
+                style={{ width: "150px" }}
+              />
+              <Description>
                 <h3>{item.name}</h3>
-                <hr />
-
-                <img
-                  src={require(`../../assets/images/${item.image}.jpeg`)}
-                  className="img"
-                  style={{ width: "300px" }}
-                />
-
                 <h3>£{item.price}</h3>
                 <p>
                   Quantity :
@@ -128,11 +125,11 @@ class ShoppingCart extends Component {
                     X
                   </button>
                 </p>
-              </section>
+              </Description>
             </ItemCard>
           );
         })}
-        
+
         <Checkout>
           <div>
             <p>
@@ -142,7 +139,17 @@ class ShoppingCart extends Component {
                 Get Total: £{this.state.total}
               </button>
             </p>
+
+            <h5>Subtotal : </h5>
+            <br />
+            <h5>Shipping :</h5>
+
+            <hr />
             <p>Total: £{this.state.total} </p>
+
+            <StripeCheckoutButton
+              price={this.state.total}
+            />
           </div>
           {/* <div className="test-warning">
             <p>
@@ -155,9 +162,6 @@ class ShoppingCart extends Component {
               CVV: 123
             </p>
           </div> */}
-          <StripeCheckoutButton
-            price={this.state.total}
-          />
         </Checkout>
       </CartDisplay>
     );

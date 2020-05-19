@@ -41,7 +41,7 @@ const App = () => {
           </Switch>
         </Pages>
       </Router>
-      <CartPopUp />
+      {/* <CartPopUp /> */}
       <Footer />
     </Container>
   );
