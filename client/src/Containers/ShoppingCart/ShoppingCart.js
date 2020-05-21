@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import StripeCheckoutButton from "../Stripe/Stripe-button";
+import Card from "../../Components/Card/Card"
 
 import firebase, {
   provider,
@@ -102,33 +103,45 @@ class ShoppingCart extends Component {
 
         {this.state.items.map(item => {
           return (
-            <ItemCard key={item.id}>
-              <img
-                src={require(`../../assets/images/${item.image}.jpeg`)}
-                className="img"
-                style={{ width: "150px" }}
-              />
-              <Description>
-                <h3>{item.name}</h3>
-                <h3>£{item.price}</h3>
-                <p>
-                  Quantity :
-                  <Counter counter={this.count} />
-                </p>
-                <p>
-                  User: {item.name}
-                  <button
-                    onClick={() =>
-                      this.removeItem(item.id)
-                    }
-                  >
-                    X
-                  </button>
-                </p>
-              </Description>
-            </ItemCard>
+            
+            <Card 
+            items={item}
+            // total={this.calculateTotal}
+            removeItem ={this.removeItem}
+            page="ShoppingCart"
+
+
+            />
+
+            // <ItemCard key={item.id}>
+            //   <img
+            //     src={require(`../../assets/images/${item.image}.jpeg`)}
+            //     className="img"
+            //     style={{ width: "150px" }}
+            //   />
+            //   <Description>
+            //     <h3>{item.name}</h3>
+            //     <h3>£{item.price}</h3>
+            //     <p>
+            //       Quantity :
+            //       <Counter counter={this.count} />
+            //     </p>
+            //     <p>
+            //       User: {item.name}
+            //       <button
+            //         onClick={() =>
+            //           this.removeItem(item.id)
+            //         }
+            //       >
+            //         X
+            //       </button>
+            //     </p>
+            //   </Description>
+            // </ItemCard>
           );
         })}
+
+
 
         <Checkout>
           <div>
@@ -140,9 +153,9 @@ class ShoppingCart extends Component {
               </button>
             </p>
 
-            <h5>Subtotal : </h5>
+            <h5>Subtotal : £{this.state.total} </h5>
             <br />
-            <h5>Shipping :</h5>
+            <h5>Shipping : £10</h5>
 
             <hr />
             <p>Total: £{this.state.total} </p>

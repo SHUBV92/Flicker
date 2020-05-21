@@ -22,10 +22,7 @@ import {
 
 const Navbar = () => (
   <Container>
-    <FontAwesomeIcon icon={faShoppingCart} />
     {/* <FontAwesomeIcon icon={faFacebookF} /> */}
-    <FontAwesomeIcon icon={faMenorah} />
-    
     <Logo
       src={require("../../assets/images/LogoGold.jpg")}
     />

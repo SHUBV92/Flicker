@@ -29,6 +29,7 @@ const Products = () => {
         <ProductWrapper
           category={category}
           handleCartClick={handleCartClick}
+          page="Products"
         />
       ))}
     </div>

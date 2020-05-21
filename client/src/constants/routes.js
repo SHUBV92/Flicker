@@ -7,6 +7,12 @@ import Products from "../Containers/Products";
 import LoginControl from "../Containers/LoginControl";
 import Cart from "../Containers/ShoppingCart";
 import CartPopUp from "../Containers/CartPopUp/CartPopUp";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faShoppingCart,
+  faFacebookF,
+  faMenorah
+} from "@fortawesome/free-solid-svg-icons";
 
 export const routes = [
   {
@@ -44,10 +50,18 @@ export const routes = [
   },
 
   {
-    name: "CartPopUp",
+    name: (
+      <FontAwesomeIcon icon={faShoppingCart} />
+    ),
     routes: "/cartPopUp",
     component: <CartPopUp />
   }
+
+  // {
+  //   name: "Insta",
+  //   routes: "https://www.instagram.com/fragranceandflicker/",
+  //   component: <CartPopUp />
+  // }
 ];
 
 // Routes

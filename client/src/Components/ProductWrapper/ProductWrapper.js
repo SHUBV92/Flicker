@@ -9,6 +9,8 @@ const ProductWrapper = props => {
           <Card
             items={item}
             handleCartClick={props.handleCartClick}
+            page={props.page}
+
           />
       ))}
     </div>
