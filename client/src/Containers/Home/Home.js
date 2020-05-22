@@ -1,4 +1,5 @@
 import React from "react";
+import Carousel from "../Carousel/Carousel"
 import { Container, Intro, WhoWeAre } from "./home.styles.jsx";
 
 const Home = () => (
@@ -21,6 +22,8 @@ const Home = () => (
         more candle for your money.
       </p>
     </Intro>
+
+    <Carousel />
 
     {/* Picture Carasoule */}
     {/* Products */}
