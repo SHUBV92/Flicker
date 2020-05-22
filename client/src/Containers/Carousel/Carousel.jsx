@@ -4,7 +4,7 @@ import {
   Slider,
   Button
 } from "./Carousel.styles.jsx";
-//   import ImageData from " ../../constants/imageData"
+  import productsData from "../../products.json";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -29,17 +29,27 @@ const Carousel = () => {
     x === -100 * (array.length - 1)
       ? setX(0)
       : setX(x - 100);
+      
   };
 
   return (
     <Container>
-      {array.map((image, index) => (
-        
-        <Slider key={index} style={{transform: `translateX(${x}%)`}}>
-          <h1>{image}</h1>
+      <div>
+      {productsData.map((category, index) => {
+        category.items.map((x) => (
+          // x.items(y => (
+          <Slider key={index} style={{transform: `translateX(${x}%)`}}>
+            <img
+          src={require(`../../assets/images/${x.image}.jpeg`)}
+            // {console.log("Image in Carousel", x.image)}
+            />
         </Slider>
+        ))
         
-      ))}
+      })}
+    </div>
+
+    
       <Button id="goLeft" onClick={goLeft}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </Button>

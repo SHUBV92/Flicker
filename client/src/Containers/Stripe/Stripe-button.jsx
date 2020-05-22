@@ -30,7 +30,7 @@ const StripeCheckoutButton = ({ price }) => {
         name='Fragrance & Flickr'
         billingAddress
         shippingAddress
-        image='../assets/images/LogoGold.jpg'
+        // image='../assets/images/LogoGold.jpg'
         description={`Your total is £${price}`}
         amount={priceForStripe}
         panelLabel="Pay Now"

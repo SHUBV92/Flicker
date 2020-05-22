@@ -12,14 +12,14 @@ export const Container = styled.div`
   /* flex-direction: column; */
   align-items: center;
   overflow: hidden;
-  background: slategray;
+  background: grey;
   i {
     font-size: 2vw;
   }
 `;
 export const Slider = styled.div`
   border: 1px solid blue;
-  position: relative;
+  /* position: relative; */
   min-width: 100%;
   height: 30%;
   transition: 0.5s;
