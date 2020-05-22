@@ -5,14 +5,17 @@ const ProductWrapper = props => {
   return (
     <div>
       <h3>{props.category.name}</h3>
-      {props.category.items.map(item => (
+      <div>
+        {props.category.items.map(item => (
           <Card
             items={item}
-            handleCartClick={props.handleCartClick}
+            handleCartClick={
+              props.handleCartClick
+            }
             page={props.page}
-
           />
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

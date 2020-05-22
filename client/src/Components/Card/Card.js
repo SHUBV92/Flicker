@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 // import Products from "../../Containers/Products/Products"
 
 import {
-  ImageButton,
+  Image,
   CardApp,
   CardContainer
 } from "./Card.styles";
@@ -20,54 +20,42 @@ const Card = props => {
     reducedPrice
   } = props.items;
 
-  let button1;
+  const button1 = (
+    <button
+      onClick={() =>
+        props.page === "Products"
+          ? props.handleCartClick({
+              name,
+              price,
+              image
+            })
+          : props.removeItem(id)
+      }
+    >
+      {props.page === "Products"
+        ? "ADD TO CART"
+        : "REMOVE ITEM"}
+    </button>
+  );
 
-  if (props.page === "Products") {
-    button1 = (
-      <button
-        onClick={() => {
-          props.handleCartClick({
-            name,
-            price,
-            image
-          });
-        }}
-      >
-        Add to Cart
-      </button>
-    );
-  } else {
-    button1 = (
-      <button
-        onClick={() => props.removeItem(id)}
-      >
-        X
-      </button>
-    );
-  }
-
+  //  const reducedP =  !reducedPrice ? null
+  //            <s>£{reducedPrice}</s> : null;
   return (
-    //  const reducedP =  !reducedPrice ? null
-    //            <s>£{reducedPrice}</s> : null;
-
     <CardApp>
-      <ImageButton>
+      <Image>
         <img
           src={require(`../../assets/images/${image}.jpeg`)}
-          className="img"
-          // style={{ width: "330px" }}
         />
-      </ImageButton>
-      {button1}
-
+      </Image>
       <CardContainer key={id}>
         <h3>{name}</h3>
         <hr />
         <h3>
           Price: <s>{reducedPrice}</s> £{price}
         </h3>
-        <h4>Products Details :</h4>
+        <h5>Products Details :</h5>
         <p>{description}</p>
+        {button1}
       </CardContainer>
     </CardApp>
   );

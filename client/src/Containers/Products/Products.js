@@ -3,7 +3,7 @@ import productsData from "../../products.json";
 import ProductWrapper from "../../Components/ProductWrapper";
 import firebase from "firebase";
 import { GeneralInfo } from "./Products.styles.jsx";
-import { fetchProductData } from '../CartPopUp/CartPopUp'
+import { fetchProductData } from "../CartPopUp/CartPopUp";
 
 const Products = () => {
   const handleCartClick = data => {
@@ -21,10 +21,10 @@ const Products = () => {
 
   return (
     <div>
-      <GeneralInfo>
+      {/* <GeneralInfo>
         <h1>Products</h1>
         
-      </GeneralInfo>
+      </GeneralInfo> */}
       {productsData.map(category => (
         <ProductWrapper
           category={category}
@@ -32,6 +32,7 @@ const Products = () => {
           page="Products"
         />
       ))}
+  
     </div>
   );
 };

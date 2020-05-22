@@ -15,13 +15,13 @@ export const AboutUS = styled.div`
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     margin: 10px;    
-    bottom-border: 2px blue;
+    bottom-border: 2px solid blue;
 `;
 
 export const Paragraph = styled.div`
     display: flex;
-    margin; 10px;
+    margin: 10px;
     padding: 10px;
     justify-self:center;
-    justify-content: center
-`
+    justify-content: center;
+`;
