@@ -52,48 +52,22 @@ const Card = props => {
 
     <CardApp>
       <ImageButton>
-      <img
-        src={require(`../../assets/images/${image}.jpeg`)}
-        // className={`items${index + 1}`}
-        className="img"
-        // style={{ width: "330px" }}
-      />
-      {/* <button>Button</button> */}
+        <img
+          src={require(`../../assets/images/${image}.jpeg`)}
+          className="img"
+          // style={{ width: "330px" }}
+        />
+      </ImageButton>
       {button1}
 
-      </ImageButton>
-      
       <CardContainer key={id}>
         <h3>{name}</h3>
         <hr />
-
-        {/* <div className="info"> */}
         <h3>
           Price: <s>{reducedPrice}</s> £{price}
         </h3>
-        {/* <h4>Previous reduced price : <s>£20</s></h4> */}
-
-        <a
-          className="App-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h4>Products Details :</h4>
-          <p>{description}</p>
-        </a>
-        {/* <button
-      onClick={() => {
-        props.handleCartClick({
-          name,
-          price,
-          image
-        });
-      }}
-    >
-      Add to Cart
-    </button>
-    } */}
-
+        <h4>Products Details :</h4>
+        <p>{description}</p>
       </CardContainer>
     </CardApp>
   );
