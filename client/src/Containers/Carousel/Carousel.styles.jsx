@@ -40,6 +40,10 @@ export const Button = styled.div`
   outline: none;
   transition: 0.5s;
 
+  #goLeft{
+    left:0;
+  }
+
   Button:hover{
       background: rgba(0, 0, 0, 0.356);
   }

@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "../Carousel/Carousel"
 import { Container, Intro, WhoWeAre } from "./home.styles.jsx";
 import Contact from "../Contact/Contact"
+import CarouselTest from "../CarouselTest/CarouselTest.components";
 
 const Home = () => (
   <Container>
@@ -24,7 +25,8 @@ const Home = () => (
       </p>
     </Intro>
 
-    <Carousel />
+    {/* <Carousel /> */}
+    <CarouselTest />
 
     {/* Picture Carasoule */}
     {/* Products */}
@@ -41,7 +43,7 @@ const Home = () => (
         products without the hefty price tag.
       </p>
     </WhoWeAre>
-    <Contact />
+    {/* <Contact /> */}
   </Container>
 );
 

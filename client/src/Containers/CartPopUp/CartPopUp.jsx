@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 // import { Container } from "./CartPopUp.styles.jsx";
-import "./CartPopUp.modules.css";
+import "./CartPopUp.styles.js";
 import firebase, {
   provider,
   auth
 } from "../../utils/firebase.js";
+
+import { Test } from "./CartPopUp.styles";
 
 class CartPopUp extends Component {
   constructor(props) {
@@ -75,35 +77,31 @@ class CartPopUp extends Component {
 
   render() {
     return (
-      <div class="Container">
-        <nav class="navbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <span class="link-text">Cart</span>
-              {/* Selected Item Card */}
-              {this.state.items.map(item => {
-                return (
-                  <div>
-                    <hr />
-                    <p>{item.name}</p>
-                    <p>{item.price}</p>
-                  </div>
-                );
-              })}
-
-              <h2 class="link-text">
-                Subtotal: {this.state.total}
-              </h2>
-              <h2 class="link-text">total</h2>
-              <a href="/cart" class="nav-link">
-                {/* <NavLink> */}
-                <button>View Cart</button>
-                {/* </NavLink> */}
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <Test>
+        <ul>
+          <li>
+            <span> Cart</span>
+            {/* Selected Item Card */}
+            {this.state.items.map(item => {
+              return (
+                <div>
+                  <hr />
+                  <p>{item.name}</p>
+                  <p>{item.price}</p>
+                </div>
+              );
+            })}
+            <h2>Subtotal: {this.state.total}</h2>
+            <h2>total</h2>
+            <a href="/cart">
+              {/* <NavLink> */}
+              <button>View Cart</button>
+              {/* </NavLink> */}
+            </a>
+          </li>
+        </ul>
+      </Test>
+      // <Test>TEST</Test>
     );
   }
 }

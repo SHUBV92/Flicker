@@ -6,7 +6,7 @@ export const CardApp = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   /* transition: 0.3s; */
   width: 200px;
-  height: 700px;
+  height: 500px;
   margin: 10px;
   /* padding: 0px; */
 `;
@@ -25,7 +25,11 @@ export const CardContainer = styled.div`
   border-bottom-left-radius: 25px;
 
   & p {
-    font-size: 8px;
+    font-size: 10px;
+  }
+  h3{
+    text-align:center;
+    color: grey;
   }
 
   button {
@@ -36,8 +40,8 @@ export const CardContainer = styled.div`
 
     margin-top: 0px;
 
-    /* transform: translate() (-50%, -50%);
-    -ms-transform: translate(-50%, -50%); */
+    /* transform: translate() (-50%, -50%); 
+    -ms-transform: translate(-50%, -50%);  */
     background-color: #555;
     opacity: 0.4;
     color: white;
@@ -46,10 +50,11 @@ export const CardContainer = styled.div`
     border: none;
     cursor: pointer;
     border-radius: 2px;
+
   }
 
   button:hover {
     background-color: pink;
-    color: black;
+    color: white;
   }
 `;

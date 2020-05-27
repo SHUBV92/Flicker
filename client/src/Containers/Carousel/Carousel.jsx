@@ -8,14 +8,19 @@ import {
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faShoppingCart,
-  faFacebookF,
   faChevronLeft,
   faChevronRight
 } from "@fortawesome/free-solid-svg-icons";
 
+import Blackcurrant from "../../assets/images/Blackcurrant.jpeg"
+import Bundle from "../../assets/images/Bundle.jpeg"
+import Evening from "../../assets/images/evening.jpeg"
+import Roses from "../../assets/images/Roses.jpeg"
+
+
+
 const Carousel = () => {
-  let array = [1, 2, 3, 4];
+  let array = [Blackcurrant, Bundle, Evening, Roses];
 
   const [x, setX] = useState(0);
 
@@ -35,13 +40,16 @@ const Carousel = () => {
   return (
     <Container>
       <div>
-      {productsData.map((category, index) => {
-        category.items.map((x) => (
-          // x.items(y => (
+      {/* {productsData.map((category, index) => { */}
+         {/* category.items.map((item, index) => ( */}
+           {/* x.items(y => ( */}
+            
+            {array.map((x, index) => (
           <Slider key={index} style={{transform: `translateX(${x}%)`}}>
             <img
-          src={require(`../../assets/images/${x.image}.jpeg`)}
-            // {console.log("Image in Carousel", x.image)}
+
+          // src={require(`../../assets/images/${item.image}.jpeg`)}
+
             />
         </Slider>
         ))
@@ -49,6 +57,7 @@ const Carousel = () => {
       })}
     </div>
 
+            {/* Buttons */}
     
       <Button id="goLeft" onClick={goLeft}>
         <FontAwesomeIcon icon={faChevronLeft} />

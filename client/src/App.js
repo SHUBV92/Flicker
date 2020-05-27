@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 import {
   BrowserRouter as Router,
@@ -14,37 +14,64 @@ import {
   Container,
   Pages
 } from "./App.styles.jsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faShoppingCart,
+  faFacebookF,
+  faMenorah
+} from "@fortawesome/free-solid-svg-icons";
+import { render } from "@testing-library/react";
 
-const App = () => {
-  return (
-    <Container>
-      <Router>
-        <Navbar />
-        <br />
-        <Pages>
-          <Switch>
-            {routes.map(route => {
-              const {
-                routes,
-                exact,
-                component
-              } = route;
-              return (
-                <Route
-                  path={routes}
-                  exact={exact}
-                >
-                  {component}
-                </Route>
-              );
-            })}
-          </Switch>
-        </Pages>
-      </Router>
-      {/* <CartPopUp /> */}
-      <Footer />
-    </Container>
-  );
-};
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showCart: true
+    };
+    this.handleCartPopUp = this.handleCartPopUp.bind(
+      this
+    );
+  }
+
+  handleCartPopUp = () => {
+    this.setState({
+      showCart: !this.state.showCart
+    });
+  };
+
+  render() {
+    return (
+      <Container>
+        <Router>
+          <Navbar
+            handleCartPopUp={this.handleCartPopUp}
+          />
+          <br />
+          <Pages>
+            <Switch>
+              {routes.map(route => {
+                const {
+                  routes,
+                  exact,
+                  component
+                } = route;
+                return (
+                  <Route
+                    path={routes}
+                    exact={exact}
+                  >
+                    {component}
+                  </Route>
+                );
+              })}
+            </Switch>
+          </Pages>
+        </Router>
+        {this.state.showCart && <CartPopUp />}
+        <Footer />
+      </Container>
+    );
+  }
+}
 
 export default App;

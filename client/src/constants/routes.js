@@ -7,12 +7,7 @@ import Products from "../Containers/Products";
 import LoginControl from "../Containers/LoginControl";
 import Cart from "../Containers/ShoppingCart";
 import CartPopUp from "../Containers/CartPopUp/CartPopUp";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faShoppingCart,
-  faFacebookF,
-  faMenorah
-} from "@fortawesome/free-solid-svg-icons";
+import CMS from "../Containers/CMS/CMS";
 
 export const routes = [
   {
@@ -48,14 +43,17 @@ export const routes = [
     routes: "/cart",
     component: <Cart />
   },
-
   {
-    name: (
-      <FontAwesomeIcon icon={faShoppingCart} />
-    ),
-    routes: "/cartPopUp",
-    component: <CartPopUp />
-  }
+    name: "CMS",
+    routes: "/cms",
+    component: <CMS />
+  }, 
+
+  // {
+  //   name: "CMS",
+  //   routes: "/cms",
+  //   component: <Match />
+  // }
 
   // {
   //   name: "Insta",

@@ -51,10 +51,11 @@ const Card = props => {
         <h3>{name}</h3>
         <hr />
         <h3>
-          Price: <s>{reducedPrice}</s> £{price}
+          {/* Price: <s>{reducedPrice}</s>  */}
+          £{price}
         </h3>
-        <h5>Products Details :</h5>
-        <p>{description}</p>
+        {/* <h5>Products Details :</h5> */}
+        {/* <p>{description}</p> */}
         {button1}
       </CardContainer>
     </CardApp>
