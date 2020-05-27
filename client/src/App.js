@@ -21,14 +21,20 @@ import {
   faMenorah
 } from "@fortawesome/free-solid-svg-icons";
 import { render } from "@testing-library/react";
+import Products from "./Containers/Products";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      showCart: true
+      showCart: false,
+      showProducts: false
     };
     this.handleCartPopUp = this.handleCartPopUp.bind(
+      this
+    );
+
+    this.handleProductsPopUp = this.handleProductsPopUp.bind(
       this
     );
   }
@@ -39,12 +45,19 @@ class App extends Component {
     });
   };
 
+  handleProductsPopUp = () => {
+    this.setState({
+      showProducts: !this.state.showProducts
+    });
+  };
+
   render() {
     return (
       <Container>
         <Router>
           <Navbar
             handleCartPopUp={this.handleCartPopUp}
+            handleProductsPopUp={this.handleProductsPopUp}
           />
           <br />
           <Pages>
@@ -68,6 +81,7 @@ class App extends Component {
           </Pages>
         </Router>
         {this.state.showCart && <CartPopUp />}
+        {this.state.showProducts && <Products />}
         <Footer />
       </Container>
     );

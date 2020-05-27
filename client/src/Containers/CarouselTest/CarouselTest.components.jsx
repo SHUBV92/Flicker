@@ -1,5 +1,6 @@
 import React from "react";
 import About from "../About/About.js"
+import { LinkContainer } from "react-router-bootstrap"
 
 import { Carousel } from "react-bootstrap";
 import ProductsData from "../../products.json";
@@ -32,7 +33,7 @@ const CarouselTest = () => {
         });
       })} */}
     
-    <Router>
+
       <Carousel.Item>
         <img
           className="d-block w-100"
@@ -41,11 +42,11 @@ const CarouselTest = () => {
           alt="Twice Slide"
         />
         <Carousel.Caption>
-      <Link to="/about">
+        {/* <LinkContainer to="/about"> */}
 
-          <h3>First slide label</h3>
+          <h3>Wax Melts</h3>
           <p>Evening Snow</p>
-        </Link>
+        {/* </LinkContainer> */}
 
         </Carousel.Caption>
       </Carousel.Item>
@@ -58,17 +59,17 @@ const CarouselTest = () => {
           alt="Twice Slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
+          <h3>Wardrobe Freshners</h3>
           <p>Evening Snow</p>
         </Carousel.Caption>
       </Carousel.Item>
 
-    </Router>
+    {/* </Router>
     <Switch>
         <Route path="/about">
             <About />
         </Route>
-    </Switch>
+    </Switch> */}
     </Carousel>
   );
 };

@@ -19,7 +19,10 @@ import {
   NavWrapper
 } from "./Navbar.styles";
 
-const Navbar = ({ handleCartPopUp }) => {
+const Navbar = ({
+  handleCartPopUp,
+  handleProductsPopUp
+}) => {
   return (
     <Container>
       {/* <FontAwesomeIcon icon={faFacebookF} /> */}
@@ -41,11 +44,42 @@ const Navbar = ({ handleCartPopUp }) => {
                   color: "black"
                 }}
               >
-                {route.name}
+          {(route.name === "Products")?
+           <div class="dropdown">
+          <button class="dropbtn">
+          {route.name}
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Wardrobe Freshners</a>
+            <a href="#">Wax Melts</a>
+            <a href="#">Wax Burners</a>
+          </div>
+        </div>
+          :route.name
+          }
+
+                {/* {route.name} */}
               </NavLink>
             </li>
           </Links>
         ))}
+
+        {/* <div class="dropdown">
+          <button class="dropbtn">
+            Products
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Wardrobe Freshners</a>
+            <a href="#">Wax Melts</a>
+            <a href="#">Wax Burners</a>
+          </div>
+        </div> */}
+
+        <FontAwesomeIcon
+          onClick={() => handleProductsPopUp()}
+          icon={faShoppingCart}
+        />
+
         <FontAwesomeIcon
           onClick={() => handleCartPopUp()}
           icon={faShoppingCart}
