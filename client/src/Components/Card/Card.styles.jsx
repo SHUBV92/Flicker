@@ -50,11 +50,10 @@ export const CardContainer = styled.div`
     border: none;
     cursor: pointer;
     border-radius: 2px;
-
   }
 
   button:hover {
     background-color: pink;
-    color: white;
+    color: black;
   }
 `;

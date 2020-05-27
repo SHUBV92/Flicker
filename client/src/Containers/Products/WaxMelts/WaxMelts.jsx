@@ -24,13 +24,15 @@ const WaxMelts = () => {
       {/* <GeneralInfo>
     </GeneralInfo> */}
     <h1>Wax Melts</h1>
-      {productsData.map(category => (
+      {/* {productsData.map(category => (
         <ProductWrapper
           category={category}
           handleCartClick={handleCartClick}
           page="Products"
         />
-      ))}
+      ))} */}
+
+      <p>This is a placeholder page for Wax melts</p>
   
     </div>
   );

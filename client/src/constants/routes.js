@@ -8,6 +8,7 @@ import LoginControl from "../Containers/LoginControl";
 import Cart from "../Containers/ShoppingCart";
 import CartPopUp from "../Containers/CartPopUp/CartPopUp";
 import CMS from "../Containers/CMS/CMS";
+import WaxMelts from "../Containers/Products/WaxMelts/WaxMelts";
 
 export const routes = [
   {
@@ -20,6 +21,11 @@ export const routes = [
   {
     name: "Products",
     routes: "/products",
+    subProducts:{
+      name: "Wax Melts",
+      routes: "/products",
+      component:<WaxMelts />
+    },
     component: <Products />
   },
 

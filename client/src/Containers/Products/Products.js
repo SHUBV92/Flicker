@@ -39,7 +39,7 @@ class Products extends Component {
 
   render() {
     return (
-      <div>
+      <GeneralInfo>
         <h1>Products</h1>
         <hr />
 
@@ -66,11 +66,11 @@ class Products extends Component {
           page="Products"
       /> */}
 
-      <button onClick={this.handleClicked}>click me</button>
-          <h1>{this.state.clicked}</h1>
+      {/* <button onClick={this.handleClicked}>click me</button>
+          <h1>{this.state.clicked}</h1> */}
           </div>
         ))}
-      </div>
+      </GeneralInfo>
     );
   }
 }
