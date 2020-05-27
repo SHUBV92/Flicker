@@ -89,9 +89,9 @@ class CartPopUp extends Component {
                   <hr />
 
                   <Card 
-                  item = {item.name}
+                  neame = {item.name}
                   price = {item.price}
-                  name="CartPopUp"/>
+                  page ="CartPopUp"/>
                   {/* <p>{item.name}</p>
                   <p>{item.price}</p> */}
                 </div>

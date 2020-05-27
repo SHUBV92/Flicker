@@ -42,11 +42,13 @@ const Card = props => {
   //            <s>£{reducedPrice}</s> : null;
   return (
     <CardApp>
+      {(props.page != "CartPopUp") ?
       <Image>
         <img
           src={require(`../../assets/images/${image}.jpeg`)}
         />
       </Image>
+    : null}
       <CardContainer key={id}>
         <h3>{name}</h3>
         <hr />

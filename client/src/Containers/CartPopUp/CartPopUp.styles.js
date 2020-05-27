@@ -48,7 +48,7 @@ export const Container = styled.div`
 `;
 
 export const Test = styled.div`
-  position: fixed;
+  position: absolute;
   right: 0;
   background-color: slategrey;
   width: 200px;
@@ -65,7 +65,7 @@ export const Test = styled.div`
   }
 
   h2 {
-    top: 500px;
+    /* top: 500px; */
     /* display: none; */
     margin-left: 1rem;
   }
