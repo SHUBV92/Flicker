@@ -8,6 +8,7 @@ import firebase, {
 } from "../../utils/firebase.js";
 
 import { Test } from "./CartPopUp.styles";
+import { Card } from "react-bootstrap";
 
 class CartPopUp extends Component {
   constructor(props) {
@@ -86,8 +87,13 @@ class CartPopUp extends Component {
               return (
                 <div>
                   <hr />
-                  <p>{item.name}</p>
-                  <p>{item.price}</p>
+
+                  <Card 
+                  item = {item.name}
+                  price = {item.price}
+                  name="CartPopUp"/>
+                  {/* <p>{item.name}</p>
+                  <p>{item.price}</p> */}
                 </div>
               );
             })}

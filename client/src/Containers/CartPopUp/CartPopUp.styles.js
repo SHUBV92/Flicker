@@ -48,9 +48,9 @@ export const Container = styled.div`
 `;
 
 export const Test = styled.div`
-  position: absolute;
+  position: fixed;
   right: 0;
-  background-color: pink;
+  background-color: slategrey;
   width: 200px;
   height: 100%;
   top: 0;
@@ -62,6 +62,12 @@ export const Test = styled.div`
     font-family: Arial, Helvetica, sans-serif;
     bottom: 0;
     position: relative;
+  }
+
+  h2 {
+    top: 500px;
+    /* display: none; */
+    margin-left: 1rem;
   }
 `;
 

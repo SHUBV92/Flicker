@@ -6,10 +6,10 @@ const CarouselTest =()=>{
 
 return(
     <Carousel className="border border-secondary">
-        <Carousel.Item>
+        <Carousel.Item >
             <img
-            className="d-block w-60"
-            style={{width:"900px", height: "900px"}}
+            className="d-block w-100"
+            // style={{width:"900px", height: "900px"}}
             src={require(`../../assets/images/Bundle.jpeg`)}
             alt="Twice Slide"
             />
@@ -21,8 +21,8 @@ return(
 
         <Carousel.Item>
             <img
-            className="d-block "
-            style={{width:"80px", height: "80px"}}
+            className="d-block w-100" 
+            // style={{width:"900px", height: "900px"}}
             src={require(`../../assets/images/Roses.jpeg`)}
             alt="Twice Slide"
             />
@@ -34,8 +34,8 @@ return(
 
         <Carousel.Item>
             <img
-            className="d-block w-60"
-            style={{width:"80px", height: "80px"}}
+            className="d-block w-100"
+            // style={{width:"900px", height: "900px"}}
             src={require(`../../assets/images/lavenderSoy.jpeg`)}
             alt="Twice Slide"
             />

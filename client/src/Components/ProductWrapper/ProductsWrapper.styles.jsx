@@ -3,14 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   
   text-align: center;
-  float: left;
+  /* float: right;
   width: 33.33%;
-  padding: 5px;
-  
-  .row::after {
-  content: "";
-  clear: both;
-  display: table;
+  padding: 10px;
+   */
+
 }
   h3 {
     color:"#ffd24d";
