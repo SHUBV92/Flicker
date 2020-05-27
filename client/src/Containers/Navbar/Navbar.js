@@ -50,9 +50,9 @@ const Navbar = ({
           {route.name}
           </button>
           <div class="dropdown-content">
-            <a href="#">Wardrobe Freshners</a>
-            <a href="#">Wax Melts</a>
-            <a href="#">Wax Burners</a>
+            <a href="/">Wardrobe Freshners</a>
+            <a href="/about">Wax Melts</a>
+            <a href="/contact">Wax Burners</a>
           </div>
         </div>
           :route.name

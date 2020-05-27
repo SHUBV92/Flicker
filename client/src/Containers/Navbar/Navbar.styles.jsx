@@ -39,6 +39,7 @@ export const Container = styled.div`
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
+  opacity:0.5;
   text-decoration: none;
   display: block;
 }
@@ -50,7 +51,7 @@ export const Container = styled.div`
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {background-color: #fff;}
 
 
 
