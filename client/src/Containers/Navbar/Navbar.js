@@ -8,6 +8,7 @@ import ShoppingCart from "../";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShoppingCart,
+  faInstagram,
   faFacebookF,
   faMenorah
 } from "@fortawesome/free-solid-svg-icons";
@@ -50,8 +51,10 @@ const Navbar = ({
           {route.name}
           </button>
           <div class="dropdown-content">
-            <a href="/">Wardrobe-Freshners</a>
-            <hr />
+            <a 
+          onClick={() => handleProductsPopUp()}
+            href="/">Wardrobe-Freshners</a>
+            <hr  />
             <a href="/about">Wax Melts</a>
             <hr />
             <a href="/contact">Wax Burners</a>
@@ -77,10 +80,10 @@ const Navbar = ({
           </div>
         </div> */}
 
-        <FontAwesomeIcon
+        {/* <FontAwesomeIcon
           onClick={() => handleProductsPopUp()}
           icon={faShoppingCart}
-        />
+        /> */}
 
         <FontAwesomeIcon
           onClick={() => handleCartPopUp()}

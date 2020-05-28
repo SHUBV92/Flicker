@@ -11,7 +11,8 @@ class Products extends Component {
   constructor() {
     super()
     this.state = {
-      clicked:null
+      clicked:null,
+      showProducts: false
     };
     this.handleCartClick = this.handleCartClick.bind(this)
     this.handleClicked = this.handleClicked.bind(this)
@@ -51,6 +52,8 @@ class Products extends Component {
               page="Products"
             />
 
+            {/* {(==="Products")} */}
+
             <WaxMelts
               category={
                 category.name === "Candles"
@@ -81,6 +84,6 @@ export default Products;
 
 
 
-// if (this.state.clicked === "Wax Melts"){
-//     render Component
+//  if (this.state.clicked === "Wax Melts"){
+//      render Component
 // }

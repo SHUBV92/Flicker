@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const CartDisplay = styled.div`
 background-color: rgb(247, 247, 247);
+padding: 100px;
 `
 
 export const Header = styled.h3`

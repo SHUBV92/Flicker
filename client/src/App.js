@@ -46,9 +46,12 @@ class App extends Component {
   };
 
   handleProductsPopUp = () => {
+    console.log("Show Products", this.state.showProducts)
+    
     this.setState({
       showProducts: !this.state.showProducts
     });
+    console.log("Show Products", this.state.showProducts)
   };
 
   render() {
@@ -81,7 +84,9 @@ class App extends Component {
           </Pages>
         </Router>
         {this.state.showCart && <CartPopUp />}
+        {/* if(==="Products"){ */}
         {this.state.showProducts && <Products />}
+        }
         <Footer />
       </Container>
     );

@@ -107,7 +107,6 @@ class CartPopUp extends Component {
           </li>
         </ul>
       </Test>
-      // <Test>TEST</Test>
     );
   }
 }

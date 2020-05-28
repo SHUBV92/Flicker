@@ -1,7 +1,8 @@
 import styled from "styled-components"
 
 export const App = styled.div`
-    background-color: rgb(247, 247, 247)
+    background-color: rgb(247, 247, 247);
+    padding: 100px;
 `;
 
 export const Header = styled.h1`

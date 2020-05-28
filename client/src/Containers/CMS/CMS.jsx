@@ -13,13 +13,6 @@ class CMS extends Component {
       stock: null
     };
 
-    this.componentDidMount = () => {
-      axios
-        .get("/localhost5337/products")
-        .then(function(response) {
-          console.log(response);
-        });
-    };
 
     this.handleSubmit = this.handleSubmit.bind(
       this
@@ -33,6 +26,20 @@ class CMS extends Component {
     event.preventDefault();
     this.setState({ stock: event.target.value });
   };
+
+  componentDidMount(){
+    // axios
+    //   .get("http://localhost1337/products")
+    //   .then(function(response) {
+    //     console.log("CMS Response: ",response);
+    //   });
+
+
+    fetch('http://localhost1337/products')
+    .then(response => response.json())
+    .then(data => console.log(data));
+  };
+
 
   render() {
     return (
