@@ -28,16 +28,19 @@ class CMS extends Component {
   };
 
   componentDidMount(){
+    console.log("Am I being hit")
     // axios
     //   .get("http://localhost1337/products")
     //   .then(function(response) {
     //     console.log("CMS Response: ",response);
     //   });
 
-
+    let dataObject = []
     fetch('http://localhost1337/products')
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => data)
+
+    console.log("Object",dataObject)
   };
 
 

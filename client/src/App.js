@@ -85,7 +85,7 @@ class App extends Component {
         </Router>
         {this.state.showCart && <CartPopUp />}
         {/* if(==="Products"){ */}
-        {this.state.showProducts && <Products />}
+        {/* {this.state.showProducts && <Products />} */}
         }
         <Footer />
       </Container>

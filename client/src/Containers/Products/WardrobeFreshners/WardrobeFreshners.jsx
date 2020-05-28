@@ -7,32 +7,26 @@ import Card from "../../../Components/Card/Card.js";
 
 
 const WardrobeFreshners= (props) => {
-  const handleCartClick = data => {
-    const itemsRef = firebase
-      .database()
-      .ref("items");
+  // const handleCartClick = data => {
+  //   const itemsRef = firebase
+  //     .database()
+  //     .ref("items");
 
-    const item = {
-      name: data.name,
-      price: data.price,
-      image: data.image
-    };
-    itemsRef.push(item);
-  };
+  //   const item = {
+  //     name: data.name,
+  //     price: data.price,
+  //     image: data.image
+  //   };
+  //   itemsRef.push(item);
+  // };
 
   return (
     <div>
       {/* <GeneralInfo>
     </GeneralInfo> */}
-      {/* {productsData.map(category => (
-        <ProductWrapper
-        category={category}
-        handleCartClick={handleCartClick}
-        page="Products"
-        /> */}
         
         <h1>Wardrobe Freshners</h1>
-
+{/* 
         <div>
         <h3>{props.category.name}</h3>
         <div>
@@ -46,7 +40,7 @@ const WardrobeFreshners= (props) => {
             />
           ))}
         </div>
-      </div>
+      </div> */}
 
   
     </div>

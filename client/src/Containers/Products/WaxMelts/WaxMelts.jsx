@@ -6,18 +6,18 @@ import firebase from "firebase";
 // import { fetchProductData } from "../CartPopUp/CartPopUp";
 
 const WaxMelts = () => {
-  const handleCartClick = data => {
-    const itemsRef = firebase
-      .database()
-      .ref("items");
+  // const handleCartClick = data => {
+  //   const itemsRef = firebase
+  //     .database()
+  //     .ref("items");
 
-    const item = {
-      name: data.name,
-      price: data.price,
-      image: data.image
-    };
-    itemsRef.push(item);
-  };
+  //   const item = {
+  //     name: data.name,
+  //     price: data.price,
+  //     image: data.image
+  //   };
+  //   itemsRef.push(item);
+  // };
 
   return (
     <div>

@@ -52,22 +52,24 @@ class Products extends Component {
               page="Products"
             />
 
-            {/* {(==="Products")} */}
-
+            {(category.name==="Wax Melts")?
             <WaxMelts
               category={
-                category.name === "Candles"
-                  ? category.items
-                  : null
+                // category.name === "Candles"? 
+                  category.items
+                  // : null
               }
               handleCartClick={this.handleCartClick}
               page="Products"
-            />
-            {/* <WardrobeFreshners 
+            /> : null
+        }
+            {/* {(category.name==="Wardrobe Freshners")?
+
+ <WardrobeFreshners 
           category={category}
           handleCartClick={handleCartClick}
           page="Products"
-      /> */}
+      /> : null } */}
 
       {/* <button onClick={this.handleClicked}>click me</button>
           <h1>{this.state.clicked}</h1> */}
