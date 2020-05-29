@@ -10,7 +10,7 @@ import CartPopUp from "../Containers/CartPopUp/CartPopUp";
 import CMS from "../Containers/CMS/CMS";
 import WaxMelts from "../Containers/Products/WaxMelts/WaxMelts";
 
-export const routes = [
+export const baseRoutes= [
   {
     name: "Home",
     routes: "/",
@@ -26,7 +26,9 @@ export const routes = [
       routes: "/products",
       component:<WaxMelts />
     },
-    component: <Products />
+    // component1: (val) => (<Products val={val} />)
+    component:<Products />
+
   },
 
   {

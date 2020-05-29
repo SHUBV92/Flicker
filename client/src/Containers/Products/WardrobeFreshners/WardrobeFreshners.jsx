@@ -32,7 +32,7 @@ const WardrobeFreshners= (props) => {
         <div>
           {props.category.items.map(item => (
             <Card
-              items={item}
+              items={item}§
               handleCartClick={
                 props.handleCartClick
               }

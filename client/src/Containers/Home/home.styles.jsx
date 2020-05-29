@@ -4,7 +4,7 @@ export const Container = styled.div``;
 
 export const Intro = styled.div`
   text-align: center;
-  padding: 50px;
+  padding: 80px;
 
   h1 {
     /* color: #e6ac00; */

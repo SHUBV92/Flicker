@@ -32,7 +32,7 @@ const WaxMelts = () => {
         />
       ))} */}
 
-      <p>This is a placeholder page for Wax melts</p>
+      <p>This is a placeholder page for Wax melts </p>
   
     </div>
   );

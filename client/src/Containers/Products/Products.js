@@ -8,15 +8,18 @@ import WaxMelts from "./WaxMelts/WaxMelts.jsx";
 import WardrobeFreshners from "./WardrobeFreshners/WardrobeFreshners.jsx";
 
 class Products extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super();
     this.state = {
-      clicked:null,
+      clicked: null,
       showProducts: false
     };
-    this.handleCartClick = this.handleCartClick.bind(this)
-    this.handleClicked = this.handleClicked.bind(this)
-
+    this.handleCartClick = this.handleCartClick.bind(
+      this
+    );
+    this.handleClicked = this.handleClicked.bind(
+      this
+    );
   }
 
   handleCartClick = data => {
@@ -32,48 +35,34 @@ class Products extends Component {
     itemsRef.push(item);
   };
 
-
-  handleClicked = (id) => { 
-    this.setState({clicked: id})
-  }
-
+  handleClicked = id => {
+    this.setState({ clicked: id });
+  };
 
   render() {
+    const prods = productsData.filter(
+      category =>
+        category.name === this.state.products1
+    );
+
+    console.log("Prods", prods);
+
+const prods1
+    (this.state.products1==="Wax Mellts")?
+   prods1 =  <h1>Wax Melts</h1> :  <h1>Wardrobe Freshners</h1>
+
+
     return (
       <GeneralInfo>
-        <h1>Products</h1>
+        <h1>{this.props.products1}</h1>
         <hr />
-
         {productsData.map(category => (
-          <div>
-            <ProductWrapper
-              category={category}
-              handleCartClick={this.handleCartClick}
-              page="Products"
-            />
-
-            {(category.name==="Wax Melts")?
-            <WaxMelts
-              category={
-                // category.name === "Candles"? 
-                  category.items
-                  // : null
-              }
-              handleCartClick={this.handleCartClick}
-              page="Products"
-            /> : null
-        }
-            {/* {(category.name==="Wardrobe Freshners")?
-
- <WardrobeFreshners 
-          category={category}
-          handleCartClick={handleCartClick}
-          page="Products"
-      /> : null } */}
-
-      {/* <button onClick={this.handleClicked}>click me</button>
-          <h1>{this.state.clicked}</h1> */}
-          </div>
+          // <ProductWrapper
+          //   category={category}
+          //   handleCartClick={this.handleCartClick}
+          //   page="Products"
+          // />
+      {prods1}
         ))}
       </GeneralInfo>
     );
@@ -82,10 +71,17 @@ class Products extends Component {
 
 export default Products;
 
+// return (
 
+//     <div>{prods.image}</div>
 
+//   )
+// this.state.products ? <div>
 
-
-//  if (this.state.clicked === "Wax Melts"){
-//      render Component
-// }
+// const prod =
+//   this.props.products1 ===
+//   "Wardrobe Freshner" ? (
+//     <div>Wardrobe Freshner</div>
+//   ) : (
+//     <div>Wax Melt</div>
+//   );

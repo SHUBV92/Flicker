@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { routes } from "../../constants/routes";
+import { baseRoutes } from "../../constants/routes";
 import Counter from "../../Components/Counter/Counter";
 import ShoppingCart from "../";
 // import CartPopUp from "../CartPopUp/CartPopUp.jsx";
@@ -31,7 +31,7 @@ const Navbar = ({
         src={require("../../assets/images/LogoGold.jpg")}
       />
       <NavWrapper>
-        {routes.map(route => (
+        {baseRoutes.map(route => (
           <Links>
             <li>
               <NavLink
@@ -45,45 +45,53 @@ const Navbar = ({
                   color: "black"
                 }}
               >
-          {(route.name === "Products")?
-           <div class="dropdown">
-          <button class="dropbtn">
-          {route.name}
-          </button>
-          <div class="dropdown-content">
-            <a 
-          onClick={() => handleProductsPopUp()}
-            href="/">Wardrobe-Freshners</a>
-            <hr  />
-            <a href="/about">Wax Melts</a>
-            <hr />
-            <a href="/contact">Wax Burners</a>
-          </div>
-        </div>
-          :route.name
-          }
+                {route.name === "Products" ? (
+                  <div class="dropdown">
+                    <button class="dropbtn">
+                      {route.name}
+                    </button>
+                    <div class="dropdown-content">
+                      <a
+                        onClick={() =>
+                          handleProductsPopUp("Wardrobe")
+                        }
+                        href="/"
+                      >
+                        Wardrobe-Freshners
+                      </a>
+
+                      <hr />
+
+                      <a
+                        onClick={() =>
+                          handleProductsPopUp("Wax Melt")
+                        }
+                        href="/about"
+                      >
+                        Wax Melts
+                      </a>
+
+                      <hr />
+
+                      <a
+                        onClick={() =>
+                          handleProductsPopUp("Wax Burners")
+                        }
+                        href="/contact"
+                      >
+                        Wax Burners
+                      </a>
+                    </div>
+                  </div>
+                ) : (
+                  route.name
+                )}
 
                 {/* {route.name} */}
               </NavLink>
             </li>
           </Links>
         ))}
-
-        {/* <div class="dropdown">
-          <button class="dropbtn">
-            Products
-          </button>
-          <div class="dropdown-content">
-            <a href="#">Wardrobe Freshners</a>
-            <a href="#">Wax Melts</a>
-            <a href="#">Wax Burners</a>
-          </div>
-        </div> */}
-
-        {/* <FontAwesomeIcon
-          onClick={() => handleProductsPopUp()}
-          icon={faShoppingCart}
-        /> */}
 
         <FontAwesomeIcon
           onClick={() => handleCartPopUp()}

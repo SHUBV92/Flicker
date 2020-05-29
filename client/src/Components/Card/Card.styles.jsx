@@ -50,10 +50,13 @@ export const CardContainer = styled.div`
     border: none;
     cursor: pointer;
     border-radius: 2px;
+    transition: width 10s;
+
   }
 
   button:hover {
     background-color: pink;
     color: black;
+    padding: 20px;
   }
 `;

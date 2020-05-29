@@ -6,7 +6,7 @@ import {
   Route
 } from "react-router-dom";
 
-import { routes } from "./constants/routes";
+import { baseRoutes } from "./constants/routes";
 import Navbar from "./Containers/Navbar";
 import CartPopUp from "./Containers/CartPopUp/CartPopUp.jsx";
 import { Footer } from "./Containers/Footer/Footer";
@@ -22,13 +22,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { render } from "@testing-library/react";
 import Products from "./Containers/Products";
+import WaxMelts from "./Containers/Products/WaxMelts/WaxMelts";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       showCart: false,
-      showProducts: false
+      showProducts: null
     };
     this.handleCartPopUp = this.handleCartPopUp.bind(
       this
@@ -45,27 +46,41 @@ class App extends Component {
     });
   };
 
-  handleProductsPopUp = () => {
-    console.log("Show Products", this.state.showProducts)
-    
+  handleProductsPopUp = (Category) => {
+    console.log(
+      "Before Show Products",
+      this.state.showProducts
+    );
+
     this.setState({
-      showProducts: !this.state.showProducts
+      showProducts: Category
     });
-    console.log("Show Products", this.state.showProducts)
+    console.log(
+      "After Show Products",
+      this.state.showProducts
+    );
   };
 
+
+// const Foo = (component: Component, ...rest) => {
+//  return ( 
+  //  <Component {...rest}/>
+//  )
+// }
   render() {
     return (
       <Container>
         <Router>
           <Navbar
             handleCartPopUp={this.handleCartPopUp}
-            handleProductsPopUp={this.handleProductsPopUp}
+            handleProductsPopUp={
+              this.handleProductsPopUp
+            }
           />
           <br />
           <Pages>
             <Switch>
-              {routes.map(route => {
+              {baseRoutes.map(route => {
                 const {
                   routes,
                   exact,
@@ -76,7 +91,12 @@ class App extends Component {
                     path={routes}
                     exact={exact}
                   >
-                    {component}
+                  {/* <Foo component={component} hello='test' /> */}
+                    {route.name === "Products"
+                      ?
+                        <Products 
+                      products1={this.state.showProducts}/>
+                      : component}
                   </Route>
                 );
               })}
@@ -85,7 +105,6 @@ class App extends Component {
         </Router>
         {this.state.showCart && <CartPopUp />}
         {/* if(==="Products"){ */}
-        {/* {this.state.showProducts && <Products />} */}
         }
         <Footer />
       </Container>
@@ -94,3 +113,5 @@ class App extends Component {
 }
 
 export default App;
+
+// this.state.showProducts &&< WaxMelts />

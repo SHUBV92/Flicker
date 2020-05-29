@@ -1,6 +1,7 @@
 import React from "react";
 import About from "../About/About.js"
 import { LinkContainer } from "react-router-bootstrap"
+import { Img, Container } from "./CarouselTest.styles.jsx"
 
 import { Carousel } from "react-bootstrap";
 import ProductsData from "../../products.json";
@@ -13,6 +14,7 @@ import {
 
 const CarouselTest = () => {
   return (
+    <Container>
       <Carousel className="border border-secondary">
       {/* {ProductsData.map(x => {
         x.items.map(image => {
@@ -35,7 +37,7 @@ const CarouselTest = () => {
     
 
       <Carousel.Item>
-        <img
+        <Img
           className="d-block w-100"
           // style={{width:"900px", height: "900px"}}
           src={require(`../../assets/images/Roses.jpeg`)}
@@ -71,6 +73,7 @@ const CarouselTest = () => {
         </Route>
     </Switch> */}
     </Carousel>
+    </Container>
   );
 };
 

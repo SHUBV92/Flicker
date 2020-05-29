@@ -48,7 +48,8 @@ export const Container = styled.div`
 `;
 
 export const Test = styled.div`
-  position: absolute;
+  position: fixed;
+  padding-top: 100px;
   right: 0;
   background-color: slategrey;
   width: 200px;
