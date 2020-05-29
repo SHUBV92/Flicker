@@ -47,9 +47,9 @@ class Products extends Component {
 
     console.log("Prods", prods);
 
-const prods1
-    (this.state.products1==="Wax Mellts")?
-   prods1 =  <h1>Wax Melts</h1> :  <h1>Wardrobe Freshners</h1>
+// const prods1
+  //   (this.state.products1==="Wax Mellts")?
+  //  prods1 =  <h1>Wax Melts</h1> :  <h1>Wardrobe Freshners</h1>
 
 
     return (
@@ -57,12 +57,12 @@ const prods1
         <h1>{this.props.products1}</h1>
         <hr />
         {productsData.map(category => (
-          // <ProductWrapper
-          //   category={category}
-          //   handleCartClick={this.handleCartClick}
-          //   page="Products"
-          // />
-      {prods1}
+          <ProductWrapper
+            category={category}
+            handleCartClick={this.handleCartClick}
+            page="Products"
+          />
+      // {prods1}
         ))}
       </GeneralInfo>
     );

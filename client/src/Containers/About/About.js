@@ -22,10 +22,19 @@ const About = () => {
         </Paragraph>
       </AboutUS>
 
+  
       <h3>
         Frangrance and Flicker - established in
         Essex in October 2019
       </h3>
+      {/* <div class="container">
+  <img src="../../assets/logo.js/" alt="Avatar" class="image" />
+  <div class="overlay">
+    <a href="#" class="icon" title="User Profile">
+      <i class="fa fa-user"></i>
+    </a>
+  </div>
+</div> */}
     </App>
   );
 };

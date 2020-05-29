@@ -16,13 +16,14 @@ import {
 } from "./App.styles.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faShoppingCart,
-  faFacebookF,
-  faMenorah
+  faComments
+
+
 } from "@fortawesome/free-solid-svg-icons";
 import { render } from "@testing-library/react";
 import Products from "./Containers/Products";
 import WaxMelts from "./Containers/Products/WaxMelts/WaxMelts";
+import "./App.css"
 
 class App extends Component {
   constructor() {
@@ -104,7 +105,10 @@ class App extends Component {
           </Pages>
         </Router>
         {this.state.showCart && <CartPopUp />}
-        {/* if(==="Products"){ */}
+
+        <FontAwesomeIcon className="Favicon"
+          icon={faComments}
+        />
         }
         <Footer />
       </Container>

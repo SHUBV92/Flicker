@@ -8,9 +8,8 @@ import ShoppingCart from "../";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShoppingCart,
-  faInstagram,
-  faFacebookF,
-  faMenorah
+  faHome
+
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -34,6 +33,7 @@ const Navbar = ({
         {baseRoutes.map(route => (
           <Links>
             <li>
+            {/* {route.icon} */}
               <NavLink
                 to={route.routes}
                 activeStyle={{
@@ -48,7 +48,7 @@ const Navbar = ({
                 {route.name === "Products" ? (
                   <div class="dropdown">
                     <button class="dropbtn">
-                      {route.name}
+                      {route.icon}
                     </button>
                     <div class="dropdown-content">
                       <a
@@ -84,7 +84,8 @@ const Navbar = ({
                     </div>
                   </div>
                 ) : (
-                  route.name
+                  // route.name
+                  route.icon
                 )}
 
                 {/* {route.name} */}

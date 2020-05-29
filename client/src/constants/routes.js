@@ -9,13 +9,25 @@ import Cart from "../Containers/ShoppingCart";
 import CartPopUp from "../Containers/CartPopUp/CartPopUp";
 import CMS from "../Containers/CMS/CMS";
 import WaxMelts from "../Containers/Products/WaxMelts/WaxMelts";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faShoppingCart,
+  faHome,
+  faEnvelope,
+  faUser,
+  faShoppingBag
+
+} from "@fortawesome/free-solid-svg-icons";
 
 export const baseRoutes= [
   {
     name: "Home",
     routes: "/",
     component: <Home />,
-    exact: true
+    exact: true,
+    icon:   <FontAwesomeIcon
+    icon={faHome}
+  />
   },
 
   {
@@ -27,19 +39,28 @@ export const baseRoutes= [
       component:<WaxMelts />
     },
     // component1: (val) => (<Products val={val} />)
-    component:<Products />
+    component:<Products />,
+    icon:   <FontAwesomeIcon
+    icon={faShoppingBag}
+  />
 
   },
 
   {
     name: "About",
     routes: "/about",
-    component: <About />
+    component: <About />,
+    icon:   <FontAwesomeIcon
+    icon={faUser}
+  />
   },
   {
     name: "Contact",
     routes: "/contact",
-    component: <Contact />
+    component: <Contact />,
+    icon:   <FontAwesomeIcon
+    icon={faEnvelope}
+  />
   },
   // {
   //   name: "Log in",
