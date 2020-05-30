@@ -48,12 +48,13 @@ const Navbar = ({
                 {route.name === "Products" ? (
                   <div class="dropdown">
                     <button class="dropbtn">
-                      {route.icon}
+                      {/* {route.icon} */}
+                      {route.name}
                     </button>
                     <div class="dropdown-content">
                       <a
                         onClick={() =>
-                          handleProductsPopUp("Wardrobe")
+                          handleProductsPopUp("Wardrobe-Freshners")
                         }
                         href="/"
                       >
@@ -84,8 +85,8 @@ const Navbar = ({
                     </div>
                   </div>
                 ) : (
-                  // route.name
-                  route.icon
+                  route.name
+                  // route.icon
                 )}
 
                 {/* {route.name} */}

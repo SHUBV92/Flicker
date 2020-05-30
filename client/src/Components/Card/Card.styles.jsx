@@ -42,9 +42,10 @@ export const CardContainer = styled.div`
 
     /* transform: translate() (-50%, -50%); 
     -ms-transform: translate(-50%, -50%);  */
-    background-color: #555;
+    /* background-color: #555; */
+    background-color: pink;    
     opacity: 0.4;
-    color: white;
+    color: black;
     font-size: 10px;
     padding: 12px 18px;
     border: none;
@@ -55,8 +56,8 @@ export const CardContainer = styled.div`
   }
 
   button:hover {
-    background-color: pink;
-    color: black;
+    background-color: grey;
+    color: white;
     padding: 20px;
   }
 `;

@@ -51,7 +51,7 @@ export const Test = styled.div`
   position: fixed;
   padding-top: 100px;
   right: 0;
-  background-color: slategrey;
+  background-color: lightgrey;
   width: 200px;
   height: 100%;
   top: 0;

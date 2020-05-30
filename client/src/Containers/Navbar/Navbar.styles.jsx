@@ -74,7 +74,7 @@ export const Logo = styled.img`
 `;
 
 export const Links = styled.ul`
-  margin: 40px;
+  /* margin: 40px; */
   list-style: none;
   /* padding: 3px; */
   /* margin: 3px; */

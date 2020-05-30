@@ -10,12 +10,20 @@ export const Intro = styled.div`
     /* color: #e6ac00; */
     /* color: #cc9900; */
     color: #ffd24d;
+    /* color: purple; */
+
   }
 `;
 
 export const WhoWeAre = styled.div`
-  background-color: #6e6e6e;
+  /* background-color: #6e6e6e; */
+  background-color: lightgrey;
   padding: 50px;
   text-align: center;
-  color: #fff;
+  /* color: #fff; */
+  color: black;
+
+ h1{ 
+   color: #cc0052;
+ }
 `;

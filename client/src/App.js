@@ -105,11 +105,10 @@ class App extends Component {
           </Pages>
         </Router>
         {this.state.showCart && <CartPopUp />}
-
+{/* 
         <FontAwesomeIcon className="Favicon"
           icon={faComments}
-        />
-        }
+        /> */}
         <Footer />
       </Container>
     );

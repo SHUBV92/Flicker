@@ -6,7 +6,7 @@ import CarouselTest from "../CarouselTest/CarouselTest.components";
 
 const Home = () => (
   <Container>
-    <Intro>
+    {/* <Intro>
       <h5>
         High-end scented candles and gifts without
         the high-end price tag.
@@ -23,7 +23,7 @@ const Home = () => (
         normal candles, so you essentially get
         more candle for your money.
       </p>
-    </Intro>
+    </Intro> */}
 
     {/* <Carousel /> */}
     <CarouselTest />
