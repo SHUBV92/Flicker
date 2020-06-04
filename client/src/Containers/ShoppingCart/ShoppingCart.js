@@ -164,17 +164,6 @@ class ShoppingCart extends Component {
               price={this.state.total}
             />
           </div>
-          {/* <div className="test-warning">
-            <p>
-              *Please use the following test
-              credit card for payment*
-            </p>
-            <br />
-            <p>
-              4242 4242 4242 4242 - Exp: 01/23 -
-              CVV: 123
-            </p>
-          </div> */}
         </Checkout>
       </CartDisplay>
     );
