@@ -57,11 +57,11 @@ const Card = props => {
       </Image>
     : null}
       <CardContainer key={id}>
-        <h2>{name}</h2>
+        <h3>{name}</h3>
         <hr />
-        <h3>
+        <h4>
           £{price}
-        </h3>
+        </h4>
         {button1}
       </CardContainer>
     </CardApp>

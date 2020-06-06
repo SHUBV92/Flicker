@@ -32,7 +32,15 @@ export const CardContainer = styled.div`
     color: grey;
     width: 180px;
     height: 32px;
+  }
 
+  h4{
+    margin-top:40px;
+    margin-left:65px;
+  }
+
+  hr{
+    margin-top:50px;
   }
 
   button {
@@ -41,7 +49,9 @@ export const CardContainer = styled.div`
     left: 12px;
     width: 150px; */
 
-    margin-top: 50px;
+    margin-top: 60px;
+    margin-left: 40px;
+
 
     /* transform: translate() (-50%, -50%); 
     -ms-transform: translate(-50%, -50%);  */
@@ -56,12 +66,12 @@ export const CardContainer = styled.div`
     border-radius: 2px;
     transition: width 10s;
 
+
   }
 
   button:hover {
     background-color: grey;
     color: white;
-    padding: 20px;
   }
 `;
 
