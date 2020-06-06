@@ -5,6 +5,7 @@ export const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  height: 1opx;
   width: 100%;
   z-index: 100;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);

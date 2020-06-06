@@ -79,26 +79,27 @@ class CartPopUp extends Component {
   render() {
     return (
       <Test>
+      <h3> Cart</h3>
         <ul>
           <li>
-            <span> Cart</span>
             {/* Selected Item Card */}
             {this.state.items.map(item => {
               return (
                 <div>
                   <hr />
 
-                  <Card 
-                  neame = {item.name}
-                  price = {item.price}
+                  {/* <Card 
+                  name = {item.name}
+                  price = {item.price}      
                   page ="CartPopUp"/>
-                  {/* <p>{item.name}</p>
-                  <p>{item.price}</p> */}
+                 */}
+                  <p>{item.name}</p> 
+                  <p>£{item.price}</p> 
                 </div>
               );
             })}
-            <h2>Subtotal: {this.state.total}</h2>
-            <h2>total</h2>
+            <h3>Subtotal: {this.state.total}</h3>
+            <h3>total</h3>
             <a href="/cart">
               {/* <NavLink> */}
               <button>View Cart</button>

@@ -49,12 +49,18 @@ export const Container = styled.div`
 
 export const Test = styled.div`
   position: fixed;
-  padding-top: 100px;
+  padding-top: 250px;
   right: 0;
   background-color: lightgrey;
   width: 200px;
   height: 100%;
   top: 0;
+  /* z-index: 100; */
+
+  span {
+    font: bold;
+    padding-left: 35px;
+  }
 
   button {
     color: white;
@@ -65,10 +71,10 @@ export const Test = styled.div`
     position: relative;
   }
 
-  h2 {
+  h3 {
     /* top: 500px; */
     /* display: none; */
-    margin-left: 1rem;
+    padding-left: 35px;
   }
 `;
 

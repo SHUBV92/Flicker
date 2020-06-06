@@ -8,7 +8,7 @@ const ProductWrapper = props => {
     <Container>
     {/* {if(props.category.name === props.prods ) */}
     {console.log("Products Wrapper", props.prods[0])}
-      <h3>{props.prods[0].name}</h3>
+      {/* <h3>{props.prods[0].name}</h3> */}
       <div>
         {props.prods[0].items.map(item => (
           <Card

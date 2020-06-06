@@ -10,6 +10,9 @@ height: auto;
 
 export const Img = styled.img`
 /* padding: 30px; */
-width:100%;
+min-width:100%;
 height: auto;
 `
+// export const Carousel.Item = styled.div`
+
+// `
