@@ -6,9 +6,11 @@ import { Container } from "./ProductsWrapper.styles.jsx"
 const ProductWrapper = props => {
   return (
     <Container>
-      <h3>{props.category.name}</h3>
+    {/* {if(props.category.name === props.prods ) */}
+    {console.log("Products Wrapper", props.prods[0])}
+      <h3>{props.prods[0].name}</h3>
       <div>
-        {props.category.items.map(item => (
+        {props.prods[0].items.map(item => (
           <Card
             items={item}
             handleCartClick={

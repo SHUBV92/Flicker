@@ -30,7 +30,7 @@ class App extends Component {
     super();
     this.state = {
       showCart: false,
-      showProducts: null
+      selectedCategory: "Wax Melts"
     };
     this.handleCartPopUp = this.handleCartPopUp.bind(
       this
@@ -48,26 +48,12 @@ class App extends Component {
   };
 
   handleProductsPopUp = (Category) => {
-    console.log(
-      "Before Show Products",
-      this.state.showProducts
-    );
 
     this.setState({
-      showProducts: Category
+      selectedCategory: Category
     });
-    console.log(
-      "After Show Products",
-      this.state.showProducts
-    );
   };
 
-
-// const Foo = (component: Component, ...rest) => {
-//  return ( 
-  //  <Component {...rest}/>
-//  )
-// }
   render() {
     return (
       <Container>
@@ -92,11 +78,10 @@ class App extends Component {
                     path={routes}
                     exact={exact}
                   >
-                  {/* <Foo component={component} hello='test' /> */}
                     {route.name === "Products"
                       ?
                         <Products 
-                      products1={this.state.showProducts}/>
+                      selectedCategory={this.state.selectedCategory}/>
                       : component}
                   </Route>
                 );

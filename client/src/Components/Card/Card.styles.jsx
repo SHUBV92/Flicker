@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CardApp = styled.div`
   display: inline-block;
-  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: Arial, Helvetica, sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   /* transition: 0.3s; */
   width: 200px;
@@ -30,6 +30,9 @@ export const CardContainer = styled.div`
   h3{
     text-align:center;
     color: grey;
+    width: 180px;
+    height: 32px;
+
   }
 
   button {
@@ -61,3 +64,28 @@ export const CardContainer = styled.div`
     padding: 20px;
   }
 `;
+
+
+
+// export const product = {
+//   main: "inline-block",
+//   flexDirection: 
+// }
+
+// export const CartApp.defaultProps = {
+//   theme: {
+//     main: "flex",
+//     color: "black",
+//     width: "500px"
+//   }
+// }
+
+// export const CartApp = styled.div `
+// display: ${props => props.theme.main};
+  /* font-family: Arial, Helvetica, sans-serif; */
+//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+//   /* transition: 0.3s; */
+//   width: 200px;
+//   height: 500px;
+//   margin: 10px;
+// `

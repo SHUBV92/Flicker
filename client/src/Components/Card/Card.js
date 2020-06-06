@@ -7,7 +7,8 @@ import Button from "../Button/Button";
 import {
   Image,
   CardApp,
-  CardContainer
+  CardContainer,
+  // CartApp
 } from "./Card.styles";
 
 const Card = props => {
@@ -38,6 +39,12 @@ const Card = props => {
     </button>
   );
 
+      // const Style = (
+      //   props.page === "Products"
+      //   ? <CardApp/> : 
+      //   <CartApp/>
+      // )
+
   //  const reducedP =  !reducedPrice ? null
   //            <s>£{reducedPrice}</s> : null;
   return (
@@ -50,14 +57,11 @@ const Card = props => {
       </Image>
     : null}
       <CardContainer key={id}>
-        <h3>{name}</h3>
+        <h2>{name}</h2>
         <hr />
         <h3>
-          {/* Price: <s>{reducedPrice}</s>  */}
           £{price}
         </h3>
-        {/* <h5>Products Details :</h5> */}
-        {/* <p>{description}</p> */}
         {button1}
       </CardContainer>
     </CardApp>

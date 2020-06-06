@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import { baseRoutes } from "../../constants/routes";
 import Counter from "../../Components/Counter/Counter";
 import ShoppingCart from "../";
-// import CartPopUp from "../CartPopUp/CartPopUp.jsx";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -54,7 +53,7 @@ const Navbar = ({
                     <div class="dropdown-content">
                       <a
                         onClick={() =>
-                          handleProductsPopUp("Wardrobe-Freshners")
+                          handleProductsPopUp("Wardrobe Freshners")
                         }
                         href="/"
                       >
@@ -65,7 +64,7 @@ const Navbar = ({
 
                       <a
                         onClick={() =>
-                          handleProductsPopUp("Wax Melt")
+                          handleProductsPopUp("Wax Melts")
                         }
                         href="/about"
                       >
@@ -76,11 +75,11 @@ const Navbar = ({
 
                       <a
                         onClick={() =>
-                          handleProductsPopUp("Wax Burners")
+                          handleProductsPopUp("Wax Melt Burners")
                         }
                         href="/contact"
                       >
-                        Wax Burners
+                        Wax Melt Burners
                       </a>
                     </div>
                   </div>
@@ -100,7 +99,6 @@ const Navbar = ({
           icon={faShoppingCart}
         />
       </NavWrapper>
-      {/* <div>Shopping cart item length</div> */}
     </Container>
   );
 };

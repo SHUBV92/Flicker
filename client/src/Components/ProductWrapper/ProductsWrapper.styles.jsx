@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   
-  text-align: center;
+  padding: 10px; 
+  /* text-align: center; */
   /* float: right;
   width: 33.33%;
-  padding: 10px;
    */
 
 }

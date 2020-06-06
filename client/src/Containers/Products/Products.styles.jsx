@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const GeneralInfo = styled.section`
   
-  /* margin-top:100px; */
+
   padding: 100px;
 
   h1 {
