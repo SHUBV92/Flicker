@@ -30,7 +30,7 @@ class App extends Component {
     super();
     this.state = {
       showCart: false,
-      selectedCategory: "Wax Melts"
+      selectedCategory: "WAX MELTS"
     };
     this.handleCartPopUp = this.handleCartPopUp.bind(
       this

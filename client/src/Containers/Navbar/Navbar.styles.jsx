@@ -62,9 +62,11 @@ export const Container = styled.div`
 `;
 
 export const NavWrapper = styled.div`
+  /* padding-top:15px; */
   text-align: center;
   /* background-color: rgb(247, 247, 247); */
   background-color: #f9daea;
+  /* height: 55px; */
 `;
 
 export const Logo = styled.img`

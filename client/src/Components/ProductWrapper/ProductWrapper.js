@@ -9,12 +9,9 @@ import {
 const ProductWrapper = props => {
   return (
     <Container>
-      {/* {if(props.category.name === props.prods ) */}
       {console.log(
-        "Products Wrapper",
-        props.prods[0]
+        "TATTI CHOR",props.prods[0].items[0].weight
       )}
-      {/* <h3>{props.prods[0].name}</h3> */}
       <Wrapper>
         {props.prods[0].items.map(item => (
           <Card

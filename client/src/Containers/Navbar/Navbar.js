@@ -54,7 +54,7 @@ const Navbar = ({
                     <div class="dropdown-content">
                       <a
                         onClick={() =>
-                          handleProductsPopUp("Wardrobe Freshners")
+                          handleProductsPopUp("WARDROBE FRESHNERS")
                         }
                         href="/"
                       >
@@ -65,7 +65,7 @@ const Navbar = ({
 
                       <a
                         onClick={() =>
-                          handleProductsPopUp("Wax Melts")
+                          handleProductsPopUp("WAX MELTS")
                         }
                         href="/about"
                       >
@@ -76,7 +76,7 @@ const Navbar = ({
 
                       <a
                         onClick={() =>
-                          handleProductsPopUp("Wax Melt Burners")
+                          handleProductsPopUp("WAX MELT BURNERS")
                         }
                         href="/contact"
                       >

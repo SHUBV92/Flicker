@@ -6,16 +6,16 @@
         "id": "1",
         "name": "Lime, Basil and Mandarin",
         "reducedPrice":10,
-        "price": 16.50,
+        "price": 16.500,
         "description": "An enticing, mouthwatering medley of Sicilian lime and zesty bergamot with a juicy heart busting with ripe mandarins, aquatic white florals, peppery basil and caraway seeds. Base notes include soft, velvety patchouli and sharp green vetivert.",
         "image": "limeBasilMandrin", 
-        "Weight": "800g"
+        "weight": "800g"
       },
       {
         "id": "2",
         "name": "Rhubarb and Custard ",
         "reducedPrice":21,
-        "price": 16.50,
+        "price": 16.500,
         "description": "Identical to those red & yellow sweets we all loved as kids. Packed full of sweet vanilla aromas.",
         "image": "Roses",
         "weight": "800g"
@@ -25,7 +25,7 @@
         "id": "3",
         "name": "Evening Snow",
         "reducedPrice":20,
-       "price": 16.50,
+       "price": 16.500,
         "description": "Evening Snow",
         "image": "eveningSnow",
         "weight": "800g"
@@ -34,7 +34,7 @@
         "id": "4",
         "name": "Clean Linen",
         "reducedPrice":30,
-        "price": 16.50,
+        "price": 16.500,
         "description": "Clean Linen",
         "image": "Roses",
         "weight": "800g"
@@ -44,7 +44,7 @@
         "id": "4",
         "name": "Lavender",
         "reducedPrice":22,
-        "price": 16.50,
+        "price": 16.500,
         "description": "Identical to freshly picked lavender flowers. This fragrance is bursting with floral aroma, this scent is just like walking through a lavender field in the heart of summer.",
         "image": "lavenderSoy",
         "weight": "800g"
@@ -53,67 +53,67 @@
     ]
   },
   {
-    "name": "Wax Melts",
+    "name": "WAX MELTS",
     "items": [
       {
         "id": "1",
         "name": "Lime, Basil and Mandarin",
-        "price": 4.50,
+        "price": 4.500,
         "description": "An enticing, mouthwatering medley of Sicilian lime and zesty bergamot with a juicy heart busting with ripe mandarins, aquatic white florals, peppery basil and caraway seeds. Base notes include soft, velvety patchouli and sharp green vetivert.",
         "image": "limeBasilMandrin",
-        "Weight": "100g"
+        "weight": "100g"
       },
       {
         "id": "2",
         "name": "Rhubarb and Custard",
-        "price": 4.50,
+        "price": 4.500,
         "description": "Identical those red & yellow sweets we all loved as kids. Packed full of sweet vanilla aromas.",
         "image": "lavender",
-        "Weight": "100g"
+        "weight": "100g"
       },
       {
         "id": "3",
         "name": "Evening Snow",
-        "price": 4.50,
+        "price": 4.500,
         "description": "Evening Snow",
         "image": "eveningSnow",
-        "Weight": "100g"
+        "weight": "100g"
       },
       {     
         "id": "4",
         "name": "Clean Linen",
-        "price": 4.50,
+        "price": 4.500,
         "description": "Clean Linen",
         "image": "lavender",
-        "Weight": "100g"
+        "weight": "100g"
       }
     ]
   },
   {
-    "name": "Wardrobe Freshners",
+    "name": "WARDROBE FRESHNERS",
     "items": [
       {
         "id": "1",
         "name": "Lavender",
-        "price": 7.50,
+        "price": 7.500,
         "description": "Identical to freshly picked lavender flowers. This fragrance is bursting with floral aroma, this scent is just like walking through a lavender field in the heart of summer.",
         "image": "lavender",
-        "Weight": "400g"
+        "weight": "400g"
       },
 
       {
         "id": "2",
         "name": "Roses",
-        "price": 7.50,
+        "price": 7.500,
         "description": "A freshly picked bouquet of roses in full bloom with nuances of geranium and violet, all wrapped in a gentle woody base.",
         "image": "Roses",
-        "Weight": "400g"
+        "weight": "400g"
 
       }
     ]
   },
   {
-    "name": "Wax Melt Burners",
+    "name": "WAX MELT BURNERS",
     "items": [
       {
         "id": "1",
@@ -121,7 +121,7 @@
         "price": 7,
         "description": "Colours: White Marble & Pearl Pink",
         "image": "Bundle",
-        "Weight": "600g"
+        "weight": "600g"
 
       },
 
@@ -131,7 +131,7 @@
         "price": 12.50,
         "description": "Colours: Bluish Grey & Clear",
         "image": "Bundle",
-        "Weight": "600g"
+        "weight": "600g"
       }
     ]
   }

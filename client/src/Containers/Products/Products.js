@@ -18,7 +18,6 @@ const Products = props => {
       price: data.price,
       image: data.image,
       weight: data.weight
-
     };
     itemsRef.push(item);
   };

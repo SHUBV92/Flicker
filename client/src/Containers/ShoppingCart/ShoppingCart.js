@@ -12,7 +12,7 @@ import {
   CartDisplay,
   ItemCard,
   Header,
-  Checkout,
+  Checkout
 } from "./ShoppingCart.styles.jsx";
 
 class ShoppingCart extends Component {
@@ -45,11 +45,14 @@ class ShoppingCart extends Component {
 
         itemsArray &&
           itemsArray.map(item => {
+            console.log("Tatti", item[1].weight)
+
             newState.push({
               id: item[0],
               name: item[1].name,
               price: item[1].price,
-              image: item[1].image
+              image: item[1].image,
+              weight: item[1].weight
             });
           });
         console.log("B", newState);
@@ -74,6 +77,27 @@ class ShoppingCart extends Component {
     const sum = items.reduce(reducer);
 
     this.setState({ total: sum });
+
+    this.counter();
+  };
+
+  calculateWeight = () => {
+    const items = this.state.items.map(item => {
+      return item.weight;
+
+      console.log("item.weight", item.weight)
+
+    });
+
+      console.log("Weightssss", this.state.items)
+
+    const reducer = (acc, cur) => acc + cur;
+
+    const weight1 = items.reduce(reducer);
+
+    console.log("Weight1", weight1)
+
+    this.setState({ weight: weight1 });
 
     this.counter();
   };
@@ -113,12 +137,17 @@ class ShoppingCart extends Component {
 
         <Checkout>
           <div>
-          {/* <p><i class="fa fa-spinner w3-spin" style="font-size:64px"></i></p> */}
+            {/* <p><i class="fa fa-spinner w3-spin" style="font-size:64px"></i></p> */}
             <p>
               <button
                 onClick={this.calculateTotal}
               >
                 Get Total: £{this.state.total}
+              </button>
+              <button
+                onClick={this.calculateWeight}
+              >
+                Get Weight: £{this.state.weight}
               </button>
             </p>
 
@@ -126,7 +155,7 @@ class ShoppingCart extends Component {
               Subtotal : £{this.state.total}{" "}
             </h5>
             <br />
-            <h5>Shipping : £{this.weight}</h5>
+            <h5>Shipping : £{this.state.weight}</h5>
 
             <hr />
             <p>Total: £{this.state.total} </p>
@@ -142,13 +171,9 @@ class ShoppingCart extends Component {
 }
 export default ShoppingCart;
 
-
-
-
 //  if(weight === 2Kg){
 //   charge £3
 // }
-
 
 //  if(weight === 5Kg){
 //   charge £5
