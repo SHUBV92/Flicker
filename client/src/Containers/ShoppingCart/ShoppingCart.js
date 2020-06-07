@@ -13,7 +13,6 @@ import {
   ItemCard,
   Header,
   Checkout,
-  Description
 } from "./ShoppingCart.styles.jsx";
 
 class ShoppingCart extends Component {

@@ -7,7 +7,7 @@ export const Container = styled.div`
   /* float: right;
   width: 33.33%;
    */
-   margin-left: 40px;
+   padding-left: 250px;
 }
   h3 {
     color:"#ffd24d";

@@ -8,6 +8,9 @@ padding: 100px;
 export const Header = styled.h3`
   margin: 10px;
   padding: 10px;
+  h3{
+    text-align: center;
+  }
 `;
 
 export const ItemCard = styled.div`
@@ -22,13 +25,10 @@ display: inline-block;
   p.solid {border-style: solid;};
 `;
 
-export const Items = styled.section`
-  padding: 2px 16px;
-`;
-
 export const Checkout = styled.section`
-  display:flex;
-  justify-content:flex-end;
+
+  padding-left: 800px;
+  /* position: fixed; */
  `
 
 export const Description = styled.div`

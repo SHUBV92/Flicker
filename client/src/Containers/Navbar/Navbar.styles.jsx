@@ -10,12 +10,9 @@ export const Container = styled.div`
   z-index: 100;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
-
-
-
 /* Dropdown Button */
 .dropbtn {
-  background-color: #fff;
+  background-color: #f9daea;
   color: grey;
   padding: 16px;
   font-size: 16px;
@@ -26,21 +23,27 @@ export const Container = styled.div`
 .dropdown {
   position: relative;
   display: inline-block;
+  opacity: 0.8;
+  
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
+  background-color: pink;  
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  border-radius: 10px;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
+  color:black;
+  font-size:20px;
+  font-style: bold;
   padding: 12px 16px;
   opacity:0.5;
   text-decoration: none;
@@ -54,9 +57,7 @@ export const Container = styled.div`
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #fff;}
-
-
+.dropdown:hover .dropbtn {background-color: #fff}
 
 `;
 

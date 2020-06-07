@@ -37,7 +37,8 @@ const Navbar = ({
                 to={route.routes}
                 activeStyle={{
                   fontWeight: "bold",
-                  color: "white"
+                  // color: ,
+                  borderBottom: "4px solid white"
                 }}
                 style={{
                   textDecoration: "none",

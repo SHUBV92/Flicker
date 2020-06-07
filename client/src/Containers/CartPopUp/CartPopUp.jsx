@@ -79,7 +79,7 @@ class CartPopUp extends Component {
   render() {
     return (
       <Test>
-      <h3> Cart</h3>
+      <h3>Cart</h3>
         <ul>
           <li>
             {/* Selected Item Card */}
@@ -87,7 +87,6 @@ class CartPopUp extends Component {
               return (
                 <div>
                   <hr />
-
                   {/* <Card 
                   name = {item.name}
                   price = {item.price}      
@@ -98,8 +97,8 @@ class CartPopUp extends Component {
                 </div>
               );
             })}
-            <h3>Subtotal: {this.state.total}</h3>
-            <h3>total</h3>
+            <h4>Subtotal: {this.state.total}</h4>
+            <h4>total</h4>
             <a href="/cart">
               {/* <NavLink> */}
               <button>View Cart</button>

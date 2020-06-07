@@ -1,66 +1,23 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  margin-top: 30px;
-  width: 5rem;
-  height: 100vh;
-  position: fixed;
-  margin-left: 380px;
-  background-color: var(--bg-primary);
-  transition: width 200ms ease;
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  li {
-    width: 100%;
-
-    ::nth-last-child() {
-      margin-top: auto;
-    }
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-    height: 5rem;
-    color: var(--text-primary);
-    text-decoration: none;
-    filter: grayscale(100%) opacity(0.7);
-    transition: var(--transition-speed);
-
-    :hover {
-      filter: grayscale(0%) opacity(1);
-      background: var(--bg-secondary);
-      color: var(--text-secondary);
-    }
-  }
-
-  h2 {
-    display: none;
-    margin-left: 1rem;
-  }
-`;
 
 export const Test = styled.div`
   position: fixed;
   padding-top: 250px;
   right: 0;
-  background-color: lightgrey;
+  background-color: pink;
   width: 200px;
   height: 100%;
   top: 0;
-  /* z-index: 100; */
 
-  span {
-    font: bold;
-    padding-left: 35px;
-  }
+  opacity: 0.7;
+  font-style: italic;
+  font-size: 20px;
+  color: white;
+  
+ul {
+  text-decoration: none;
+}
 
   button {
     color: white;
@@ -70,13 +27,63 @@ export const Test = styled.div`
     bottom: 0;
     position: relative;
   }
+  span { 
+    font: bold;
+    padding-left: 50px;
+  }
 
   h3 {
-    /* top: 500px; */
-    /* display: none; */
-    padding-left: 35px;
+    padding-left: 15px;
   }
 `;
+
+// export const Container = styled.div`
+//   margin-top: 30px;
+//   width: 5rem;
+//   height: 100vh;
+//   position: fixed;
+//   margin-left: 380px;
+//   background-color: var(--bg-primary);
+//   transition: width 200ms ease;
+
+//   ul {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+//     flex-direction: row;
+//     align-items: center;
+//   }
+
+//   li {
+//     width: 100%;
+
+//     ::nth-last-child() {
+//       margin-top: auto;
+//     }
+//   }
+
+//   a {
+//     display: flex;
+//     align-items: center;
+//     height: 5rem;
+//     color: var(--text-primary);
+//     text-decoration: none;
+//     filter: grayscale(100%) opacity(0.7);
+//     transition: var(--transition-speed);
+
+//     :hover {
+//       filter: grayscale(0%) opacity(1);
+//       background: var(--bg-secondary);
+//       color: var(--text-secondary);
+//     }
+//   }
+
+//   h2 {
+//     display: none;
+//     margin-left: 1rem;
+//   }
+// `;
+
 
 /* 2rem :
 is the relative position 
