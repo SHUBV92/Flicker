@@ -24,6 +24,6 @@ export const WhoWeAre = styled.div`
   color: black;
 
  h1{ 
-   color: #cc0052;
+   color: #e6ac00;
  }
 `;

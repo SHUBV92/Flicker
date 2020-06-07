@@ -21,7 +21,8 @@ class ShoppingCart extends Component {
     this.state = {
       items: [],
       total: 0,
-      count: 0
+      count: 0,
+      weight: 10
     };
   }
 
@@ -112,6 +113,7 @@ class ShoppingCart extends Component {
 
         <Checkout>
           <div>
+          {/* <p><i class="fa fa-spinner w3-spin" style="font-size:64px"></i></p> */}
             <p>
               <button
                 onClick={this.calculateTotal}
@@ -124,7 +126,7 @@ class ShoppingCart extends Component {
               Subtotal : £{this.state.total}{" "}
             </h5>
             <br />
-            <h5>Shipping : £10</h5>
+            <h5>Shipping : £{this.weight}</h5>
 
             <hr />
             <p>Total: £{this.state.total} </p>
@@ -139,3 +141,15 @@ class ShoppingCart extends Component {
   }
 }
 export default ShoppingCart;
+
+
+
+
+//  if(weight === 2Kg){
+//   charge £3
+// }
+
+
+//  if(weight === 5Kg){
+//   charge £5
+// }

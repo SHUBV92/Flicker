@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const GeneralInfo = styled.section`
-
+  
   /* padding-top: 80px;
   padding-left: 150px;
   padding-right: 150px; */
@@ -11,10 +11,11 @@ export const GeneralInfo = styled.section`
   h1 {
     position: sticky;
     text-align: center;
+    font-style: italic;
+    color: #e6ac00;
   }
-  
+
   h2 {
     text-align: center;
   }
 `;
-

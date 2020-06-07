@@ -38,7 +38,7 @@ const Navbar = ({
                 activeStyle={{
                   fontWeight: "bold",
                   // color: ,
-                  borderBottom: "4px solid white"
+                  borderBottom: "4px solid white",
                 }}
                 style={{
                   textDecoration: "none",

@@ -28,7 +28,8 @@ const Card = props => {
           ? props.handleCartClick({
               name,
               price,
-              image
+              image,
+              weight
             })
           : props.removeItem(id)
       }

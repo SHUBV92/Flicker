@@ -66,6 +66,18 @@ const CarouselTest = () => {
         </Carousel.Caption>
       </Carousel.Item>
 
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          // style={{width:"900px", height: "900px"}}
+          src={require(`../../assets/images/banner.jpeg`)}
+          alt="Twice Slide"
+        />
+        <Carousel.Caption>
+          <h3>Wardrobe Freshners</h3>
+          <p>Evening Snow</p>
+        </Carousel.Caption>
+      </Carousel.Item>
     {/* </Router>
     <Switch>
         <Route path="/about">

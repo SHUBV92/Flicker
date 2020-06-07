@@ -1,15 +1,21 @@
 import React from "react";
 import Card from "../Card/";
 import { faAlignCenter } from "@fortawesome/free-solid-svg-icons";
-import { Container } from "./ProductsWrapper.styles.jsx"
+import {
+  Container,
+  Wrapper
+} from "./ProductsWrapper.styles.jsx";
 
 const ProductWrapper = props => {
   return (
     <Container>
-    {/* {if(props.category.name === props.prods ) */}
-    {console.log("Products Wrapper", props.prods[0])}
+      {/* {if(props.category.name === props.prods ) */}
+      {console.log(
+        "Products Wrapper",
+        props.prods[0]
+      )}
       {/* <h3>{props.prods[0].name}</h3> */}
-      <div>
+      <Wrapper>
         {props.prods[0].items.map(item => (
           <Card
             items={item}
@@ -19,7 +25,7 @@ const ProductWrapper = props => {
             page={props.page}
           />
         ))}
-      </div>
+      </Wrapper>
     </Container>
   );
 };

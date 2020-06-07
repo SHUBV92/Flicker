@@ -8,7 +8,8 @@
         "reducedPrice":10,
         "price": 16.50,
         "description": "An enticing, mouthwatering medley of Sicilian lime and zesty bergamot with a juicy heart busting with ripe mandarins, aquatic white florals, peppery basil and caraway seeds. Base notes include soft, velvety patchouli and sharp green vetivert.",
-        "image": "limeBasilMandrin"
+        "image": "limeBasilMandrin", 
+        "Weight": "800g"
       },
       {
         "id": "2",
@@ -16,7 +17,9 @@
         "reducedPrice":21,
         "price": 16.50,
         "description": "Identical to those red & yellow sweets we all loved as kids. Packed full of sweet vanilla aromas.",
-        "image": "Roses"
+        "image": "Roses",
+        "weight": "800g"
+
       },
       {
         "id": "3",
@@ -24,7 +27,8 @@
         "reducedPrice":20,
        "price": 16.50,
         "description": "Evening Snow",
-        "image": "eveningSnow"
+        "image": "eveningSnow",
+        "weight": "800g"
       }, 
       {
         "id": "4",
@@ -32,7 +36,9 @@
         "reducedPrice":30,
         "price": 16.50,
         "description": "Clean Linen",
-        "image": "Roses"
+        "image": "Roses",
+        "weight": "800g"
+
       }, 
       {
         "id": "4",
@@ -40,7 +46,9 @@
         "reducedPrice":22,
         "price": 16.50,
         "description": "Identical to freshly picked lavender flowers. This fragrance is bursting with floral aroma, this scent is just like walking through a lavender field in the heart of summer.",
-        "image": "lavenderSoy"
+        "image": "lavenderSoy",
+        "weight": "800g"
+
       }      
     ]
   },
@@ -52,28 +60,32 @@
         "name": "Lime, Basil and Mandarin",
         "price": 4.50,
         "description": "An enticing, mouthwatering medley of Sicilian lime and zesty bergamot with a juicy heart busting with ripe mandarins, aquatic white florals, peppery basil and caraway seeds. Base notes include soft, velvety patchouli and sharp green vetivert.",
-        "image": "limeBasilMandrin"
+        "image": "limeBasilMandrin",
+        "Weight": "100g"
       },
       {
         "id": "2",
         "name": "Rhubarb and Custard",
         "price": 4.50,
         "description": "Identical those red & yellow sweets we all loved as kids. Packed full of sweet vanilla aromas.",
-        "image": "lavender"
+        "image": "lavender",
+        "Weight": "100g"
       },
       {
         "id": "3",
         "name": "Evening Snow",
         "price": 4.50,
         "description": "Evening Snow",
-        "image": "eveningSnow"
+        "image": "eveningSnow",
+        "Weight": "100g"
       },
       {     
         "id": "4",
         "name": "Clean Linen",
         "price": 4.50,
         "description": "Clean Linen",
-        "image": "lavender"
+        "image": "lavender",
+        "Weight": "100g"
       }
     ]
   },
@@ -85,7 +97,8 @@
         "name": "Lavender",
         "price": 7.50,
         "description": "Identical to freshly picked lavender flowers. This fragrance is bursting with floral aroma, this scent is just like walking through a lavender field in the heart of summer.",
-        "image": "lavender"
+        "image": "lavender",
+        "Weight": "400g"
       },
 
       {
@@ -93,7 +106,9 @@
         "name": "Roses",
         "price": 7.50,
         "description": "A freshly picked bouquet of roses in full bloom with nuances of geranium and violet, all wrapped in a gentle woody base.",
-        "image": "Roses"
+        "image": "Roses",
+        "Weight": "400g"
+
       }
     ]
   },
@@ -105,7 +120,9 @@
         "name": "Ceramic Burner",
         "price": 7,
         "description": "Colours: White Marble & Pearl Pink",
-        "image": "Bundle"
+        "image": "Bundle",
+        "Weight": "600g"
+
       },
 
       {
@@ -113,7 +130,8 @@
         "name": "Pearl Burners",
         "price": 12.50,
         "description": "Colours: Bluish Grey & Clear",
-        "image": "Bundle"
+        "image": "Bundle",
+        "Weight": "600g"
       }
     ]
   }

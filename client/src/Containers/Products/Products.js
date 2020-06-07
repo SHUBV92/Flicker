@@ -7,9 +7,7 @@ import { fetchProductData } from "../CartPopUp/CartPopUp";
 import WaxMelts from "./WaxMelts/WaxMelts.jsx";
 import WardrobeFreshners from "./WardrobeFreshners/WardrobeFreshners.jsx";
 
-const Products = (props) => { 
-
-  
+const Products = props => {
   const handleCartClick = data => {
     const itemsRef = firebase
       .database()
@@ -18,26 +16,30 @@ const Products = (props) => {
     const item = {
       name: data.name,
       price: data.price,
-      image: data.image
+      image: data.image,
+      weight: data.weight
+
     };
     itemsRef.push(item);
   };
 
-  const prods = productsData.filter(category => (
-   props.selectedCategory === category.name 
-  ))
+  const prods = productsData.filter(
+    category =>
+      props.selectedCategory === category.name
+  );
 
-    return(
-      <GeneralInfo>
-        <h1>{props.selectedCategory}</h1>
-        <hr />
-          <ProductWrapper
-            handleCartClick={handleCartClick}
-            page="Products"
-            prods = {prods}
-          />
-      </GeneralInfo>
-    );
-}
+  return (
+    <GeneralInfo>
+      <h5>Only shipping to the UK</h5>
+      <h1>{props.selectedCategory}</h1>
+      <hr />
+      <ProductWrapper
+        handleCartClick={handleCartClick}
+        page="Products"
+        prods={prods}
+      />
+    </GeneralInfo>
+  );
+};
 
 export default Products;
