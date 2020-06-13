@@ -9,7 +9,7 @@
         "price": 16.500,
         "description": "An enticing, mouthwatering medley of Sicilian lime and zesty bergamot with a juicy heart busting with ripe mandarins, aquatic white florals, peppery basil and caraway seeds. Base notes include soft, velvety patchouli and sharp green vetivert.",
         "image": "limeBasilMandrin", 
-        "weight": "800g"
+        "weight": 800
       },
       {
         "id": "2",
@@ -18,7 +18,7 @@
         "price": 16.500,
         "description": "Identical to those red & yellow sweets we all loved as kids. Packed full of sweet vanilla aromas.",
         "image": "Roses",
-        "weight": "800g"
+        "weight": 800
 
       },
       {
@@ -28,7 +28,7 @@
        "price": 16.500,
         "description": "Evening Snow",
         "image": "eveningSnow",
-        "weight": "800g"
+        "weight": 800
       }, 
       {
         "id": "4",
@@ -37,7 +37,7 @@
         "price": 16.500,
         "description": "Clean Linen",
         "image": "Roses",
-        "weight": "800g"
+        "weight": 800
 
       }, 
       {
@@ -47,7 +47,7 @@
         "price": 16.500,
         "description": "Identical to freshly picked lavender flowers. This fragrance is bursting with floral aroma, this scent is just like walking through a lavender field in the heart of summer.",
         "image": "lavenderSoy",
-        "weight": "800g"
+        "weight": 800
 
       }      
     ]
@@ -61,7 +61,7 @@
         "price": 4.500,
         "description": "An enticing, mouthwatering medley of Sicilian lime and zesty bergamot with a juicy heart busting with ripe mandarins, aquatic white florals, peppery basil and caraway seeds. Base notes include soft, velvety patchouli and sharp green vetivert.",
         "image": "limeBasilMandrin",
-        "weight": "100g"
+        "weight": 100
       },
       {
         "id": "2",
@@ -69,7 +69,7 @@
         "price": 4.500,
         "description": "Identical those red & yellow sweets we all loved as kids. Packed full of sweet vanilla aromas.",
         "image": "lavender",
-        "weight": "100g"
+        "weight": 100
       },
       {
         "id": "3",
@@ -77,7 +77,7 @@
         "price": 4.500,
         "description": "Evening Snow",
         "image": "eveningSnow",
-        "weight": "100g"
+        "weight": 100
       },
       {     
         "id": "4",
@@ -85,7 +85,7 @@
         "price": 4.500,
         "description": "Clean Linen",
         "image": "lavender",
-        "weight": "100g"
+        "weight": 100
       }
     ]
   },
@@ -98,7 +98,7 @@
         "price": 7.500,
         "description": "Identical to freshly picked lavender flowers. This fragrance is bursting with floral aroma, this scent is just like walking through a lavender field in the heart of summer.",
         "image": "lavender",
-        "weight": "400g"
+        "weight": 400
       },
 
       {
@@ -107,7 +107,7 @@
         "price": 7.500,
         "description": "A freshly picked bouquet of roses in full bloom with nuances of geranium and violet, all wrapped in a gentle woody base.",
         "image": "Roses",
-        "weight": "400g"
+        "weight": 400
 
       }
     ]
@@ -121,7 +121,7 @@
         "price": 7,
         "description": "Colours: White Marble & Pearl Pink",
         "image": "Bundle",
-        "weight": "600g"
+        "weight": 600
 
       },
 
@@ -131,7 +131,7 @@
         "price": 12.50,
         "description": "Colours: Bluish Grey & Clear",
         "image": "Bundle",
-        "weight": "600g"
+        "weight": 600
       }
     ]
   }

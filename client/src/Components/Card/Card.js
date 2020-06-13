@@ -49,7 +49,6 @@ const Card = props => {
 
   //  const reducedP =  !reducedPrice ? null
   //            <s>£{reducedPrice}</s> : null;
-  console.log("Tattiyaan", weight)
   return (
     <CardApp>
       {(props.page != "CartPopUp") ?
@@ -63,7 +62,7 @@ const Card = props => {
         <h3>{name}</h3>
         <hr />
         <h4>
-          £{price}0
+          £{price}
         </h4>
         {button1}
       </CardContainer>

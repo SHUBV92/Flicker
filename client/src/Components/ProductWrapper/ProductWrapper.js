@@ -9,9 +9,6 @@ import {
 const ProductWrapper = props => {
   return (
     <Container>
-      {console.log(
-        "TATTI CHOR",props.prods[0].items[0].weight
-      )}
       <Wrapper>
         {props.prods[0].items.map(item => (
           <Card

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import StripeCheckoutButton from "../Stripe/Stripe-button";
 import Card from "../../Components/Card/Card";
+import { Spinner } from "react-bootstrap";
 
 import firebase, {
   provider,
@@ -20,9 +21,11 @@ class ShoppingCart extends Component {
     super();
     this.state = {
       items: [],
-      total: 0,
       count: 0,
-      weight: 10
+      weight: 10,
+      weightCharge: 0,
+      total: 0,
+      subtotal: 0
     };
   }
 
@@ -39,14 +42,10 @@ class ShoppingCart extends Component {
         let items1 = snapshot.val();
         console.log("A", items1);
         const itemsArray =
-          items1 && Object.entries(items1);
-
+        items1 && Object.entries(items1);
         let newState = [];
-
         itemsArray &&
           itemsArray.map(item => {
-            console.log("Tatti", item[1].weight)
-
             newState.push({
               id: item[0],
               name: item[1].name,
@@ -55,7 +54,6 @@ class ShoppingCart extends Component {
               weight: item[1].weight
             });
           });
-        console.log("B", newState);
 
         this.setState({
           items: newState
@@ -66,6 +64,32 @@ class ShoppingCart extends Component {
       }
     );
   }
+
+  calculateWeight = () => {
+    const items = this.state.items.map(item => {
+      return item.weight;
+
+      console.log("item.weight", item.weight);
+    });
+
+    const reducer = (acc, cur) => acc + cur;
+
+    const weight1 = items.reduce(reducer);
+
+    if (weight1 >= 500) {
+      this.setState({ weightCharge: 3 });
+    }
+    if (weight1 === 5000) {
+      this.setState({ weightCharge: 5 });
+    }
+    if (weight1 === 8000) {
+      this.setState({ weightCharge: 10 });
+    }
+
+    this.setState({ weight: weight1 });
+
+    this.counter();
+  };
 
   calculateTotal = () => {
     const items = this.state.items.map(item => {
@@ -78,30 +102,15 @@ class ShoppingCart extends Component {
 
     this.setState({ total: sum });
 
-    this.counter();
-  };
-
-  calculateWeight = () => {
-    const items = this.state.items.map(item => {
-      return item.weight;
-
-      console.log("item.weight", item.weight)
-
-    });
-
-      console.log("Weightssss", this.state.items)
-
-    const reducer = (acc, cur) => acc + cur;
-
-    const weight1 = items.reduce(reducer);
-
-    console.log("Weight1", weight1)
-
-    this.setState({ weight: weight1 });
+    console.log(this.state.weightCharge)
+    
+    const subtotal = sum + this.state.weightCharge
+    this.setState({ total: subtotal });
 
     this.counter();
   };
 
+  
   counter = returnedData => {
     this.setState({ returnedData });
   };
@@ -114,10 +123,6 @@ class ShoppingCart extends Component {
   }
 
   render() {
-    console.log(
-      "Items in state",
-      this.state.items[0]
-    );
     return (
       <CartDisplay>
         <Header>
@@ -125,15 +130,23 @@ class ShoppingCart extends Component {
           <hr />
         </Header>
 
-        {this.state.items.map(item => {
-          return (
-            <Card
-              items={item}
-              removeItem={this.removeItem}
-              page="ShoppingCart"
-            />
-          );
-        })}
+        {this.state.items.length === 0 ? (
+          <Spinner
+            animation="border"
+            variant="warning"
+            style={{ marginLeft: "500px" }}
+          />
+        ) : (
+          this.state.items.map(item => {
+            return (
+              <Card
+                items={item}
+                removeItem={this.removeItem}
+                page="ShoppingCart"
+              />
+            );
+          })
+        )}
 
         <Checkout>
           <div>
@@ -147,7 +160,7 @@ class ShoppingCart extends Component {
               <button
                 onClick={this.calculateWeight}
               >
-                Get Weight: £{this.state.weight}
+                Get Weight: {this.state.weight}g
               </button>
             </p>
 
@@ -155,10 +168,16 @@ class ShoppingCart extends Component {
               Subtotal : £{this.state.total}{" "}
             </h5>
             <br />
-            <h5>Shipping : £{this.state.weight}</h5>
+            <h5>
+              Total Weight : {this.state.weight}g
+            </h5>
 
             <hr />
-            <p>Total: £{this.state.total} </p>
+            <p>
+              Total: £
+              {this.state.total +
+                this.state.weightCharge}{" "}
+            </p>
 
             <StripeCheckoutButton
               price={this.state.total}

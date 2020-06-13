@@ -7,9 +7,10 @@ const StripeCheckoutButton = ({ price }) => {
     const publishableKey = 'pk_test_vWcPu1ZmD8qxCRLMuHc1V41h00c9y8gb42'
 
     const onToken = token => {
-        axios({
-            url:'payment',
-            method:'post',
+        console.log("TOKEN", token)
+        axios.getUri('payment', {
+            // url:'payment',
+            // method:'post',
             data: {
                 amount: priceForStripe,
                 token
@@ -22,6 +23,9 @@ const StripeCheckoutButton = ({ price }) => {
                 'There was an issue with your payment. Please sure you use the provided credit card'
             );
         })
+
+        console.log("TOKEN has been hit", token)
+
     };
 
     return (

@@ -8,57 +8,64 @@ export const Container = styled.div`
   height: 200px;
   width: 100%;
   z-index: 100;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 
-/* Dropdown Button */
-.dropbtn {
-  background-color: #f9daea;
-  color: grey;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
+  /* Dropdown Button */
+  .dropbtn {
+    background-color: #f9daea;
+    color: grey;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  opacity: 0.8;
-  
-}
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    opacity: 0.8;
+  }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  /* background-color: #f1f1f1; */
-  background-color: #f9daea;  
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  border-radius: 10px;
-}
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    /* background-color: #f1f1f1; */
+    background-color: #f9daea;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px
+      rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    margin-right: 50px;  
+    /* margin-top: 5px; */
+  }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  color:black;
-  font-size:20px;
-  font-style: bold;
-  padding: 12px 16px;
-  opacity:0.5;
-  text-decoration: none;
-  display: block;
-}
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    font-size: 20px;
+    font-style: bold;
+    padding: 12px 16px;
+    opacity: 0.5;
+    text-decoration: none;
+    display: block;
+  }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #fff}
-
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #fff;
+  }
 `;
 
 export const NavWrapper = styled.div`
