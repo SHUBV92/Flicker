@@ -14,6 +14,7 @@ export const CardApp = styled.div`
 export const Image = styled.div`
   /* position: relative; */
   img {
+    position:relative;
     padding: 0px;
     /* background-color: green; */
     transition: transform 0.2s; /* Animation */
@@ -34,6 +35,13 @@ export const Image = styled.div`
     ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     border-radius: 50px;
   }
+
+  /* p{
+    position: absolute;
+  bottom: 8px;
+  left: 16px;
+} */
+
 `;
 
 export const CardContainer = styled.div`

@@ -8,6 +8,12 @@ import {
   // CartApp
 } from "./Card.styles";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSearchPlus,
+  faExpandAlt
+} from "@fortawesome/free-solid-svg-icons";
+
 const Card = props => {
   const {
     id,
@@ -60,6 +66,9 @@ const Card = props => {
           <img
             src={require(`../../assets/NewImages/${image}.jpeg`)}
           />
+          <p>
+            <FontAwesomeIcon icon={faExpandAlt} />
+          </p>
         </Image>
       ) : null}
       <CardContainer key={id}>
