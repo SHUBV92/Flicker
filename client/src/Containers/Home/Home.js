@@ -3,9 +3,11 @@ import Carousel from "../Carousel/Carousel"
 import { Container, Intro, WhoWeAre } from "./home.styles.jsx";
 import Contact from "../Contact/Contact"
 import CarouselTest from "../CarouselTest/CarouselTest.components";
+import CurrencyFormat from 'react-currency-format';
 
 const Home = () => (
   <Container>
+    <CurrencyFormat value={2456981} displayType={'text'} thousandSeparator={true} prefix={'$'} />hey
     {/* <Intro>
       <h5>
         High-end scented candles and gifts without

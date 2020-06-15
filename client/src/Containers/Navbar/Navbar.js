@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShoppingCart,
   faHome
-
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -32,13 +31,13 @@ const Navbar = ({
         {baseRoutes.map(route => (
           <Links>
             <li>
-            {/* {route.icon} */}
+              {/* {route.icon} */}
               <NavLink
                 to={route.routes}
                 activeStyle={{
                   fontWeight: "bold",
                   // color: ,
-                  borderBottom: "4px solid white",
+                  borderBottom: "4px solid white"
                 }}
                 style={{
                   textDecoration: "none",
@@ -54,18 +53,22 @@ const Navbar = ({
                     <div class="dropdown-content">
                       <a
                         onClick={() =>
-                          handleProductsPopUp("WARDROBE FRESHNERS")
+                          handleProductsPopUp(
+                            "CANDLES"
+                          )
                         }
                         href="/"
                       >
-                        Wardrobe-Freshners
+                        Candles
                       </a>
 
                       <hr />
 
                       <a
                         onClick={() =>
-                          handleProductsPopUp("WAX MELTS")
+                          handleProductsPopUp(
+                            "WAX MELTS"
+                          )
                         }
                         href="/about"
                       >
@@ -76,7 +79,21 @@ const Navbar = ({
 
                       <a
                         onClick={() =>
-                          handleProductsPopUp("WAX MELT BURNERS")
+                          handleProductsPopUp(
+                            "WARDROBE FRESHNERS"
+                          )
+                        }
+                        href="/contact"
+                      >
+                        Wardrobe Freshners 
+                      </a>
+                      <hr />
+
+                      <a
+                        onClick={() =>
+                          handleProductsPopUp(
+                            "WAX MELT BURNERS"
+                          )
                         }
                         href="/contact"
                       >

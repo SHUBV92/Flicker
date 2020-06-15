@@ -7,15 +7,24 @@ export const GeneralInfo = styled.section`
   padding-right: 150px; */
 
   padding: 100px;
+  padding-top:200px;
+`
+export const Title = styled.section`
+    position: fixed;
+    z-index:50;
+    background-color:white;
+    width:100%;
+    /* height: 50px; */
+    /* padding: 50px; */
+    padding-top:50px;
 
   h1 {
-    position: sticky;
     text-align: center;
-    font-style: italic;
+    /* font-style: italic; */
     color: #e6ac00;
   }
-
-  h2 {
-    text-align: center;
+  h5 {
+    /* text-align: center; */
+    margin-top:20px;
   }
 `;

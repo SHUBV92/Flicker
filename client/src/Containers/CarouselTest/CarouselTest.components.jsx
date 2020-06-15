@@ -36,28 +36,13 @@ const CarouselTest = () => {
       })} */}
     
 
-      <Carousel.Item>
-        <Img
-          className="d-block w-100"
-          // style={{width:"900px", height: "900px"}}
-          src={require(`../../assets/images/Roses.jpeg`)}
-          alt="Twice Slide"
-        />
-        <Carousel.Caption>
-        {/* <LinkContainer to="/about"> */}
-
-          <h3>Wax Melts</h3>
-          <p>Evening Snow</p>
-        {/* </LinkContainer> */}
-
-        </Carousel.Caption>
-      </Carousel.Item>
+  
 
       <Carousel.Item>
         <img
           className="d-block w-100"
           // style={{width:"900px", height: "900px"}}
-          src={require(`../../assets/images/lavenderSoy.jpeg`)}
+          src={require(`../../assets/NewImages/mixCandles.jpeg`)}
           alt="Twice Slide"
         />
         <Carousel.Caption>
@@ -70,7 +55,7 @@ const CarouselTest = () => {
         <img
           className="d-block w-100"
           // style={{width:"900px", height: "900px"}}
-          src={require(`../../assets/images/banner.jpeg`)}
+          src={require(`../../assets/NewImages/waxMeltBasket.jpeg`)}
           alt="Twice Slide"
         />
         <Carousel.Caption>

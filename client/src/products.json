@@ -1,55 +1,52 @@
 [
   {
-    "name": "Candles",
+    "name": "CANDLES",
     "items": [
       {
         "id": "1",
-        "name": "Lime, Basil and Mandarin",
-        "reducedPrice":10,
-        "price": 16.500,
-        "description": "An enticing, mouthwatering medley of Sicilian lime and zesty bergamot with a juicy heart busting with ripe mandarins, aquatic white florals, peppery basil and caraway seeds. Base notes include soft, velvety patchouli and sharp green vetivert.",
-        "image": "limeBasilMandrin", 
+        "name": "Evening Snow",
+        "reducedPrice": 20,
+        "price": 16.5,
+        "description": "Evening Snow",
+        "image": "EveningSnowCandle",
         "weight": 800
       },
       {
         "id": "2",
-        "name": "Rhubarb and Custard ",
-        "reducedPrice":21,
-        "price": 16.500,
-        "description": "Identical to those red & yellow sweets we all loved as kids. Packed full of sweet vanilla aromas.",
-        "image": "Roses",
+        "name": "Fresh Linen",
+        "reducedPrice": 30,
+        "price": 16.5,
+        "description": "Fresh Linen",
+        "image": "FreshLinenCandles",
         "weight": 800
-
       },
       {
         "id": "3",
-        "name": "Evening Snow",
-        "reducedPrice":20,
-       "price": 16.500,
-        "description": "Evening Snow",
-        "image": "eveningSnow",
-        "weight": 800
-      }, 
-      {
-        "id": "4",
-        "name": "Clean Linen",
-        "reducedPrice":30,
-        "price": 16.500,
-        "description": "Clean Linen",
-        "image": "Roses",
-        "weight": 800
-
-      }, 
-      {
-        "id": "4",
         "name": "Lavender",
-        "reducedPrice":22,
-        "price": 16.500,
+        "reducedPrice": 22,
+        "price": 16.5,
         "description": "Identical to freshly picked lavender flowers. This fragrance is bursting with floral aroma, this scent is just like walking through a lavender field in the heart of summer.",
-        "image": "lavenderSoy",
+        "image": "LavenderCandles",
         "weight": 800
-
-      }      
+      },
+      {
+        "id": "4",
+        "name": "Lime, Basil and Mandarin",
+        "reducedPrice": 10,
+        "price": 16.5,
+        "description": "An enticing, mouthwatering medley of Sicilian lime and zesty bergamot with a juicy heart busting with ripe mandarins, aquatic white florals, peppery basil and caraway seeds. Base notes include soft, velvety patchouli and sharp green vetivert.",
+        "image": "LimeBasilMandarinCandles",
+        "weight": 800
+      },
+      {
+        "id": "5",
+        "name": "Rhubarb and Custard ",
+        "reducedPrice": 21,
+        "price": 16.5,
+        "description": "Identical to those red & yellow sweets we all loved as kids. Packed full of sweet vanilla aromas.",
+        "image": "RhubarbCustardCandles",
+        "weight": 800
+      }
     ]
   },
   {
@@ -57,34 +54,124 @@
     "items": [
       {
         "id": "1",
-        "name": "Lime, Basil and Mandarin",
-        "price": 4.500,
-        "description": "An enticing, mouthwatering medley of Sicilian lime and zesty bergamot with a juicy heart busting with ripe mandarins, aquatic white florals, peppery basil and caraway seeds. Base notes include soft, velvety patchouli and sharp green vetivert.",
-        "image": "limeBasilMandrin",
+        "name": "Baby Powder",
+        "price": 4.5,
+        "description": "Baby Powder",
+        "image": "BabyPowderWax",
         "weight": 100
       },
       {
         "id": "2",
-        "name": "Rhubarb and Custard",
-        "price": 4.500,
-        "description": "Identical those red & yellow sweets we all loved as kids. Packed full of sweet vanilla aromas.",
-        "image": "lavender",
+        "name": "Blackcurrant & Toberose",
+        "price": 4.5,
+        "description": "Blackcurrant & Toberose",
+        "image": "BlackcurrantTuberoseWax",
         "weight": 100
       },
       {
         "id": "3",
-        "name": "Evening Snow",
-        "price": 4.500,
-        "description": "Evening Snow",
-        "image": "eveningSnow",
+        "name": "Bois",
+        "price": 4.5,
+        "description": "Bois",
+        "image": "BoisWax",
         "weight": 100
       },
-      {     
+      {
         "id": "4",
-        "name": "Clean Linen",
-        "price": 4.500,
-        "description": "Clean Linen",
-        "image": "lavender",
+        "name": "Cassisis & Fig",
+        "price": 4.5,
+        "description": "Cassis & Fig",
+        "image": "CassisFigWax",
+        "weight": 100
+      },
+      {
+        "id": "5",
+        "name": "Cuban Tobacco & Oak",
+        "price": 4.5,
+        "description": "Cuban Tobacco & Oak",
+        "image": "CubanTobaccoOakWax",
+        "weight": 100
+      },
+      {
+        "id": "6",
+        "name": "Dark Honey & Tobacco",
+        "price": 4.5,
+        "description": "Dark Honey Tobacco",
+        "image": "DarkHoneyTobaccoWax",
+        "weight": 100
+      },
+      {
+        "id": "7",
+        "name": "Evening Snow",
+        "price": 4.5,
+        "description": "Evening Snow",
+        "image": "EveningSnowWax",
+        "weight": 100
+      },
+      {
+        "id": "8",
+        "name": "Fresh Linen",
+        "price": 4.5,
+        "description": "Fresh Linen",
+        "image": "FreshLinenWax",
+        "weight": 100
+      },
+
+      {
+        "id": "9",
+        "name": "Lavender",
+        "price": 4.5,
+        "description": "Lavender",
+        "image": "LavenderWax",
+        "weight": 100
+      },
+
+      {
+        "id": "10",
+        "name": "Lime Basil & Mandrin",
+        "price": 4.5,
+        "description": "Lime Basil & Mandrin",
+        "image": "LimeBasilMandarinMeltsWax",
+        "weight": 100
+      },
+      {
+        "id": "11",
+        "name": "Pandoras Box",
+        "price": 4.5,
+        "description": "Pandoras Box",
+        "image": "PandorasBoxWax",
+        "weight": 100
+      },
+      {
+        "id": "12",
+        "name": "Pear & Freesia",
+        "price": 4.5,
+        "description": "Pear & Freesia",
+        "image": "PearFreesiaWax",
+        "weight": 100
+      },
+      {
+        "id": "13",
+        "name": "Rhubard & Custard",
+        "price": 4.5,
+        "description": "Rhubarb & Custard",
+        "image": "RhubarbCustardWax",
+        "weight": 100
+      },
+      {
+        "id": "14",
+        "name": "Roses",
+        "price": 4.5,
+        "description": "Roses",
+        "image": "RosesWax",
+        "weight": 100
+      },
+      {
+        "id": "15",
+        "name": "Velvet Peony & Oud",
+        "price": 4.5,
+        "description": "Velvet Peony & Oud",
+        "image": "VelvetPeonyOudWax",
         "weight": 100
       }
     ]
@@ -95,20 +182,19 @@
       {
         "id": "1",
         "name": "Lavender",
-        "price": 7.500,
+        "price": 7.5,
         "description": "Identical to freshly picked lavender flowers. This fragrance is bursting with floral aroma, this scent is just like walking through a lavender field in the heart of summer.",
-        "image": "lavender",
+        "image": "WardrobeFreshners",
         "weight": 400
       },
 
       {
         "id": "2",
         "name": "Roses",
-        "price": 7.500,
+        "price": 7.5,
         "description": "A freshly picked bouquet of roses in full bloom with nuances of geranium and violet, all wrapped in a gentle woody base.",
-        "image": "Roses",
+        "image": "WardrobeFreshners",
         "weight": 400
-
       }
     ]
   },
@@ -120,17 +206,16 @@
         "name": "Ceramic Burner",
         "price": 7,
         "description": "Colours: White Marble & Pearl Pink",
-        "image": "Bundle",
+        "image": "glassBurner",
         "weight": 600
-
       },
 
       {
         "id": "2",
         "name": "Pearl Burners",
-        "price": 12.50,
+        "price": 12.5,
         "description": "Colours: Bluish Grey & Clear",
-        "image": "Bundle",
+        "image": "pinkBurner",
         "weight": 600
       }
     ]

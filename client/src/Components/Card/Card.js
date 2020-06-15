@@ -1,13 +1,10 @@
 import React from "react";
 import Button from "../Button/Button";
 
-// import ShoppingCart from "../../Containers/ShoppingCart/ShoppingCart"
-// import Products from "../../Containers/Products/Products"
-
 import {
   Image,
   CardApp,
-  CardContainer,
+  CardContainer
   // CartApp
 } from "./Card.styles";
 
@@ -16,11 +13,18 @@ const Card = props => {
     id,
     name,
     price,
-    description,
     image,
-    weight,
-    reducedPrice
+    weight
   } = props.items;
+
+  const currencyFormatter = new Intl.NumberFormat(
+    "en-US",
+    {
+      style: "currency",
+      currency: "GBP",
+      minimumFractionDigits: 2
+    }
+  );
 
   const button1 = (
     <button
@@ -41,29 +45,27 @@ const Card = props => {
     </button>
   );
 
-      // const Style = (
-      //   props.page === "Products"
-      //   ? <CardApp/> : 
-      //   <CartApp/>
-      // )
+  // const Style = (
+  //   props.page === "Products"
+  //   ? <CardApp/> :
+  //   <CartApp/>
+  // )
 
   //  const reducedP =  !reducedPrice ? null
   //            <s>£{reducedPrice}</s> : null;
   return (
     <CardApp>
-      {(props.page != "CartPopUp") ?
-      <Image>
-        <img
-          src={require(`../../assets/images/${image}.jpeg`)}
-        />
-      </Image>
-    : null}
+      {props.page != "CartPopUp" ? (
+        <Image>
+          <img
+            src={require(`../../assets/NewImages/${image}.jpeg`)}
+          />
+        </Image>
+      ) : null}
       <CardContainer key={id}>
         <h3>{name}</h3>
         <hr />
-        <h4>
-          £{price}
-        </h4>
+        <h4>{currencyFormatter.format(price)}</h4>
         {button1}
       </CardContainer>
     </CardApp>

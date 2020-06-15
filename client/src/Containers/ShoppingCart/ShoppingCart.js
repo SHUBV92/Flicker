@@ -11,7 +11,6 @@ import firebase, {
 import Counter from "../../Components/Counter/Counter.js";
 import {
   CartDisplay,
-  ItemCard,
   Header,
   Checkout
 } from "./ShoppingCart.styles.jsx";
@@ -42,7 +41,7 @@ class ShoppingCart extends Component {
         let items1 = snapshot.val();
         console.log("A", items1);
         const itemsArray =
-        items1 && Object.entries(items1);
+          items1 && Object.entries(items1);
         let newState = [];
         itemsArray &&
           itemsArray.map(item => {
@@ -79,10 +78,10 @@ class ShoppingCart extends Component {
     if (weight1 >= 500) {
       this.setState({ weightCharge: 3 });
     }
-    if (weight1 === 5000) {
+    if (weight1 >= 5000) {
       this.setState({ weightCharge: 5 });
     }
-    if (weight1 === 8000) {
+    if (weight1 >= 8000) {
       this.setState({ weightCharge: 10 });
     }
 
@@ -102,15 +101,15 @@ class ShoppingCart extends Component {
 
     this.setState({ total: sum });
 
-    console.log(this.state.weightCharge)
-    
-    const subtotal = sum + this.state.weightCharge
+    console.log(this.state.weightCharge);
+
+    const subtotal =
+      sum + this.state.weightCharge;
     this.setState({ total: subtotal });
 
     this.counter();
   };
 
-  
   counter = returnedData => {
     this.setState({ returnedData });
   };
@@ -123,6 +122,14 @@ class ShoppingCart extends Component {
   }
 
   render() {
+    const currencyFormatter = new Intl.NumberFormat(
+      "en-US",
+      {
+        style: "currency",
+        currency: "GBP",
+        minimumFractionDigits: 2
+      }
+    );
     return (
       <CartDisplay>
         <Header>
@@ -150,12 +157,11 @@ class ShoppingCart extends Component {
 
         <Checkout>
           <div>
-            {/* <p><i class="fa fa-spinner w3-spin" style="font-size:64px"></i></p> */}
             <p>
               <button
                 onClick={this.calculateTotal}
               >
-                Get Total: £{this.state.total}
+                Get Total: {currencyFormatter.format(this.state.total)}
               </button>
               <button
                 onClick={this.calculateWeight}
@@ -165,16 +171,18 @@ class ShoppingCart extends Component {
             </p>
 
             <h5>
-              Subtotal : £{this.state.total}{" "}
+              Total Weight : {this.state.weight}g
             </h5>
+            <h5>Total : £{this.state.total}</h5>
             <br />
             <h5>
-              Total Weight : {this.state.weight}g
+              Shipping Cost : £
+              {this.state.weightCharge}
             </h5>
 
             <hr />
             <p>
-              Total: £
+              Subtotal: £
               {this.state.total +
                 this.state.weightCharge}{" "}
             </p>
