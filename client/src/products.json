@@ -204,7 +204,7 @@
       {
         "id": "1",
         "name": "Ceramic Burner",
-        "price": 7,
+        "price": 12.50,
         "description": "Colours: White Marble & Pearl Pink",
         "image": "glassBurner",
         "weight": 600
@@ -212,8 +212,17 @@
 
       {
         "id": "2",
-        "name": "Pearl Burners",
-        "price": 12.5,
+        "name": "Pink Pearl Burners",
+        "price": 7,
+        "description": "Colours: Bluish Grey & Clear",
+        "image": "pinkBurner",
+        "weight": 600
+      }, 
+
+      {
+        "id": "2",
+        "name": "Silver Pearl Burners",
+        "price": 7,
         "description": "Colours: Bluish Grey & Clear",
         "image": "pinkBurner",
         "weight": 600

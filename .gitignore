@@ -7,11 +7,12 @@
 
 # testing
 /coverage
-
+/Users/shubindervirk/Desktop/Makers/Other_Projects/fragrance/client/src/utils/firebase.js
 # production
 /build
 
 # misc
+.env
 .DS_Store
 .env.local
 .env.development.local

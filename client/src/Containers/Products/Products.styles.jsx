@@ -22,6 +22,8 @@ export const Title = styled.section`
     text-align: center;
     /* font-style: italic; */
     color: #e6ac00;
+    color: black;
+
   }
   h5 {
     /* text-align: center; */

@@ -14,16 +14,20 @@ export const CardApp = styled.div`
 export const Image = styled.div`
   /* position: relative; */
   img {
-    position:relative;
     padding: 0px;
     /* background-color: green; */
     transition: transform 0.2s; /* Animation */
     width: 100%;
-    height: 200px;
+    height: 250px;
     margin: 0 auto;
 
     /* width: 100%; */
     /* height: 200px; */
+   
+  }
+
+  p{
+    display:none;
   }
 
   img:active {
@@ -36,11 +40,13 @@ export const Image = styled.div`
     border-radius: 50px;
   }
 
-  /* p{
-    position: absolute;
-  bottom: 8px;
-  left: 16px;
-} */
+  img:hover{
+    p{
+      display: block;
+    }
+  }
+
+  
 
 `;
 
@@ -74,7 +80,7 @@ export const CardContainer = styled.div`
     left: 12px;
     width: 150px; */
 
-    margin-top: 60px;
+    margin-top: 40px;
     margin-left: 40px;
 
     /* transform: translate() (-50%, -50%); 
