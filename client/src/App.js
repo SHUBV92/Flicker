@@ -77,7 +77,7 @@ class App extends Component {
                     path={routes}
                     exact={exact}
                   >
-                    {route.name === "Products"
+                    {route.name === "PRODUCTS"
                       ?
                         <Products 
                       selectedCategory={this.state.selectedCategory}/>

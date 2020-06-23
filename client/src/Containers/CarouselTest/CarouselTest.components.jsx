@@ -63,6 +63,47 @@ const CarouselTest = () => {
           <p>Evening Snow</p>
         </Carousel.Caption>
       </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          // style={{width:"900px", height: "900px"}}
+          src={require(`../../assets/NewImages/bag.jpeg`)}
+          alt="Twice Slide"
+        />
+        <Carousel.Caption>
+          <h3>Wardrobe Freshners</h3>
+          <p>Evening Snow</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          // style={{width:"900px", height: "900px"}}
+          src={require(`../../assets/NewImages/pen.jpeg`)}
+          alt="Twice Slide"
+        />
+        <Carousel.Caption>
+          <h3>Wardrobe Freshners</h3>
+          <p>Evening Snow</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+
+          className="d-block w-100"
+          style={{transform: "rotate(-90deg)", height: "720px"}}
+          
+          // style={{width:"900px", height: "900px"}}
+          src={require(`../../assets/NewImages/secret.jpeg`)}
+          alt="Twice Slide"
+        />
+        <Carousel.Caption>
+          <h3>Wardrobe Freshners</h3>
+          <p>Evening Snow</p>
+        </Carousel.Caption>
+      </Carousel.Item>
     {/* </Router>
     <Switch>
         <Route path="/about">

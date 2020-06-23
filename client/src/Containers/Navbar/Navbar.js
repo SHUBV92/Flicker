@@ -44,7 +44,7 @@ const Navbar = ({
                   color: "black"
                 }}
               >
-                {route.name === "Products" ? (
+                {route.name === "PRODUCTS" ? (
                   <div class="dropdown">
                     <button class="dropbtn">
                       {/* {route.icon} */}

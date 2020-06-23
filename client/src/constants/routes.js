@@ -31,7 +31,7 @@ export const baseRoutes= [
   },
 
   {
-    name: "Products",
+    name: "PRODUCTS",
     routes: "/products",
     subProducts:{
       name: "Wax Melts",
@@ -72,11 +72,11 @@ export const baseRoutes= [
     routes: "/cart",
     component: <Cart />
   },
-  {
-    name: "CMS",
-    routes: "/cms",
-    component: <CMS />
-  }, 
+  // {
+  //   name: "CMS",
+  //   routes: "/cms",
+  //   component: <CMS />
+  // }, 
 
   // {
   //   name: "CMS",
