@@ -14,12 +14,11 @@ import {
   Container,
   Pages
 } from "./App.styles.jsx";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faComments
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faComments
 
-
-} from "@fortawesome/free-solid-svg-icons";
+// } from "@fortawesome/free-solid-svg-icons";
 import { render } from "@testing-library/react";
 import Products from "./Containers/Products";
 import WaxMelts from "./Containers/Products/WaxMelts/WaxMelts";
