@@ -2,26 +2,27 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const creds = require("./config");
-
 const nodemailer = require("nodemailer");
+const app = express();
+const server = require("http").createServer(app);
 
-// if (process.env.NODE_ENV == "production"){
-//   require("dotenv").config();
-// }
 
 const stripe = require("stripe")(
   process.env.STRIPE_SECRET_KEY
 );
+// if (process.env.NODE_ENV == "production"){
+//   require("dotenv").config();
+// }
 
-const app = express();
+server.listen(process.env.PORT || 5000)
 
-app.use(
-  bodyParser.urlencoded({ extended: false })
-);
+app.use(express.static(path.join(__dirname, "client/build")));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.get("/", function(req, res) {  
+  res.sendFile(path.join(__dirname, "client/build", "index.html"))});
 
 // Stripe Payment API
-
 app.get("/payment", (req, res) => {
   console.log(req.body);
   const body = {
@@ -29,7 +30,6 @@ app.get("/payment", (req, res) => {
     amount: req.body.amount,
     currency: "gbp"
   };
-
   stripe.charges.create(
     body,
     (stripeErr, stripeRes) => {
@@ -47,11 +47,9 @@ app.get("/payment", (req, res) => {
 });
 
 // Nodemailer
-
 app.get("/", (req, res) => {
   res.send("Send Your Email to /send");
 });
-
 app.post("/send", (req, res) => {
   const output = `
     <h1>Conatct Request</h1>
@@ -76,7 +74,6 @@ app.post("/send", (req, res) => {
       pass: creds.PASS
     }
   });
-
   let mailOptions = {
     from: '"Shubinder" <shubv1992@gmail.com>',
     to: "shubinder92@gmail.com",
@@ -84,20 +81,17 @@ app.post("/send", (req, res) => {
     text: "Hello",
     html: output
   };
-
   transporter.sendMail(
     mailOptions,
     (error, info) => {
       if (error) {
         return console.log(error);
       }
-
       console.log(
         "Message sent: %s",
         info.messageId
       );
       const date = new Date();
-
       console.log(
         "Time:",
         `${date.getHours()}:${date.getMinutes()}`
@@ -113,8 +107,7 @@ app.post("/send", (req, res) => {
   );
 });
 
-app.listen(process.env.PORT || 3000)
 
 // listen(5000, () =>
-//   console.log(`Listening on port: 5000`)
-// );
+
+
