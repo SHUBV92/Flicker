@@ -60,10 +60,10 @@ export const CardContainer = styled.div`
   }
   h3 {
     text-align: center;
-    color: pink;
+    color: grey;
     width: 180px;
     height: 32px;
-    font-weight: bold;
+    /* font-weight: bold; */
   }
 
   h4 {
