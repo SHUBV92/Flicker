@@ -1,34 +1,22 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import StripeCheckoutButton from "../Stripe/Stripe-button";
 import Card from "../../Components/Card/Card";
 import { Spinner } from "react-bootstrap";
-
-import firebase, {
-  provider,
-  auth
-} from "../../utils/firebase.js";
-
+import firebase, { provider,auth } from "../../utils/firebase.js";
 import Counter from "../../Components/Counter/Counter.js";
-import {
-  CartDisplay,
-  Header,
-  Checkout
-} from "./ShoppingCart.styles.jsx";
+import { CartDisplay, Header, Checkout } from "./ShoppingCart.styles.jsx";
 
-class ShoppingCart extends Component {
-  constructor(props) {
-    super();
-    this.state = {
-      items: [],
-      count: 0,
-      weight: 10,
-      weightCharge: 0,
-      total: 0,
-      subtotal: 0
-    };
-  }
+const ShoppingCart = () => {
+  const [items, setItems] = useState([])
+  const [count, setCount] = useState(0)
+  const [weight, setWeight] = useState(10)
+  const [weightCharge, setWeightCharge] = useState(0)
+  const [total, setTotal] = useState(0)
+  const [subTotal, setSubTotal] = useState(0)
 
-  componentDidMount() {
+
+  // Start the Firebase and retireve data saved in the Database
+  useEffect(()=> {
     const itemsRef = firebase
       .database()
       .ref("items");
@@ -54,74 +42,67 @@ class ShoppingCart extends Component {
             });
           });
 
-        this.setState({
-          items: newState
-        });
+        setItems(newState);
       },
       error => {
         console.error("Error: ", error);
       }
     );
-  }
+    }, [])
 
-  calculateWeight = () => {
-    const items = this.state.items.map(item => {
+    // Calculate the total weight of items 
+  const calculateWeight = () => {
+    const productItems = items.map(item => {
       return item.weight;
-
-      console.log("item.weight", item.weight);
     });
 
     const reducer = (acc, cur) => acc + cur;
 
-    const weight1 = items.reduce(reducer);
+    const weight1 = productItems.reduce(reducer);
+    console.log("Product Items", productItems)
+    console.log("Product Items", weight1)
 
     if (weight1 >= 500) {
-      this.setState({ weightCharge: 3 });
+      setWeightCharge(3);
     }
     if (weight1 >= 5000) {
-      this.setState({ weightCharge: 5 });
+      setWeightCharge(5);
     }
     if (weight1 >= 8000) {
-      this.setState({ weightCharge: 10 });
+      setWeightCharge(10);
     }
-
-    this.setState({ weight: weight1 });
-
-    this.counter();
+    setWeight(weight1);
+    console.log("WeightCharge", weightCharge)
+    counter();
   };
 
-  calculateTotal = () => {
-    const items = this.state.items.map(item => {
+  const calculateTotal = () => {
+    const productItems = items.map(item => {
       return item.price;
     });
 
     const reducer = (acc, cur) => acc + cur;
 
-    const sum = items.reduce(reducer);
-
-    this.setState({ total: sum });
-
-    console.log(this.state.weightCharge);
+    const sum = productItems.reduce(reducer);
+      setTotal(sum);
 
     const subtotal =
-      sum + this.state.weightCharge;
-    this.setState({ total: subtotal });
-
-    this.counter();
+      sum + weightCharge;
+      setSubTotal( subtotal );
+      counter();
   };
 
-  counter = returnedData => {
-    this.setState({ returnedData });
+  const counter = returnedData => {
+    setCount( returnedData );
   };
 
-  removeItem(itemId) {
+  const removeItem = (itemId) => {
     const itemsRef = firebase
       .database()
       .ref(`/items/${itemId}`);
     itemsRef.remove();
   }
 
-  render() {
     const currencyFormatter = new Intl.NumberFormat(
       "en-US",
       {
@@ -137,18 +118,18 @@ class ShoppingCart extends Component {
           <hr />
         </Header>
 
-        {this.state.items.length === 0 ? (
+        {items.length === 0 ? (
           <Spinner
             animation="border"
             variant="warning"
             style={{ marginLeft: "500px" }}
           />
         ) : (
-          this.state.items.map(item => {
+          items.map(item => {
             return (
               <Card
                 items={item}
-                removeItem={this.removeItem}
+                removeItem={removeItem}
                 page="ShoppingCart"
               />
             );
@@ -159,49 +140,51 @@ class ShoppingCart extends Component {
           <div>
             <p>
               <button
-                onClick={this.calculateTotal}
+                onClick={calculateTotal}
               >
-                Get Total: {currencyFormatter.format(this.state.total)}
+                Get Total: {currencyFormatter.format(total)}
               </button>
               <button
-                onClick={this.calculateWeight}
+                onClick={calculateWeight}
               >
-                Get Weight: {this.state.weight}g
+                Get Weight: {weight}g
               </button>
             </p>
 
-            <h5>
-              Total Weight : {this.state.weight}g
-            </h5>
-            <h5>Total : £{this.state.total}</h5>
+            <h5> Total Weight : {weight}g </h5>
+            <h5> Total : £{total} </h5>
             <br />
             <h5>
               Shipping Cost : £
-              {this.state.weightCharge}
+              {weightCharge}
             </h5>
-
             <hr />
             <p>
               Subtotal: £
-              {this.state.total +
-                this.state.weightCharge}{" "}
+              {total +
+                weightCharge}
             </p>
 
             <StripeCheckoutButton
-              price={this.state.total}
+              price={total}
             />
           </div>
         </Checkout>
       </CartDisplay>
     );
   }
-}
+
 export default ShoppingCart;
 
-//  if(weight === 2Kg){
-//   charge £3
-// }
 
-//  if(weight === 5Kg){
-//   charge £5
-// }
+
+
+  //   this.state = {
+  //     items: [],
+  //     count: 0,
+  //     weight: 10,
+  //     weightCharge: 0,
+  //     total: 0,
+  //     subtotal: 0
+  //   };
+  // }
